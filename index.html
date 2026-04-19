@@ -504,7 +504,7 @@
 
   <main>
     <section class="hero" id="concept">
-      <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
         <source src="images/Video Project.mp4" type="video/mp4">
       </video>
       <div class="hero-overlay"></div>
@@ -713,6 +713,36 @@
       </div>
     </section>
   </main>
+
+  <script>
+    (function () {
+      var video = document.querySelector('.hero-video');
+      if (!video) return;
+
+      function tryPlay() {
+        var p = video.play();
+        if (p !== undefined) {
+          p.catch(function () {
+            // ユーザー操作後に再生を試みる
+            document.addEventListener('touchstart', function onTouch() {
+              video.play();
+              document.removeEventListener('touchstart', onTouch);
+            }, { once: true });
+          });
+        }
+      }
+
+      video.muted = true;
+      video.setAttribute('playsinline', '');
+      video.setAttribute('webkit-playsinline', '');
+
+      if (video.readyState >= 2) {
+        tryPlay();
+      } else {
+        video.addEventListener('canplay', tryPlay, { once: true });
+      }
+    })();
+  </script>
 
   <footer class="site-footer">
     <div class="container">
