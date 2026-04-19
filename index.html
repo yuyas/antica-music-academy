@@ -96,6 +96,36 @@
 
     .hero {
       padding: 110px 0 82px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10, 11, 14, 0.62) 0%,
+        rgba(10, 11, 14, 0.48) 50%,
+        rgba(10, 11, 14, 0.72) 100%
+      );
+      z-index: 1;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
     }
 
     .hero-grid {
@@ -474,6 +504,10 @@
 
   <main>
     <section class="hero" id="concept">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="images/Video Project.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">High-End Music Education — Ebisu, Tokyo</span>
