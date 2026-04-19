@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antica Music Academy | 一流の感性と品格を育むハイエンド音楽教育</title>
+  <meta name="description" content="Antica Music Academyは恵比寿を拠点に、幼児から大人までを対象としたハイエンド音楽教育サービス。ピアノ・歌/声楽・ヴァイオリン・フルートに対応し、一流講師陣による個別最適の指導で、感性・表現力・品格を育てます。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Shippori+Mincho+B1:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0d10;
+      --bg-soft: #12141a;
+      --panel: #171a22;
+      --panel-soft: #1d212c;
+      --text: #f4f4f6;
+      --text-muted: #c6c8cf;
+      --line: #2a2f3d;
+      --accent: #d9ba7b;
+      --accent-deep: #b89355;
+      --max-width: 1120px;
+      --radius: 16px;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(circle at 85% 0%, #2a2114 0%, rgba(42, 33, 20, 0) 36%),
+        linear-gradient(180deg, #0b0c0f 0%, #11141b 100%);
+      color: var(--text);
+      font-family: "Shippori Mincho B1", "Yu Mincho", "Hiragino Mincho ProN", serif;
+      line-height: 1.75;
+      letter-spacing: 0.01em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(217, 186, 123, 0.24);
+      background: rgba(11, 12, 15, 0.84);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: "Cinzel", serif;
+      font-size: 1.0rem;
+      letter-spacing: 0.18em;
+      font-weight: 400;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: var(--accent);
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .nav a {
+      transition: color 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: 110px 0 82px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-family: "Cormorant Garamond", "Cinzel", serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 16px;
+      line-height: 1.35;
+      font-weight: 600;
+      font-family: "Shippori Mincho B1", "Yu Mincho", serif;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      letter-spacing: 0.06em;
+      margin-bottom: 20px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--text-muted);
+    }
+
+    .hero-copy p {
+      max-width: 65ch;
+    }
+
+    .hero-panel {
+      border: 1px solid rgba(217, 186, 123, 0.3);
+      border-radius: var(--radius);
+      padding: 28px;
+      background:
+        linear-gradient(150deg, rgba(217, 186, 123, 0.2), rgba(217, 186, 123, 0.04)),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel h2 {
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-panel ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text-muted);
+    }
+
+    .hero-panel li {
+      margin-bottom: 9px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.94;
+    }
+
+    .btn-primary {
+      color: #14120d;
+      font-weight: 700;
+      background: linear-gradient(120deg, #e8cea0, #c8a15f);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(217, 186, 123, 0.46);
+      color: var(--accent);
+      background: transparent;
+    }
+
+    section {
+      padding: 78px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-title {
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.5rem, 3vw, 2.35rem);
+      margin-bottom: 10px;
+      letter-spacing: 0.03em;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--panel-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .card h3 {
+      color: var(--accent);
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .service-item {
+      text-align: center;
+      background: var(--panel-soft);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px 12px;
+      color: #efe4cc;
+      font-size: 0.92rem;
+    }
+
+    .program-table {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .program-card {
+      border-radius: var(--radius);
+      border: 1px solid rgba(217, 186, 123, 0.28);
+      background: linear-gradient(180deg, rgba(217, 186, 123, 0.1), rgba(29, 33, 44, 0.95));
+      padding: 24px;
+    }
+
+    .program-card .label {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+    }
+
+    .program-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .access-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 18px;
+    }
+
+    .flow-list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .flow-item {
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      padding: 18px;
+    }
+
+    .step {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .contact {
+      padding-bottom: 94px;
+    }
+
+    .contact-box {
+      border-radius: var(--radius);
+      border: 1px solid rgba(217, 186, 123, 0.36);
+      background:
+        linear-gradient(140deg, rgba(217, 186, 123, 0.18), rgba(217, 186, 123, 0.04)),
+        #161922;
+      box-shadow: var(--shadow);
+      padding: 34px;
+      text-align: center;
+    }
+
+    .contact-box p {
+      max-width: 72ch;
+      margin-inline: auto;
+    }
+
+    .instructor-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .instructor-card {
+      text-align: center;
+    }
+
+    .instructor-photo-link {
+      display: block;
+    }
+
+    .instructor-photo {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid rgba(217, 186, 123, 0.22);
+      background: var(--panel-soft);
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .instructor-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .instructor-photo-link:hover .instructor-photo img {
+      transform: scale(1.04);
+    }
+
+    .instructor-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.4rem;
+      color: var(--accent);
+      opacity: 0.5;
+    }
+
+    .instructor-dept {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 5px;
+      font-style: italic;
+    }
+
+    .instructor-card h3 {
+      font-size: 0.96rem;
+      color: var(--text);
+      margin-bottom: 0;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 980px) {
+      .instructor-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .instructor-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 26px 0 36px;
+      text-align: center;
+      font-size: 0.84rem;
+      color: #9ea2ad;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-3,
+      .program-table,
+      .access-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .flow-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        min-height: 66px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 80px;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+
+      .service-grid,
+      .flow-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">Antica Music Academy</a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="#concept">コンセプト</a>
+        <a href="#features">教育価値</a>
+        <a href="#instructors">講師陣</a>
+        <a href="#program">プログラム</a>
+        <a href="#access">拠点・提供形態</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="concept">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">High-End Music Education — Ebisu, Tokyo</span>
+          <h1>音楽は、<br>人生の品格を<br>彫刻する。</h1>
+          <p>Antica Music Academyは、恵比寿を拠点とするハイエンド音楽教育サービスです。幼児から大人まで、それぞれの人生段階に合わせた個別最適の学びを設計し、将来にわたり通用する表現力と知性を育みます。</p>
+          <p>私たちが提供するのは、単なる技術習得ではありません。芸術に触れる姿勢、舞台に立つ所作、他者に伝わる品格までを含む、豊かな人格形成のための総合教育です。</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">体験レッスン申し込み</a>
+            <a class="btn btn-secondary" href="#contact">お問い合わせ</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="提供概要">
+          <h2>提供領域</h2>
+          <ul>
+            <li>対象: 幼児・小中高生・大人・シニアまで対応</li>
+            <li>専門領域: ピアノ / 歌・声楽 / ヴァイオリン / フルート</li>
+            <li>教育設計: 一流講師陣による個別最適カリキュラム</li>
+            <li>拠点: 恵比寿スタジオ / オンライン / 出張レッスン</li>
+            <li>付加価値: 音楽療法の知見を活かした心身アプローチ</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="section-title">
+          <h2>本質的な教育価値</h2>
+          <p>価格の比較ではなく、文化資本としての価値を重視するご家庭・個人へ。Anticaは、将来価値を見据えた投資としての音楽教育を提供します。</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>一流講師陣による指導</h3>
+            <p>国内外での演奏歴、教育機関での指導歴、コンクール審査経験を持つ講師が在籍。高い専門性と人間理解を兼ね備えた指導で、学びの質を保証します。</p>
+          </article>
+          <article class="card">
+            <h3>個別最適と音楽療法の融合</h3>
+            <p>年齢・特性・目標・生活リズムを踏まえ、最適なレッスン設計を実施。音楽療法の視点を取り入れ、自己表現と情緒の安定を両立する教育を行います。</p>
+          </article>
+          <article class="card">
+            <h3>世界観まで含む学習環境</h3>
+            <p>空間、音響、教材、講師との対話までを一貫して設計。学習者の感性を日常の中で磨き、長期的に品格ある表現者へ導くことを目指します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>対応分野</h2>
+          <p>一つの楽器に閉じない、総合的な音楽教育の選択肢をご用意しています。</p>
+        </div>
+        <div class="service-grid">
+          <div class="service-item">ピアノ</div>
+          <div class="service-item">歌・声楽</div>
+          <div class="service-item">ヴァイオリン</div>
+          <div class="service-item">フルート</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="instructors">
+      <div class="container">
+        <div class="section-title">
+          <h2>講師陣</h2>
+          <p>各分野の第一線で活躍する演奏家・教育者が、個々の成長を丁寧にサポートします。</p>
+        </div>
+        <div class="instructor-grid">
+
+          <article class="instructor-card">
+            <a href="https://www.youtube.com/@kiyocorate" target="_blank" rel="noopener noreferrer" class="instructor-photo-link">
+              <div class="instructor-photo">
+                <img src="656498218_18108958561838355_2317338392718204903_n.jpg" alt="工藤記代子" loading="lazy">
+              </div>
+            </a>
+            <span class="instructor-dept">幼児教育</span>
+            <h3>工藤 記代子</h3>
+          </article>
+
+          <article class="instructor-card">
+            <a href="https://www.takana.net/" target="_blank" rel="noopener noreferrer" class="instructor-photo-link">
+              <div class="instructor-photo">
+                <img src="http://www.takana.net/tm/uploads/2021/02/profile-20210222-225x300.jpg" alt="宮本貴奈" loading="lazy">
+              </div>
+            </a>
+            <span class="instructor-dept">ピアノ</span>
+            <h3>宮本 貴奈</h3>
+          </article>
+
+          <article class="instructor-card">
+            <a href="https://voiceprofessionals.jp/" target="_blank" rel="noopener noreferrer" class="instructor-photo-link">
+              <div class="instructor-photo" style="background: linear-gradient(160deg, #d4b896 0%, #f5ede0 60%, #ffffff 100%);">
+                <img src="210429_yasukurasayaka_00409-pavi7e21ctp0ymo6o2e09o0m4adl749vuyko9kvz3k.png" alt="安倉さやか" loading="lazy">
+              </div>
+            </a>
+            <span class="instructor-dept">歌・声楽</span>
+            <h3>安倉 さやか</h3>
+          </article>
+
+          <article class="instructor-card">
+            <a href="https://www.ikukokawai.com/" target="_blank" rel="noopener noreferrer" class="instructor-photo-link">
+              <div class="instructor-photo">
+                <img src="https://www.ikukokawai.com/cms/wp-content/uploads/2016/09/02-070.jpg" alt="川井郁子" loading="lazy">
+              </div>
+            </a>
+            <span class="instructor-dept">ヴァイオリン</span>
+            <h3>川井 郁子</h3>
+          </article>
+
+          <article class="instructor-card">
+            <a href="https://yukikookunoflute.wixsite.com/toppage" target="_blank" rel="noopener noreferrer" class="instructor-photo-link">
+              <div class="instructor-photo">
+                <img src="yukiko-okuno01.avif" alt="奥野由紀子" loading="lazy">
+              </div>
+            </a>
+            <span class="instructor-dept">フルート</span>
+            <h3>奥野 由紀子</h3>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="program">
+      <div class="container">
+        <div class="section-title">
+          <h2>プログラム設計</h2>
+          <p>ライフステージと目的に応じて、教育内容と到達目標を明確に設計します。詳細な費用や期間は、体験時のヒアリング後にご提案いたします。</p>
+        </div>
+        <div class="program-table">
+          <article class="program-card">
+            <span class="label">Early Stage</span>
+            <h3>幼児・児童向け</h3>
+            <p>聴く力・リズム感・集中力を育てる導入プログラム。楽しさを起点にしながら、将来的な専門学習にもつながる基礎を丁寧に育成します。</p>
+          </article>
+          <article class="program-card">
+            <span class="label">Academic Stage</span>
+            <h3>学生向け</h3>
+            <p>受験・コンクール・舞台経験まで見据えた実践型指導。技術と表現力を同時に鍛え、自己肯定感と発信力を高める教育を行います。</p>
+          </article>
+          <article class="program-card">
+            <span class="label">Professional Life</span>
+            <h3>大人向け</h3>
+            <p>教養としての音楽、自己表現、人生後半の豊かさを追求するためのレッスン。多忙な日常に適応した、継続性の高い学びを提供します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="access">
+      <div class="container access-grid">
+        <article class="card">
+          <h3>拠点: 恵比寿スタジオ</h3>
+          <p>文化感度の高い街・恵比寿にて、プライバシーに配慮した予約制レッスンを提供。上質な空間で、学習者ごとに最適化された時間をお約束します。</p>
+          <p>平日夜・週末の対応枠を確保し、教育熱心なご家庭や多忙なエグゼクティブ層にも継続しやすい運営体制を整えています。</p>
+        </article>
+        <article class="card">
+          <h3>オンライン・出張対応</h3>
+          <p>国内外どこからでも受講可能なオンラインレッスンに対応。加えて、要望に応じてご自宅・指定会場への出張レッスンも提供しています。</p>
+          <p>移動時間を最小化しながら、質を妥協しない学びを実現します。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>ご受講までの流れ</h2>
+          <p>ヒアリング重視の導入プロセスで、目的と将来像に即した学習プランを設計します。</p>
+        </div>
+        <div class="flow-list">
+          <article class="flow-item">
+            <span class="step">Step 1</span>
+            <p>体験レッスン申し込み、またはお問い合わせ</p>
+          </article>
+          <article class="flow-item">
+            <span class="step">Step 2</span>
+            <p>ご家庭・ご本人の教育方針と目標を丁寧にヒアリング</p>
+          </article>
+          <article class="flow-item">
+            <span class="step">Step 3</span>
+            <p>講師による体験レッスンと適性評価を実施</p>
+          </article>
+          <article class="flow-item">
+            <span class="step">Step 4</span>
+            <p>個別最適プログラムと年間方針をご提案</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-box">
+          <h2>体験レッスン・個別相談のご案内</h2>
+          <p>感性教育を重視するご家庭、教養と品格を磨きたい大人の皆さまへ。Antica Music Academyは、音楽を通じた長期的な成長と社会的価値の創出を支援します。</p>
+          <div class="cta-row" style="justify-content:center;">
+            <a class="btn btn-primary" href="mailto:info@antica-music-academy.jp?subject=%E4%BD%93%E9%A8%93%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF">体験レッスン申し込み</a>
+            <a class="btn btn-secondary" href="mailto:info@antica-music-academy.jp?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Antica Music Academy | Ebisu, Tokyo</p>
+      <p>Copyright 2026 Antica Music Academy. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
