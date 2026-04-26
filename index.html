@@ -416,126 +416,11 @@
       color: #9ea2ad;
     }
 
-    .proposal-slide {
-      padding: 92px 0;
-      border-top: 1px solid rgba(217, 186, 123, 0.24);
-      border-bottom: 1px solid rgba(217, 186, 123, 0.24);
-      background:
-        radial-gradient(circle at 5% 0%, rgba(217, 186, 123, 0.15), rgba(217, 186, 123, 0) 36%),
-        linear-gradient(160deg, #11141b, #161a23 65%, #191e29 100%);
-    }
-
-    .proposal-card {
-      background: rgba(12, 14, 20, 0.72);
-      border: 1px solid rgba(217, 186, 123, 0.34);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 34px;
-    }
-
-    .proposal-title {
-      margin-bottom: 10px;
-      font-size: clamp(1.3rem, 2.7vw, 2rem);
-      letter-spacing: 0.02em;
-    }
-
-    .proposal-sub {
-      margin-bottom: 24px;
-    }
-
-    .proposal-layout {
-      display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      gap: 18px;
-    }
-
-    .proposal-box {
-      background: var(--panel-soft);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 20px;
-    }
-
-    .proposal-box h3 {
-      color: var(--accent);
-      font-size: 1rem;
-      margin-bottom: 12px;
-    }
-
-    .money-flow {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
-    }
-
-    .money-node,
-    .money-arrow {
-      border-radius: 10px;
-      padding: 10px 12px;
-      border: 1px solid var(--line);
-      font-size: 0.86rem;
-      color: #efe4cc;
-    }
-
-    .money-node {
-      background: rgba(217, 186, 123, 0.08);
-      min-width: 140px;
-      text-align: center;
-    }
-
-    .money-arrow {
-      background: rgba(15, 19, 27, 0.9);
-      color: var(--accent);
-      min-width: 156px;
-      text-align: center;
-      letter-spacing: 0.03em;
-    }
-
-    .proposal-box ul {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--text-muted);
-    }
-
-    .proposal-box li {
-      margin-bottom: 8px;
-    }
-
-    .milestone-list {
-      display: grid;
-      gap: 10px;
-    }
-
-    .milestone-item {
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 10px;
-      align-items: start;
-      border-radius: 10px;
-      border: 1px solid var(--line);
-      background: rgba(13, 17, 24, 0.9);
-      padding: 10px 12px;
-    }
-
-    .milestone-item strong {
-      color: var(--accent);
-      font-family: "Cormorant Garamond", serif;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.82rem;
-    }
-
     @media (max-width: 980px) {
       .hero-grid,
       .grid-3,
       .program-table,
       .access-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .proposal-layout {
         grid-template-columns: 1fr;
       }
 
@@ -570,9 +455,6 @@
         grid-template-columns: 1fr;
       }
 
-      .proposal-card {
-        padding: 24px;
-      }
     }
   </style>
 </head>
@@ -581,7 +463,6 @@
     <div class="container header-inner">
       <a href="#" class="brand">Antica Music Academy</a>
       <nav class="nav" aria-label="メインナビゲーション">
-        <a href="#proposal-b">提案スライド</a>
         <a href="#concept">コンセプト</a>
         <a href="#features">教育価値</a>
         <a href="#instructors">講師陣</a>
@@ -593,76 +474,6 @@
   </header>
 
   <main>
-    <section class="proposal-slide" id="proposal-b">
-      <div class="container">
-        <article class="proposal-card">
-          <span class="eyebrow">Meeting Note</span>
-          <h2 class="proposal-title">Antica Music Academy 打ち合わせ</h2>
-          <p class="proposal-sub">亜里さんと今日話したい内容を、シンプルに1枚でまとめました。</p>
-          <div class="proposal-layout">
-            <div class="proposal-box">
-              <h3>1. 本日確認・ご相談したいこと</h3>
-              <ul>
-                <li>お金の流れ</li>
-                <li>最初の費用をどう負担するか</li>
-                <li>役割分担（誰が何を担当するか）</li>
-                <li>トラブル時の対応</li>
-              </ul>
-            </div>
-            <div class="proposal-box">
-              <h3>2. レッスンの流れ</h3>
-              <div class="money-flow" aria-label="レッスンの流れ">
-                <div class="money-node">① ご紹介 or 問い合わせ</div>
-                <div class="money-node">② 初回ヒアリング</div>
-                <div class="money-node">③ 講師の選定、日程調整</div>
-                <div class="money-node">④ 初回レッスン</div>
-              </div>
-            </div>
-            <div class="proposal-box">
-              <h3>3. 教室のお金の流れ</h3>
-              <div class="money-flow" aria-label="分配フロー">
-                <div class="money-node">① レッスン後に生徒が運営へ支払い（振込 / カード決済）</div>
-                <div class="money-node">② 講師へ報酬を支払う</div>
-                <div class="money-node">③ 運営費を差し引く</div>
-                <div class="money-node">④ 分配</div>
-              </div>
-              <h3 style="margin-top:18px;">・分配イメージ（1レッスン 15,000円）</h3>
-              <div class="milestone-list">
-                <div class="milestone-item">
-                  <strong>講師</strong>
-                  <p>9,000円</p>
-                </div>
-                <div class="milestone-item">
-                  <strong>運営</strong>
-                  <p>6,000円（亜里さんと私で分配）</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="proposal-layout" style="margin-top:18px;">
-            <div class="proposal-box">
-              <h3>5. 今後かかる可能性のある費用</h3>
-              <ul>
-                <li>ホームページ（ドメイン取得、サーバー管理）</li>
-                <li>弁護士相談（契約書関連のチェック）</li>
-                <li>保険（教室賠償責任など）</li>
-              </ul>
-              <p>売上から回収する想定。回収ルールは最初に決めておく。</p>
-            </div>
-            <div class="proposal-box">
-              <h3>6. 役割分担</h3>
-              <ul>
-                <li>【亜里さん】 講師対応、ブランドづくり、紹介対応、顧客対応</li>
-                <li>【私】 仕組みづくり、お金管理、運営</li>
-              </ul>
-              <h3 style="margin-top:18px;">7. 最終確認</h3>
-              <p>この進め方でスタートして問題ないか確認させてください。</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
     <section class="hero" id="concept">
 <div class="container hero-grid">
         <div class="hero-copy">
