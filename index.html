@@ -69,13 +69,22 @@
     }
 
     .brand {
-      font-family: "Cinzel", serif;
-      font-size: 1.0rem;
-      letter-spacing: 0.18em;
-      font-weight: 400;
-      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
       white-space: nowrap;
-      color: var(--accent);
+    }
+
+    .brand-icon {
+      width: 28px;
+      height: auto;
+      display: block;
+    }
+
+    .brand-wordmark {
+      width: clamp(150px, 24vw, 230px);
+      height: auto;
+      display: block;
     }
 
     .nav {
@@ -461,7 +470,10 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="brand">Antica Music Academy</a>
+      <a href="#" class="brand" aria-label="Antica Music Academy ホーム">
+        <img class="brand-icon" src="LOGO.svg" alt="" aria-hidden="true">
+        <img class="brand-wordmark" src="ANTICA MUSIC ACADEMY.svg" alt="Antica Music Academy">
+      </a>
       <nav class="nav" aria-label="メインナビゲーション">
         <a href="#concept">コンセプト</a>
         <a href="#features">教育価値</a>
@@ -482,8 +494,7 @@
           <p>Antica Music Academyは、恵比寿を拠点とするハイエンド音楽教育サービスです。幼児から大人まで、それぞれの人生段階に合わせた個別最適の学びを設計し、将来にわたり通用する表現力と知性を育みます。</p>
           <p>私たちが提供するのは、単なる技術習得ではありません。芸術に触れる姿勢、舞台に立つ所作、他者に伝わる品格までを含む、豊かな人格形成のための総合教育です。</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#contact">体験レッスン申し込み</a>
-            <a class="btn btn-secondary" href="#contact">お問い合わせ</a>
+            <a class="btn btn-primary" href="#contact">体験レッスン・お問い合わせ</a>
           </div>
         </div>
         <aside class="hero-panel" aria-label="提供概要">
@@ -601,7 +612,7 @@
         <div class="flow-list">
           <article class="flow-item">
             <span class="step">Step 1</span>
-            <p>体験レッスン申し込み、またはお問い合わせ</p>
+            <p>体験レッスン・お問い合わせフォームへ入力</p>
           </article>
           <article class="flow-item">
             <span class="step">Step 2</span>
@@ -625,8 +636,7 @@
           <h2>体験レッスン・個別相談のご案内</h2>
           <p>感性教育を重視するご家庭、教養と品格を磨きたい大人の皆さまへ。Antica Music Academyは、音楽を通じた長期的な成長と社会的価値の創出を支援します。</p>
           <div class="cta-row" style="justify-content:center;">
-            <a class="btn btn-primary" href="mailto:info@antica-music-academy.jp?subject=%E4%BD%93%E9%A8%93%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF">体験レッスン申し込み</a>
-            <a class="btn btn-secondary" href="mailto:info@antica-music-academy.jp?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">お問い合わせ</a>
+            <a class="btn btn-primary" href="mailto:info@antica-music-academy.jp?subject=%E4%BD%93%E9%A8%93%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3%E3%83%BB%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">体験レッスン・お問い合わせ</a>
           </div>
         </div>
       </div>
