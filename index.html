@@ -337,6 +337,88 @@
       margin-inline: auto;
     }
 
+    .contact-form-section {
+      padding-top: 0;
+      padding-bottom: 94px;
+    }
+
+    .form-box {
+      border-radius: var(--radius);
+      border: 1px solid rgba(217, 186, 123, 0.32);
+      background:
+        linear-gradient(145deg, rgba(217, 186, 123, 0.14), rgba(217, 186, 123, 0.03)),
+        #141820;
+      box-shadow: var(--shadow);
+      padding: 34px;
+    }
+
+    .form-box h2 {
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
+      margin-bottom: 8px;
+    }
+
+    .form-box p {
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .form-field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .form-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-field label {
+      font-size: 0.86rem;
+      letter-spacing: 0.03em;
+      color: #efe4cc;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(217, 186, 123, 0.28);
+      background: rgba(10, 13, 18, 0.92);
+      color: var(--text);
+      padding: 12px 14px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+
+    .form-field textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: rgba(217, 186, 123, 0.75);
+      box-shadow: 0 0 0 2px rgba(217, 186, 123, 0.18);
+    }
+
+    .form-submit {
+      margin-top: 4px;
+    }
+
     .instructor-grid {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -462,6 +544,14 @@
       .service-grid,
       .flow-list {
         grid-template-columns: 1fr;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-box {
+        padding: 24px;
       }
 
     }
@@ -641,13 +731,51 @@
         </div>
       </div>
     </section>
+
+    <section class="contact-form-section" id="contact-form">
+      <div class="container">
+        <div class="form-box">
+          <h2>お問い合わせフォーム</h2>
+          <p>体験レッスンのお申し込み、ご質問、法人・提携のご相談はこちらからお送りください。</p>
+          <form class="contact-form" action="https://formspree.io/f/xbdqbbwo" method="POST">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="form-name">お名前</label>
+                <input id="form-name" name="name" type="text" required>
+              </div>
+              <div class="form-field">
+                <label for="form-email">メールアドレス</label>
+                <input id="form-email" name="email" type="email" required>
+              </div>
+              <div class="form-field">
+                <label for="form-tel">電話番号</label>
+                <input id="form-tel" name="phone" type="tel">
+              </div>
+              <div class="form-field">
+                <label for="form-type">希望内容</label>
+                <select id="form-type" name="request_type">
+                  <option value="体験レッスン">体験レッスン</option>
+                  <option value="お問い合わせ">お問い合わせ</option>
+                  <option value="法人・提携相談">法人・提携相談</option>
+                </select>
+              </div>
+              <div class="form-field full">
+                <label for="form-message">ご相談内容</label>
+                <textarea id="form-message" name="message"></textarea>
+              </div>
+            </div>
+            <button class="btn btn-primary form-submit" type="submit">送信する</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <p>Antica Music Academy | Ebisu, Tokyo</p>
       <p>Copyright 2026 Antica Music Academy. All rights reserved.</p>
-      <p>運営者　<a href="http://www.officetouch.co.jp/onishi.html" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline; text-underline-offset:3px;">大西 亜里</a></p>
+      <p>代表 | 音楽プロデューサー　<a href="http://www.officetouch.co.jp/onishi.html" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline; text-underline-offset:3px;">大西 亜里</a></p>
     </div>
   </footer>
 </body>
