@@ -84,25 +84,164 @@
     }
 
     .brand-wordmark {
-      width: clamp(140px, 24vw, 250px);
+      width: clamp(calc(140px + 4pt), calc(24vw + 4pt), calc(250px + 4pt));
       height: auto;
       display: block;
     }
 
     .nav {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border: 1px solid rgba(139, 107, 63, 0.35);
+      border-radius: 8px;
+      background: #fffdf8;
+      cursor: pointer;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .menu-toggle:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 14px rgba(139, 107, 63, 0.18);
+    }
+
+    .piano-keys {
+      position: relative;
+      display: block;
+      width: 46px;
+      height: 26px;
+    }
+
+    .piano-whites {
       display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      color: var(--text-muted);
-      font-size: 0.9rem;
+      gap: 2px;
+      align-items: flex-end;
+      height: 100%;
     }
 
-    .nav a {
-      transition: color 0.2s ease;
+    .piano-key-white {
+      width: 13px;
+      height: 22px;
+      border: 1px solid var(--accent);
+      border-top: none;
+      border-radius: 0 0 4px 4px;
+      background: #ffffff;
     }
 
-    .nav a:hover {
+    .piano-blacks {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .piano-key-black {
+      position: absolute;
+      top: 0;
+      width: 8px;
+      height: 14px;
+      border-radius: 0 0 3px 3px;
+      background: #2f2618;
+    }
+
+    .piano-key-black:nth-child(1) {
+      left: 9px;
+    }
+
+    .piano-key-black:nth-child(2) {
+      left: 24px;
+    }
+
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      background: rgba(47, 38, 24, 0.42);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .menu-overlay.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .menu-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 40;
+      width: 60%;
+      height: 100%;
+      padding: 28px 32px 40px;
+      border-left: 1px solid rgba(139, 107, 63, 0.28);
+      background:
+        linear-gradient(165deg, rgba(139, 107, 63, 0.08), rgba(139, 107, 63, 0.02)),
+        #ffffff;
+      box-shadow: -12px 0 40px rgba(70, 49, 20, 0.14);
+      transform: translateX(100%);
+      transition: transform 0.35s ease;
+      overflow-y: auto;
+    }
+
+    .menu-drawer.is-open {
+      transform: translateX(0);
+    }
+
+    .menu-drawer-header {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 36px;
+    }
+
+    .menu-close {
+      border: 1px solid rgba(139, 107, 63, 0.35);
+      border-radius: 999px;
+      padding: 8px 18px;
+      background: transparent;
       color: var(--accent);
+      font-family: "Noto Serif JP", serif;
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .menu-close:hover {
+      background: rgba(139, 107, 63, 0.1);
+      color: var(--accent-deep);
+    }
+
+    .menu-drawer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .menu-drawer-nav a {
+      color: var(--text);
+      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 4px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .menu-drawer-nav a:hover {
+      color: var(--accent);
+      border-bottom-color: rgba(139, 107, 63, 0.4);
+    }
+
+    body.menu-open {
+      overflow: hidden;
     }
 
     .hero {
@@ -200,7 +339,7 @@
     }
 
     .btn-primary {
-      color: #ffffff;
+      color: #9c7a4e;
       font-weight: 700;
       background: linear-gradient(120deg, #9a7751, #7c6039);
     }
@@ -531,10 +670,6 @@
         min-height: 66px;
       }
 
-      .nav {
-        display: none;
-      }
-
       .hero {
         padding-top: 80px;
       }
@@ -566,16 +701,37 @@
         <img class="brand-icon" src="LOGO.svg" alt="" aria-hidden="true">
         <img class="brand-wordmark" src="アンティカ音楽学院.svg" alt="アンティカ音楽学院">
       </a>
-      <nav class="nav" aria-label="メインナビゲーション">
-        <a href="#concept">コンセプト</a>
-        <a href="#features">教育価値</a>
-        <a href="#instructors">講師陣</a>
-        <a href="#program">プログラム</a>
-        <a href="#access">拠点・提供形態</a>
-        <a href="#contact">お問い合わせ</a>
-      </nav>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="menu-drawer">
+        <span class="piano-keys" aria-hidden="true">
+          <span class="piano-whites">
+            <span class="piano-key-white"></span>
+            <span class="piano-key-white"></span>
+            <span class="piano-key-white"></span>
+          </span>
+          <span class="piano-blacks">
+            <span class="piano-key-black"></span>
+            <span class="piano-key-black"></span>
+          </span>
+        </span>
+      </button>
     </div>
   </header>
+
+  <div class="menu-overlay" id="menu-overlay" hidden></div>
+  <aside class="menu-drawer" id="menu-drawer" aria-hidden="true" aria-label="サイトメニュー">
+    <div class="menu-drawer-header">
+      <button class="menu-close" type="button" aria-label="メニューを閉じる">閉じる</button>
+    </div>
+    <nav class="menu-drawer-nav" aria-label="メインナビゲーション">
+      <a href="#concept">コンセプト</a>
+      <a href="#features">教育価値</a>
+      <a href="#instructors">講師陣</a>
+      <a href="#program">プログラム</a>
+      <a href="#access">拠点・提供形態</a>
+      <a href="#contact">お問い合わせ</a>
+      <a href="#contact-form">お問い合わせフォーム</a>
+    </nav>
+  </aside>
 
   <main>
     <section class="hero" id="concept">
@@ -777,8 +933,52 @@
     <div class="container">
       <p>アンティカ音楽学院｜恵比寿</p>
       <p>Copyright 2026 Antica Music Academy. All rights reserved.</p>
-      <p>代表 | 音楽プロデューサー　<a href="http://www.officetouch.co.jp/onishi.html" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline; text-underline-offset:3px;">大西 亜里</a></p>
+      <p>代表 | 音楽プロデューサー　<a href="https://www.tunecore.co.jp/artists/ARI_OHNISHI" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline; text-underline-offset:3px;">大西 亜里</a></p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector(".menu-toggle");
+      var closeBtn = document.querySelector(".menu-close");
+      var overlay = document.getElementById("menu-overlay");
+      var drawer = document.getElementById("menu-drawer");
+      var links = drawer.querySelectorAll(".menu-drawer-nav a");
+
+      function openMenu() {
+        drawer.classList.add("is-open");
+        overlay.classList.add("is-open");
+        overlay.hidden = false;
+        drawer.setAttribute("aria-hidden", "false");
+        toggle.setAttribute("aria-expanded", "true");
+        document.body.classList.add("menu-open");
+      }
+
+      function closeMenu() {
+        drawer.classList.remove("is-open");
+        overlay.classList.remove("is-open");
+        drawer.setAttribute("aria-hidden", "true");
+        toggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
+        window.setTimeout(function () {
+          if (!drawer.classList.contains("is-open")) {
+            overlay.hidden = true;
+          }
+        }, 320);
+      }
+
+      toggle.addEventListener("click", openMenu);
+      closeBtn.addEventListener("click", closeMenu);
+      overlay.addEventListener("click", closeMenu);
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && drawer.classList.contains("is-open")) {
+          closeMenu();
+        }
+      });
+      links.forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+      });
+    })();
+  </script>
 </body>
 </html>
