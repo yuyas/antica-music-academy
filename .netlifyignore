@@ -1,0 +1,6 @@
+# Keep preview deploys lean; production assets are unchanged on GitHub Pages
+*.pdf
+*.docx
+業務委託*
+音楽系フリーランス*
+Antica Music Academy _*

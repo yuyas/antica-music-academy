@@ -1,0 +1,10 @@
+# Preview deploy for feature/endorsing-artists (Netlify)
+# Production remains on GitHub Pages (main) → anticamusicacademy.com
+
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
