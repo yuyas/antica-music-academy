@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>賛同アーティスト | Antica Music Academy</title>
+  <meta name="description" content="アンティカ音楽学院の理念に賛同するアーティストをご紹介します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f5f2;
+      --panel: #ffffff;
+      --panel-soft: #fffdf8;
+      --text: #2f2618;
+      --text-muted: #5e503e;
+      --line: #ddcfba;
+      --accent: #8b6b3f;
+      --accent-deep: #6f5532;
+      --max-width: 1120px;
+      --radius: 16px;
+      --shadow: 0 16px 38px rgba(70, 49, 20, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(circle at 85% 0%, rgba(139, 107, 63, 0.1) 0%, rgba(139, 107, 63, 0) 42%),
+        linear-gradient(180deg, #ffffff 0%, #fbf8f3 100%);
+      color: var(--text);
+      font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+      line-height: 1.75;
+      letter-spacing: 0.01em;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(139, 107, 63, 0.22);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      white-space: nowrap;
+    }
+
+    .brand-icon {
+      width: 28px;
+      height: auto;
+      display: block;
+    }
+
+    .brand-wordmark {
+      width: clamp(calc(140px + 12pt), calc(24vw + 12pt), calc(250px + 12pt));
+      height: auto;
+      display: block;
+    }
+
+    .menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      border: 1px solid rgba(139, 107, 63, 0.35);
+      border-radius: 8px;
+      background: #fffdf8;
+      cursor: pointer;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .menu-toggle:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 14px rgba(139, 107, 63, 0.18);
+    }
+
+    .hamburger {
+      position: relative;
+      display: block;
+      width: 26px;
+      height: 18px;
+    }
+
+    .hamburger span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 999px;
+    }
+
+    .hamburger span:nth-child(1) { top: 0; }
+    .hamburger span:nth-child(2) { top: 8px; }
+    .hamburger span:nth-child(3) { bottom: 0; }
+
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      background: rgba(47, 38, 24, 0.42);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .menu-overlay.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .menu-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 40;
+      width: 60%;
+      height: 100%;
+      padding: 28px 32px 40px;
+      border-left: 1px solid rgba(139, 107, 63, 0.28);
+      background:
+        linear-gradient(165deg, rgba(139, 107, 63, 0.08), rgba(139, 107, 63, 0.02)),
+        #ffffff;
+      box-shadow: -12px 0 40px rgba(70, 49, 20, 0.14);
+      transform: translateX(100%);
+      transition: transform 0.35s ease;
+      overflow-y: auto;
+    }
+
+    .menu-drawer.is-open { transform: translateX(0); }
+
+    .menu-drawer-header {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 36px;
+    }
+
+    .menu-close {
+      border: 1px solid rgba(139, 107, 63, 0.35);
+      border-radius: 999px;
+      padding: 8px 18px;
+      background: transparent;
+      color: var(--accent);
+      font-family: "Noto Serif JP", serif;
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .menu-close:hover {
+      background: rgba(139, 107, 63, 0.1);
+      color: var(--accent-deep);
+    }
+
+    .menu-drawer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .menu-drawer-nav a {
+      color: var(--text);
+      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 4px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .menu-drawer-nav a:hover {
+      color: var(--accent);
+      border-bottom-color: rgba(139, 107, 63, 0.4);
+    }
+
+    .menu-drawer-nav a.is-current {
+      color: var(--accent);
+      border-bottom-color: rgba(139, 107, 63, 0.4);
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    h1, h2, h3 {
+      margin: 0 0 16px;
+      line-height: 1.35;
+      font-weight: 600;
+      font-family: "Noto Serif JP", serif;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--text-muted);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.94;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(139, 107, 63, 0.42);
+      color: var(--accent);
+      background: transparent;
+    }
+
+    section {
+      padding: 78px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-title { margin-bottom: 36px; }
+
+    .section-title h1,
+    .section-title h2 {
+      font-size: clamp(1.5rem, 3vw, 2.35rem);
+      margin-bottom: 10px;
+      letter-spacing: 0.03em;
+    }
+
+    .page-hero {
+      padding: 88px 0 24px;
+      border-top: none;
+    }
+
+    .page-hero .section-title {
+      margin-bottom: 0;
+      max-width: 72ch;
+    }
+
+    .page-back {
+      margin-top: 28px;
+    }
+
+    .artist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 28px;
+    }
+
+    .artist-card {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .artist-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(139, 107, 63, 0.38);
+      box-shadow: 0 22px 48px rgba(70, 49, 20, 0.14);
+    }
+
+    .artist-card-link {
+      display: block;
+      height: 100%;
+      color: inherit;
+    }
+
+    .artist-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(139, 107, 63, 0.08), rgba(139, 107, 63, 0.02)),
+        var(--panel);
+      border-bottom: 1px solid rgba(139, 107, 63, 0.16);
+      position: relative;
+    }
+
+    .artist-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+
+    .artist-card:hover .artist-photo img {
+      transform: scale(1.03);
+    }
+
+    .artist-photo.is-missing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(145deg, rgba(139, 107, 63, 0.1), rgba(139, 107, 63, 0.03)),
+        var(--panel-soft);
+    }
+
+    .artist-photo.is-missing::after {
+      content: "Photo";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      opacity: 0.45;
+    }
+
+    .artist-body {
+      padding: 22px 22px 24px;
+    }
+
+    .artist-body h3 {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 10px;
+      letter-spacing: 0.1em;
+    }
+
+    .artist-bio {
+      font-size: 0.9rem;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    .artist-link-label {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 26px 0 36px;
+      text-align: center;
+      font-size: 0.84rem;
+      color: #9ea2ad;
+    }
+
+    .footer-brand { font-size: calc(0.84rem + 4pt); line-height: 1.35; }
+    .footer-owner-role { font-size: calc(0.84rem + 4pt); line-height: 1.35; }
+    .footer-owner-name { font-size: calc(0.84rem + 6pt); line-height: 1.35; }
+
+    @media (max-width: 640px) {
+      .header-inner { min-height: 66px; }
+      section { padding: 62px 0; }
+      .page-hero { padding-top: 72px; }
+      .artist-grid { gap: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Antica Music Academy ホーム">
+        <img class="brand-icon" src="LOGO.svg" alt="" aria-hidden="true">
+        <img class="brand-wordmark" src="アンティカ音楽学院.svg" alt="アンティカ音楽学院">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="menu-drawer">
+        <span class="hamburger" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu-overlay" id="menu-overlay" hidden></div>
+  <aside class="menu-drawer" id="menu-drawer" aria-hidden="true" aria-label="サイトメニュー">
+    <div class="menu-drawer-header">
+      <button class="menu-close" type="button" aria-label="メニューを閉じる">閉じる</button>
+    </div>
+    <nav class="menu-drawer-nav" aria-label="メインナビゲーション">
+      <a href="index.html#concept">コンセプト</a>
+      <a href="index.html#features">教育価値</a>
+      <a href="index.html#instructors">講師陣</a>
+      <a href="artists.html" class="is-current" aria-current="page">賛同アーティスト</a>
+      <a href="index.html#program">プログラム</a>
+      <a href="index.html#access">拠点・提供形態</a>
+      <a href="index.html#flow">ご受講までの流れ</a>
+      <a href="index.html#contact">体験レッスン・個別相談のご案内</a>
+      <a href="index.html#contact-form">お問い合わせフォーム</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Endorsing Artists</span>
+          <h1>賛同アーティスト</h1>
+          <p>音楽の第一線で活躍するアーティストの皆さまが、アンティカ音楽学院の理念に賛同しています。感性と表現の深みを、次世代へとつなぐ存在としてご紹介します。</p>
+        </div>
+        <p class="page-back"><a class="btn btn-secondary" href="index.html">トップページへ戻る</a></p>
+      </div>
+    </section>
+
+    <section id="artist-list">
+      <div class="container">
+        <!--
+          新しいアーティストを追加する場合:
+          下の <article class="artist-card"> ブロックをコピーし、
+          コメント・画像パス・名前・プロフィール・リンク・ラベルを編集してください。
+        -->
+        <div class="artist-grid">
+
+          <!-- ARTIST: 富永 峻 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="https://shuntominaga.org/" target="_blank" rel="noopener noreferrer">
+              <div class="artist-photo">
+                <img src="images/Shun_Tominaga.JPG" alt="富永 峻" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>富永 峻</h3>
+                <p class="artist-bio">国内外で活躍するミュージシャン。音楽を通じた表現の幅と、次世代への継承を大切に活動しています。舞台と制作の両面から、豊かな音楽文化の発信に取り組んでいます。</p>
+                <span class="artist-link-label">Official Site</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- ARTIST: 手塚 佳代子 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="https://www.instagram.com/happylifeisgoooood/" target="_blank" rel="noopener noreferrer">
+              <div class="artist-photo">
+                <img src="images/Kayoko_Tezuka.JPG" alt="手塚 佳代子" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>手塚 佳代子</h3>
+                <p class="artist-bio">表現とライフスタイルの境界を越え、音楽と日常の豊かさを発信するアーティスト。感性豊かな活動を通じて、聴く人の心に寄り添う表現を追求しています。</p>
+                <span class="artist-link-label">Instagram</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- ARTIST: 増田 香穂 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="https://lit.link/kahomasuda" target="_blank" rel="noopener noreferrer">
+              <div class="artist-photo">
+                <img src="images/Kaho_Masuda.jpeg" alt="増田 香穂" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>増田 香穂</h3>
+                <p class="artist-bio">多面的な音楽活動を通じ、聴く人の心に寄り添う表現を追求。舞台と制作の両面から活躍し、音楽の可能性を広げる表現を続けています。</p>
+                <span class="artist-link-label">Official Link</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- ARTIST: 安倉 さやか -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="https://voiceprofessionals.jp/" target="_blank" rel="noopener noreferrer">
+              <div class="artist-photo">
+                <img src="images/Sayaka_Yasukura.png" alt="安倉 さやか" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>安倉 さやか</h3>
+                <p class="artist-bio">ボイスを軸に、表現力とプロフェッショナリズムを磨き続けるアーティスト。声の可能性を広げ、多様なフィールドで活動しています。</p>
+                <span class="artist-link-label">Official Site</span>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">アンティカ音楽学院</p>
+      <p>Copyright 2026 Antica Music Academy.</p>
+      <p>All rights reserved.</p>
+      <p class="footer-owner-role">代表 | 音楽プロデューサー</p>
+      <p class="footer-owner-name"><a href="https://www.tunecore.co.jp/artists/ARI_OHNISHI" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline; text-underline-offset:3px;">大西 亜里</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector(".menu-toggle");
+      var closeBtn = document.querySelector(".menu-close");
+      var overlay = document.getElementById("menu-overlay");
+      var drawer = document.getElementById("menu-drawer");
+      var links = drawer.querySelectorAll(".menu-drawer-nav a");
+
+      function openMenu() {
+        drawer.classList.add("is-open");
+        overlay.classList.add("is-open");
+        overlay.hidden = false;
+        drawer.setAttribute("aria-hidden", "false");
+        toggle.setAttribute("aria-expanded", "true");
+        document.body.classList.add("menu-open");
+      }
+
+      function closeMenu() {
+        drawer.classList.remove("is-open");
+        overlay.classList.remove("is-open");
+        drawer.setAttribute("aria-hidden", "true");
+        toggle.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("menu-open");
+        window.setTimeout(function () {
+          if (!drawer.classList.contains("is-open")) {
+            overlay.hidden = true;
+          }
+        }, 320);
+      }
+
+      toggle.addEventListener("click", openMenu);
+      closeBtn.addEventListener("click", closeMenu);
+      overlay.addEventListener("click", closeMenu);
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && drawer.classList.contains("is-open")) {
+          closeMenu();
+        }
+      });
+      links.forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+      });
+    })();
+
+    (function () {
+      document.querySelectorAll(".artist-photo img").forEach(function (img) {
+        img.addEventListener("error", function () {
+          var photo = img.closest(".artist-photo");
+          if (photo) {
+            photo.classList.add("is-missing");
+            img.remove();
+          }
+        });
+        if (img.complete && img.naturalWidth === 0) {
+          img.dispatchEvent(new Event("error"));
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

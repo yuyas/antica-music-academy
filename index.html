@@ -607,6 +607,125 @@
       letter-spacing: 0.08em;
     }
 
+    .artist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 28px;
+    }
+
+    .artist-card {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      overflow: hidden;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .artist-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(139, 107, 63, 0.38);
+      box-shadow: 0 22px 48px rgba(70, 49, 20, 0.14);
+    }
+
+    .artist-card-link {
+      display: block;
+      height: 100%;
+      color: inherit;
+    }
+
+    .artist-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(139, 107, 63, 0.08), rgba(139, 107, 63, 0.02)),
+        var(--panel);
+      border-bottom: 1px solid rgba(139, 107, 63, 0.16);
+      position: relative;
+    }
+
+    .artist-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+
+    .artist-card:hover .artist-photo img {
+      transform: scale(1.03);
+    }
+
+    .artist-photo.is-missing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(145deg, rgba(139, 107, 63, 0.1), rgba(139, 107, 63, 0.03)),
+        var(--panel-soft);
+    }
+
+    .artist-photo.is-missing::after {
+      content: "Photo";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      opacity: 0.45;
+    }
+
+    .artist-body {
+      padding: 22px 22px 24px;
+    }
+
+    .artist-body h3 {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 10px;
+      letter-spacing: 0.1em;
+    }
+
+    .artist-bio {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .artist-link-label {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+    }
+
+    .artist-teaser-actions {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .page-hero {
+      padding: 88px 0 48px;
+      border-top: none;
+    }
+
+    .page-hero .section-title {
+      margin-bottom: 0;
+      max-width: 68ch;
+    }
+
     @media (max-width: 980px) {
       .instructor-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -714,6 +833,7 @@
       <a href="#concept">コンセプト</a>
       <a href="#features">教育価値</a>
       <a href="#instructors">講師陣</a>
+      <a href="artists.html">賛同アーティスト</a>
       <a href="#program">プログラム</a>
       <a href="#access">拠点・提供形態</a>
       <a href="#flow">ご受講までの流れ</a>
@@ -795,6 +915,72 @@
           <article class="instructor-card">
             <h3>Coming soon</h3>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="endorsing-artists">
+      <div class="container">
+        <div class="section-title">
+          <h2>賛同アーティスト</h2>
+          <p>音楽の第一線で活躍するアーティストの皆さまが、アンティカ音楽学院の理念に賛同しています。感性と表現の深みを、次世代へとつなぐ存在としてご紹介します。</p>
+        </div>
+        <div class="artist-grid artist-grid--preview">
+          <!-- ARTIST: 富永 峻 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="https://shuntominaga.org/" target="_blank" rel="noopener noreferrer">
+              <div class="artist-photo">
+                <img src="images/Shun_Tominaga.JPG" alt="富永 峻" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>富永 峻</h3>
+                <p class="artist-bio">国内外で活躍するミュージシャン。音楽を通じた表現の幅と、次世代への継承を大切に活動しています。</p>
+                <span class="artist-link-label">Official Site</span>
+              </div>
+            </a>
+          </article>
+          <!-- ARTIST: 手塚 佳代子 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="https://www.instagram.com/happylifeisgoooood/" target="_blank" rel="noopener noreferrer">
+              <div class="artist-photo">
+                <img src="images/Kayoko_Tezuka.JPG" alt="手塚 佳代子" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>手塚 佳代子</h3>
+                <p class="artist-bio">表現とライフスタイルの境界を越え、音楽と日常の豊かさを発信するアーティスト。感性豊かな活動を続けています。</p>
+                <span class="artist-link-label">Instagram</span>
+              </div>
+            </a>
+          </article>
+          <!-- ARTIST: 増田 香穂 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="https://lit.link/kahomasuda" target="_blank" rel="noopener noreferrer">
+              <div class="artist-photo">
+                <img src="images/Kaho_Masuda.jpeg" alt="増田 香穂" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>増田 香穂</h3>
+                <p class="artist-bio">多面的な音楽活動を通じ、聴く人の心に寄り添う表現を追求。舞台と制作の両面から活躍しています。</p>
+                <span class="artist-link-label">Official Link</span>
+              </div>
+            </a>
+          </article>
+          <!-- ARTIST: 安倉 さやか -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="https://voiceprofessionals.jp/" target="_blank" rel="noopener noreferrer">
+              <div class="artist-photo">
+                <img src="images/Sayaka_Yasukura.png" alt="安倉 さやか" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>安倉 さやか</h3>
+                <p class="artist-bio">ボイスを軸に、表現力とプロフェッショナリズムを磨き続けるアーティスト。声の可能性を広げる活動を行っています。</p>
+                <span class="artist-link-label">Official Site</span>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="artist-teaser-actions">
+          <a class="btn btn-secondary" href="artists.html">賛同アーティスト一覧を見る</a>
         </div>
       </div>
     </section>
@@ -969,6 +1155,21 @@
       });
       links.forEach(function (link) {
         link.addEventListener("click", closeMenu);
+      });
+    })();
+
+    (function () {
+      document.querySelectorAll(".artist-photo img").forEach(function (img) {
+        img.addEventListener("error", function () {
+          var photo = img.closest(".artist-photo");
+          if (photo) {
+            photo.classList.add("is-missing");
+            img.remove();
+          }
+        });
+        if (img.complete && img.naturalWidth === 0) {
+          img.dispatchEvent(new Event("error"));
+        }
       });
     })();
   </script>
