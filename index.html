@@ -645,6 +645,19 @@
       gap: 28px;
     }
 
+    .ambassador-logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0 38px;
+    }
+
+    .ambassador-logo {
+      display: block;
+      width: min(100%, 560px);
+      max-width: 560px;
+      height: auto;
+    }
+
     .artist-card {
       border-radius: var(--radius);
       border: 1px solid var(--line);
@@ -791,6 +804,14 @@
     @media (max-width: 640px) {
       .artist-grid {
         grid-template-columns: 1fr;
+      }
+
+      .ambassador-logo-wrap {
+        margin: 22px 0 30px;
+      }
+
+      .ambassador-logo {
+        width: min(100%, 92vw);
       }
 
       .instructor-grid {
@@ -972,6 +993,9 @@
         <div class="section-title">
           <h2>ミュージック・アンバサダー（Music Ambassador）</h2>
           <p>音楽の第一線で活躍するアーティストの皆さまが、アンティカ音楽学院の理念に共鳴しています。感性と表現の深みを、次世代へとつなぐ存在としてご紹介します。</p>
+        </div>
+        <div class="ambassador-logo-wrap">
+          <img class="ambassador-logo" src="images/music-ambassador-logo.png" alt="Music Ambassador">
         </div>
         <div class="artist-grid artist-grid--preview">
           <!-- ARTIST: くどう きよこ -->
