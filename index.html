@@ -365,8 +365,6 @@
 
     .news-card {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 22px;
       align-items: center;
       border: 1px solid rgba(139, 107, 63, 0.26);
       border-radius: var(--radius);
@@ -392,15 +390,19 @@
       font-size: clamp(1.25rem, 2.5vw, 1.75rem);
     }
 
-    .news-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 12px;
+    .news-card h3 a {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 5px;
+      transition: color 0.2s ease;
+    }
+
+    .news-card h3 a:hover {
+      color: var(--accent);
     }
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
     }
 
@@ -443,15 +445,10 @@
       margin-bottom: 0;
     }
 
-    .access-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 18px;
-    }
 
     .flow-list {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px;
     }
 
@@ -832,9 +829,6 @@
       .hero-grid,
       .grid-3,
       .program-table,
-      .access-grid {
-        grid-template-columns: 1fr;
-      }
 
       .service-grid {
         grid-template-columns: 1fr 1fr;
@@ -906,7 +900,6 @@
       <a href="#instructors">講師陣</a>
       <a href="#endorsing-artists">Music Ambassador</a>
       <a href="#program">プログラム</a>
-      <a href="#access">拠点・提供形態</a>
       <a href="#flow">ご受講までの流れ</a>
       <a href="#contact">お問い合わせ</a>
       <a href="#contact-form">お問い合わせフォーム</a>
@@ -917,7 +910,6 @@
     <section class="hero" id="concept">
 <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow en">High-End Music Education — Ebisu, Tokyo</span>
           <h1>音楽文化で、<br>社会をつなぐ。</h1>
           <p>第一線で活躍する音楽家とともに、生活者・地域・企業を音楽文化でつなぐ新しい文化事業です。</p>
           <p>コンサートや企業イベントにとどまらず、音楽を「ひとときの鑑賞体験」から「社会の日常に根づく文化」へと広げていきます。</p>
@@ -929,9 +921,8 @@
           <h2>提供領域</h2>
           <ul>
             <li>対象: 幼児・小中高生・大人・シニアまで対応</li>
-            <li>専門領域: ピアノ / 歌・声楽 / ヴァイオリン / フルート</li>
+            <li>専門領域: ピアノ / 歌・声楽</li>
             <li>イベント: 一流講師陣によるアンティカ音楽学院だけのワークショップ</li>
-            <li>拠点: 都内各拠点</li>
           </ul>
         </aside>
       </div>
@@ -943,14 +934,8 @@
           <h2>News</h2>
         </div>
         <article class="news-card">
-          <div>
-            <span class="news-date">2026.07.07</span>
-            <h3>ANTICA Music Academy Launch Event</h3>
-          </div>
-          <div class="news-actions">
-            <a class="btn btn-primary" href="flyer_AnticaMusicAcademy_20260707.pdf" target="_blank" rel="noopener noreferrer">PDFを見る</a>
-            <a class="btn btn-secondary" href="flyer_AnticaMusicAcademy_20260707.pdf" download>Download PDF</a>
-          </div>
+          <span class="news-date">2026.07.07</span>
+          <h3><a href="flyer_AnticaMusicAcademy_20260707.pdf" target="_blank" rel="noopener noreferrer">アンティカ音楽学院 ローンチ・イベント</a></h3>
         </article>
       </div>
     </section>
@@ -959,13 +944,11 @@
       <div class="container">
         <div class="section-title">
           <h2>対応分野</h2>
-          <p>一つの楽器に閉じない、総合的な音楽文化をご提供しています。</p>
+          <p>ピアノと歌・声楽に特化し、感性と表現力を丁寧に育む音楽文化をご提供しています。</p>
         </div>
         <div class="service-grid">
           <div class="service-item">ピアノ</div>
           <div class="service-item">歌・声楽</div>
-          <div class="service-item">ヴァイオリン</div>
-          <div class="service-item">フルート</div>
         </div>
       </div>
     </section>
@@ -1088,21 +1071,6 @@
             <p>教養としての音楽、自己表現、人生後半の豊かさを追求するためのレッスン。多忙な日常に適応した、継続性の高い学びを提供します。</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section id="access">
-      <div class="container access-grid">
-        <article class="card">
-          <h3>拠点: 恵比寿スタジオ</h3>
-          <p>文化感度の高い街・恵比寿にて、プライバシーに配慮した予約制レッスンを提供。上質な空間で、学習者ごとに最適化された時間をお約束します。</p>
-          <p>平日夜・週末の対応枠を確保し、教育熱心なご家庭や多忙なエグゼクティブ層にも継続しやすい運営体制を整えています。</p>
-        </article>
-        <article class="card">
-          <h3>オンライン・出張対応</h3>
-          <p>国内外どこからでも受講可能なオンラインレッスンに対応。加えて、要望に応じてご自宅・指定会場への出張レッスンも提供しています。</p>
-          <p>移動時間を最小化しながら、質を妥協しない学びを実現します。</p>
-        </article>
       </div>
     </section>
 
