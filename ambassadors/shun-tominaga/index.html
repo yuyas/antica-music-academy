@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>富永 峻 | Music Ambassador | Antica Music Academy</title>
+  <meta name="description" content="富永 峻（Shun Tominaga）のプロフィール。ANTICA Music Academy ミュージック・アンバサダー。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f5f2;
+      --panel: #ffffff;
+      --panel-soft: #fffdf8;
+      --text: #2f2618;
+      --text-muted: #5e503e;
+      --line: #ddcfba;
+      --accent: #8b6b3f;
+      --accent-deep: #6f5532;
+      --max-width: 1120px;
+      --radius: 16px;
+      --shadow: 0 16px 38px rgba(70, 49, 20, 0.12);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(circle at 85% 0%, rgba(139, 107, 63, 0.1) 0%, rgba(139, 107, 63, 0) 42%),
+        linear-gradient(180deg, #ffffff 0%, #fbf8f3 100%);
+      color: var(--text);
+      font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+      line-height: 1.75;
+      letter-spacing: 0.01em;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(100% - 40px, var(--max-width)); margin-inline: auto; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(139, 107, 63, 0.22);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+    }
+    .header-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; }
+    .brand-icon { width: 28px; height: auto; display: block; }
+    .brand-wordmark { width: clamp(calc(140px + 12pt), calc(24vw + 12pt), calc(250px + 12pt)); height: auto; display: block; }
+    main { padding: 72px 0 94px; }
+    .profile-hero {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1.14fr);
+      gap: 42px;
+      align-items: start;
+    }
+    .profile-photo {
+      overflow: hidden;
+      border: 1px solid rgba(139, 107, 63, 0.22);
+      border-radius: var(--radius);
+      background: var(--panel-soft);
+      box-shadow: var(--shadow);
+      aspect-ratio: 4 / 5;
+    }
+    .profile-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .profile-copy { padding-top: 10px; }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--accent);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-style: italic;
+    }
+    h1 { margin: 0 0 6px; font-size: clamp(2.1rem, 4vw, 3.6rem); font-weight: 500; line-height: 1.35; letter-spacing: 0.06em; }
+    .name-en { display: block; margin-bottom: 22px; color: var(--accent); font-family: "Cormorant Garamond", serif; font-size: clamp(1.35rem, 2.8vw, 2rem); }
+    .official-link { display: inline-flex; margin-bottom: 24px; padding: 11px 20px; border-radius: 999px; color: #fff; background: linear-gradient(120deg, #9a7751, #7c6039); font-weight: 700; }
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 28px; padding: 0; list-style: none; }
+    .tags li { border: 1px solid rgba(139, 107, 63, 0.34); border-radius: 999px; padding: 7px 13px; color: var(--accent); background: rgba(255, 253, 248, 0.82); font-size: 0.86rem; }
+    .profile-body { border-top: 1px solid var(--line); padding-top: 28px; }
+    .profile-body p { margin: 0 0 18px; color: var(--text-muted); font-size: 1rem; }
+    .back-link { display: inline-flex; margin-top: 18px; color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+    @media (max-width: 860px) {
+      main { padding-top: 46px; }
+      .profile-hero { grid-template-columns: 1fr; gap: 28px; }
+      .profile-photo { max-width: 520px; width: 100%; margin-inline: auto; }
+    }
+    @media (max-width: 640px) {
+      .header-inner { min-height: 66px; }
+      .container { width: min(100% - 32px, var(--max-width)); }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html" aria-label="Antica Music Academy トップページへ戻る">
+        <img class="brand-icon" src="../../LOGO.svg" alt="" aria-hidden="true">
+        <img class="brand-wordmark" src="../../アンティカ音楽学院.svg" alt="アンティカ音楽学院">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container profile-hero">
+      <div class="profile-photo">
+        <img src="../../images/Shun_Tominaga.JPG" alt="富永 峻">
+      </div>
+      <article class="profile-copy">
+        <span class="eyebrow">Music Ambassador</span>
+        <h1>富永 峻</h1>
+        <span class="name-en">Shun Tominaga</span>
+          <a class="official-link" href="https://shuntominaga.org/" target="_blank" rel="noopener noreferrer">公式サイトを見る ↗</a>
+        <ul class="tags"><li>Piano</li><li>Performance</li><li>Education</li></ul>
+        <div class="profile-body">
+          <p>ポルトガル、スペイン、ドイツで育った日本人ピアニスト。スペイン・マドリード王立音楽院、ドイツ・フライブルク音楽大学ソリストクラス（修士課程）で研鑽を積み、ヨーロッパを中心に国内ツアーやオーケストラとの共演など幅広く活動。</p>
+          <p>帰国後はソロ、オペラ伴奏、室内楽など多方面で高い評価を受け、舞台『No.9 不滅の旋律』にも出演。現在は渋谷区広尾「ミレートス」を拠点に演奏活動を行うほか、公開レッスンや室内楽指導など教育活動にも力を注いでいる。</p>
+        </div>
+        <a class="back-link" href="../../index.html#endorsing-artists">トップページへ戻る</a>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

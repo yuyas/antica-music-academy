@@ -644,7 +644,7 @@
 
     .artist-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 28px;
     }
 
@@ -666,6 +666,11 @@
       display: block;
       height: 100%;
       color: inherit;
+    }
+
+    .artist-card-link:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
     }
 
     .artist-photo {
@@ -732,6 +737,14 @@
       letter-spacing: 0.1em;
     }
 
+    .artist-name-en {
+      display: block;
+      margin: -4px 0 12px;
+      color: var(--accent);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+    }
     .artist-bio {
       font-size: 0.9rem;
       line-height: 1.8;
@@ -769,12 +782,20 @@
     }
 
     @media (max-width: 980px) {
+      .artist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .instructor-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 640px) {
+      .artist-grid {
+        grid-template-columns: 1fr;
+      }
+
       .instructor-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -804,6 +825,10 @@
     }
 
     @media (max-width: 980px) {
+      .artist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .hero-grid,
       .grid-3,
       .program-table,
@@ -821,6 +846,10 @@
     }
 
     @media (max-width: 640px) {
+      .artist-grid {
+        grid-template-columns: 1fr;
+      }
+
       .header-inner {
         min-height: 66px;
       }
@@ -964,72 +993,74 @@
         <div class="artist-grid artist-grid--preview">
           <!-- ARTIST: くどう きよこ -->
           <article class="artist-card">
-            <div class="artist-card-link">
+            <a class="artist-card-link" href="ambassadors/kiyoko-kudo/">
               <div class="artist-photo">
                 <img src="images/Kiyoko_Kudo.jpg" alt="くどう きよこ" loading="lazy">
               </div>
               <div class="artist-body">
                 <h3>くどう きよこ</h3>
+                <span class="artist-name-en">Kiyoko Kudo</span>
                 <p class="artist-bio">ANTICA Music Academyの理念に共鳴し、音楽文化を通じた豊かな出会いと学びを支えるミュージック・アンバサダー。感性と表現を次世代へつなぐ活動を応援しています。</p>
-                <span class="artist-link-label">Music Ambassador</span>
+                <span class="artist-link-label">View Profile</span>
               </div>
-            </div>
+            </a>
           </article>
           <!-- ARTIST: 手塚 佳代子 -->
           <article class="artist-card">
-            <a class="artist-card-link" href="https://www.instagram.com/happylifeisgoooood/" target="_blank" rel="noopener noreferrer">
+            <a class="artist-card-link" href="ambassadors/kayoko-tezuka/">
               <div class="artist-photo">
                 <img src="images/Kayoko_Tezuka.JPG" alt="手塚 佳代子" loading="lazy">
               </div>
               <div class="artist-body">
                 <h3>手塚 佳代子</h3>
-                <p class="artist-bio">幼少期よりピアノ・バレエ・声楽などを学び、NHK番組やエプロンショーに子役・モデルとして出演。洗足学園高校音楽科声楽専攻に進み、ミュージカル『アニー』主演などで頭角を現す。ハウス食品ファミリーミュージカル各作品で主要キャストを務めた後、武蔵野音楽大学・劇団四季研究所を卒業。劇団四季では『美女と野獣』などディズニー作品に出演し、社会貢献活動「美しい日本語の話し方教室」で全国60校以上の児童を指導。国連クラシックライブ『赤毛のアン』大人アン役を2年連続主演、終戦80周年記念ソング『sincerely wish』など幅広く活動。ウィーン国立音楽大学マスタークラス・ディプロマを取得し、現在は武蔵野音楽大学大学院声楽部に在学中。</p>
-                <span class="artist-link-label">Instagram</span>
+                <span class="artist-name-en">Kayoko Tezuka</span>
+                <p class="artist-bio">幼少期よりピアノ・バレエ・声楽を学び、舞台・ミュージカル・教育活動まで幅広く活躍。美しい日本語や表現の力を次世代へ伝えるアーティストです。</p>
+                <span class="artist-link-label">View Profile</span>
               </div>
             </a>
           </article>
           <!-- ARTIST: 富永 峻 -->
           <article class="artist-card">
-            <a class="artist-card-link" href="https://shuntominaga.org/" target="_blank" rel="noopener noreferrer">
+            <a class="artist-card-link" href="ambassadors/shun-tominaga/">
               <div class="artist-photo">
                 <img src="images/Shun_Tominaga.JPG" alt="富永 峻" loading="lazy">
               </div>
               <div class="artist-body">
                 <h3>富永 峻</h3>
-                <p class="artist-bio">ポルトガル、スペイン、ドイツで育った日本人ピアニスト。スペイン・マドリード王立音楽院、ドイツ・フライブルク音楽大学ソリストクラス（修士課程）で研鑽を積み、ヨーロッパを中心に国内ツアーやオーケストラとの共演など幅広く活動。帰国後はソロ、オペラ伴奏、室内楽など多方面で高い評価を受け、舞台『No.9 不滅の旋律』にも出演。現在は渋谷区広尾「ミレートス」を拠点に演奏活動を行うほか、公開レッスンや室内楽指導など教育活動にも力を注いでいる。</p>
-                <span class="artist-link-label">Official Site</span>
+                <span class="artist-name-en">Shun Tominaga</span>
+                <p class="artist-bio">欧州で研鑽を積んだ日本人ピアニスト。ソロ、オペラ伴奏、室内楽、舞台出演など幅広く活動し、公開レッスンや室内楽指導にも力を注いでいます。</p>
+                <span class="artist-link-label">View Profile</span>
               </div>
             </a>
           </article>
           <!-- ARTIST: 増田 香穂 -->
           <article class="artist-card">
-            <a class="artist-card-link" href="https://lit.link/kahomasuda" target="_blank" rel="noopener noreferrer">
+            <a class="artist-card-link" href="ambassadors/kaho-masuda/">
               <div class="artist-photo">
-                <img class="artist-photo-zoom" src="images/Kaho_Masuda.jpeg" alt="増田 香穂" loading="lazy">
+                <img src="images/Kaho_Masuda.jpeg" alt="増田 香穂" loading="lazy">
               </div>
               <div class="artist-body">
                 <h3>増田 香穂</h3>
-                <p class="artist-bio">桐朋学園大学大学院ピアノ専攻修了。中学2年からピアノを本格的に始め、約4年で最難関音楽大学へと駆け上がった異色の経歴を持つ。演奏活動を軸に、音楽サロンのプロデュースや早稲田大学MBAでの講師を務めるなど、表現者・教育者・起業家の三つの顔を併せ持つ。「クラシック音楽業界をアップデートする」を掲げ、業界の新しい届け方を模索。17LIVE公式認証ライバーとしても発信を続ける。マイクロソフト主催「学生エバンジェリストアワード」ファイナリスト選出。</p>
-                <span class="artist-link-label">Official Link</span>
+                <span class="artist-name-en">Kaho Masuda</span>
+                <p class="artist-bio">桐朋学園大学大学院ピアノ専攻修了。演奏活動、音楽サロンのプロデュース、教育・起業領域を横断し、クラシック音楽の新しい届け方を模索しています。</p>
+                <span class="artist-link-label">View Profile</span>
               </div>
             </a>
           </article>
           <!-- ARTIST: 安倉 さやか -->
           <article class="artist-card">
-            <a class="artist-card-link" href="https://voiceprofessionals.jp/" target="_blank" rel="noopener noreferrer">
+            <a class="artist-card-link" href="ambassadors/sayaka-yasukura/">
               <div class="artist-photo">
-                <img class="artist-photo-zoom" src="images/Sayaka_Yasukura.png" alt="安倉 さやか" loading="lazy">
+                <img src="images/Sayaka_Yasukura.png" alt="安倉 さやか" loading="lazy">
               </div>
               <div class="artist-body">
                 <h3>安倉 さやか</h3>
-                <p class="artist-bio">武蔵野音楽大学卒業。クラシック・ジャズピアノを学んだのち、グラミー賞受賞歌手も用いる発声法 Speech Level Singing を Dave Stroud らに師事し、SLS公認インストラクターとなる。2013年には Vocology In Practice（VIP）認定インストラクターへ。日本では VT Artist Development チーフインストラクターを務め、自身も「Voice Professionals」代表として医学・音声学に基づくボイストレーニングを展開する。クライアントには紅白歌合戦出演歌手、日本レコード大賞受賞歌手、ミュージカル俳優、宝塚トップスターなど国内最高峰のアーティストが名を連ねる。『PRODUCE 101 JAPAN』ボイストレーナーとしても知られ、後進のトレーナー育成にも力を注いでいる。</p>
-                <span class="artist-link-label">Official Site</span>
+                <span class="artist-name-en">Sayaka Yasukura</span>
+                <p class="artist-bio">医学・音声学に基づくボイストレーニングを展開するVoice Professionals代表。国内最高峰のアーティストや後進トレーナーの育成にも携わっています。</p>
+                <span class="artist-link-label">View Profile</span>
               </div>
             </a>
           </article>
-        </div>
-        <div class="artist-teaser-actions">
-          <a class="btn btn-secondary" href="artists.html">ミュージック・アンバサダー一覧を見る</a>
         </div>
       </div>
     </section>
