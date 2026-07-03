@@ -321,8 +321,35 @@
       transition: transform 0.45s ease;
     }
 
+    .artist-photo-focus--kayoko {
+      transform: scale(1.14) translateY(-2%);
+      transform-origin: center top;
+    }
+
+    .artist-photo-focus--kaho {
+      transform: scale(1.2) translateY(-3%);
+      transform-origin: center top;
+    }
+
+    .artist-photo-focus--shoko {
+      transform: scale(1.34) translateY(-6%);
+      transform-origin: center top;
+    }
+
     .artist-card:hover .artist-photo img {
       transform: scale(1.03);
+    }
+
+    .artist-card:hover .artist-photo-focus--kayoko {
+      transform: scale(1.18) translateY(-1%);
+    }
+
+    .artist-card:hover .artist-photo-focus--kaho {
+      transform: scale(1.24) translateY(-2%);
+    }
+
+    .artist-card:hover .artist-photo-focus--shoko {
+      transform: scale(1.38) translateY(-5%);
     }
 
     .artist-photo.is-missing::before {
@@ -469,7 +496,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="https://www.instagram.com/happylifeisgoooood/" target="_blank" rel="noopener noreferrer">
               <div class="artist-photo">
-                <img src="images/Kayoko_Tezuka.jpg" alt="手塚 佳代子" loading="lazy">
+                <img class="artist-photo-focus--kayoko" src="images/Kayoko_Tezuka.jpg" alt="手塚 佳代子" loading="lazy">
               </div>
               <div class="artist-body">
                 <h3>手塚 佳代子</h3>
@@ -483,7 +510,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="https://lit.link/kahomasuda" target="_blank" rel="noopener noreferrer">
               <div class="artist-photo">
-                <img src="images/Kaho_Masuda.jpeg" alt="増田 香穂" loading="lazy">
+                <img class="artist-photo-focus--kaho" src="images/Kaho_Masuda.jpeg" alt="増田 香穂" loading="lazy">
               </div>
               <div class="artist-body">
                 <h3>増田 香穂</h3>
@@ -497,7 +524,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/shoko-mizuno/">
               <div class="artist-photo">
-                <img src="images/Shoko_Mizuno.jpg" alt="水野 彰子" loading="lazy">
+                <img class="artist-photo-focus--shoko" src="images/Shoko_Mizuno.jpg" alt="水野 彰子" loading="lazy">
               </div>
               <div class="artist-body">
                 <h3>水野 彰子</h3>
