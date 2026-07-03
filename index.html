@@ -416,6 +416,93 @@
       font-size: 0.92rem;
     }
 
+
+    .representative-section {
+      background:
+        linear-gradient(180deg, rgba(255, 253, 248, 0.72), rgba(247, 245, 242, 0.96));
+    }
+
+    .representative-grid {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+      gap: 38px;
+      align-items: start;
+    }
+
+    .representative-photo {
+      overflow: hidden;
+      border: 1px solid rgba(139, 107, 63, 0.24);
+      border-radius: var(--radius);
+      background: var(--panel-soft);
+      box-shadow: var(--shadow);
+      aspect-ratio: 4 / 5;
+    }
+
+    .representative-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .representative-profile {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+    }
+
+    .representative-name {
+      margin: 0 0 4px;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+
+    .representative-role {
+      display: block;
+      margin-bottom: 22px;
+      color: var(--accent);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.18rem;
+      letter-spacing: 0.08em;
+    }
+
+    .representative-profile p {
+      margin: 0 0 15px;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.86;
+    }
+
+    .representative-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0 20px;
+    }
+
+    .representative-license {
+      margin-top: 20px;
+      padding: 18px 20px;
+      border: 1px solid rgba(139, 107, 63, 0.24);
+      border-radius: var(--radius);
+      background: rgba(255, 253, 248, 0.72);
+    }
+
+    .representative-license h3 {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+    }
+
+    .representative-license ul {
+      margin: 0;
+      padding-left: 1.1em;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.82;
+    }
     .program-table {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -956,6 +1043,17 @@
         grid-template-columns: 1fr;
       }
 
+
+      .representative-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      .representative-photo {
+        max-width: 460px;
+        width: 100%;
+        margin-inline: auto;
+      }
       .hero-grid {
         gap: 26px;
       }
@@ -1199,6 +1297,40 @@
       </div>
     </section>
 
+
+    <section id="representative-message" class="representative-section">
+      <div class="container representative-grid">
+        <div class="representative-photo">
+          <img src="images/Ari_Onishi.jpg" alt="大西 亜里" loading="lazy">
+        </div>
+        <article class="representative-profile">
+          <div class="section-title">
+            <h2>代表挨拶</h2>
+          </div>
+          <h3 class="representative-name">大西 亜里</h3>
+          <span class="representative-role">Representative / Music Producer</span>
+          <p>国立音楽大学声楽学科ソプラノ専攻卒業。桐蔭学園中学・高等学校、慶應義塾高等学校で音楽教師を務める。音大同級生kiyoと“ANTICA”を結成し、文化放送スーパーオーディションで2,000組からグランプリを受賞。テレビ朝日AXEL主題歌「返事」でメジャーデビューし、文化放送「アンティカの恋愛小説」でDJデビュー。</p>
+          <p>ソロ活動ではテレビ番組「音革命」で桑名正博のアシスタントMCを務め、KONISHIKIと花キューピットテーマソングを作曲・デュエットし全国ツアーを実施。西田ひかる、若槻千夏、IKKO、早乙女太一等へのボイストレーニングや楽曲提供も行う。2008年、avexより「誰より今」でソロデビュー。</p>
+          <p>東日本大震災を受け、昭和大学医学部で呼吸生理学を学び、医学博士と復興支援ソング「ラッタッタ呼吸体操」を共同制作。音楽で心身が健康になる音楽療法を実践している。2020年には相田翔子と共作した「星座の道標」を大西亜里公式YouTubeで配信。</p>
+          <p>2023年、Billboard Live 東京にて相田翔子、ダイアモンドユカイをゲストに迎え、復帰初の2公演を記録動員。2024年からは島谷ひとみ、秋川雅史らと共演し、築地本願寺ブディストホール舞台「おっ母ちゃん」主題歌「あなたが…」と劇伴音楽を担当、作曲家として本格活動を開始。</p>
+          <p>2025年、東京国立博物館「平和への祈り音楽祭」プロデューサーとして、次世代の若手音楽家をブッキングし好評を博す。2026年2月初演のロングラン歴史ミュージカル「小栗忠順」音楽を担当。2026年7月7日より「アンティカ音楽学院」を開校し、代表に就任。</p>
+          <div class="representative-links">
+            <a class="btn btn-secondary" href="https://www.youtube.com/channel/UCm155wwhe8EEy1PWAKxIEug" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a class="btn btn-secondary" href="https://www.instagram.com/arionishi/?igshid=1um23iik9ed8z" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn btn-secondary" href="https://www.tokyoheadline.com/700216/" target="_blank" rel="noopener noreferrer">Interview</a>
+            <a class="btn btn-secondary" href="https://tablo.jp/archives/46301" target="_blank" rel="noopener noreferrer">Article</a>
+          </div>
+          <div class="representative-license">
+            <h3>Licence</h3>
+            <ul>
+              <li>中学高等学校教諭第一種免許</li>
+              <li>日本メンタルヘルス協会認定心理カウンセラー</li>
+              <li>日本音楽著作権協会 JASRAC 会員</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
     <section id="news">
       <div class="container">
         <div class="section-title">
