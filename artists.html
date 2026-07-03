@@ -321,6 +321,18 @@
       transition: transform 0.45s ease;
     }
 
+    .artist-photo-credit {
+      position: absolute;
+      right: 10px;
+      bottom: 8px;
+      padding: 2px 7px;
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--text-muted);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.72rem;
+      line-height: 1;
+      letter-spacing: 0.04em;
+    }
     .artist-photo-focus--kayoko {
       transform: scale(1.44) translateY(-7%);
       transform-origin: center top;
@@ -336,10 +348,13 @@
       transform-origin: center top;
     }
 
+    .artist-photo-focus--yukiko {
+      transform: scale(1.28) translateY(-6%);
+      transform-origin: center top;
+    }
     .artist-card:hover .artist-photo img {
       transform: none;
     }
-
     .artist-card:hover .artist-photo img.artist-photo-focus--kayoko {
       transform: scale(1.44) translateY(-7%);
     }
@@ -352,6 +367,9 @@
       transform: scale(1.92) translateY(-22%);
     }
 
+    .artist-card:hover .artist-photo img.artist-photo-focus--yukiko {
+      transform: scale(1.28) translateY(-6%);
+    }
     .artist-photo.is-missing::before {
       content: "";
       position: absolute;
@@ -478,6 +496,20 @@
         -->
         <div class="artist-grid">
 
+          <!-- ARTIST: 奥野 由紀子 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="ambassadors/yukiko-okuno/">
+              <div class="artist-photo">
+                <img class="artist-photo-focus--yukiko" src="images/Yukiko_Okuno.jpg" alt="奥野 由紀子" loading="lazy">
+                <span class="artist-photo-credit">© Junichiro Matsuo</span>
+              </div>
+              <div class="artist-body">
+                <h3>奥野 由紀子</h3>
+                <p class="artist-bio">アルトフルート・スペシャリスト、東京女子管弦楽団フルート奏者。国内外での共演、受賞、ソロアルバムリリースを重ね、地域文化活動にも携わっています。</p>
+                <span class="artist-link-label">View Profile</span>
+              </div>
+            </a>
+          </article>
           <!-- ARTIST: 富永 峻 -->
           <article class="artist-card">
             <a class="artist-card-link" href="https://shuntominaga.org/" target="_blank" rel="noopener noreferrer">

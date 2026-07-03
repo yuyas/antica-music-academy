@@ -703,6 +703,18 @@
       transition: transform 0.45s ease;
     }
 
+    .artist-photo-credit {
+      position: absolute;
+      right: 10px;
+      bottom: 8px;
+      padding: 2px 7px;
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--text-muted);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.72rem;
+      line-height: 1;
+      letter-spacing: 0.04em;
+    }
     .artist-photo-focus--kayoko {
       transform: scale(1.44) translateY(-7%);
       transform-origin: center top;
@@ -718,6 +730,10 @@
       transform-origin: center top;
     }
 
+    .artist-photo-focus--yukiko {
+      transform: scale(1.28) translateY(-6%);
+      transform-origin: center top;
+    }
     .artist-photo-zoom {
     transform: scale(1.6) translateY(-8%);
     transform-origin: center top;
@@ -725,7 +741,6 @@
     .artist-card:hover .artist-photo img {
     transform: none;
 }
-
 .artist-card:hover .artist-photo img.artist-photo-focus--kayoko {
     transform: scale(1.44) translateY(-7%);
 }
@@ -738,6 +753,9 @@
     transform: scale(1.92) translateY(-22%);
 }
 
+    .artist-card:hover .artist-photo img.artist-photo-focus--yukiko {
+      transform: scale(1.28) translateY(-6%);
+    }
 .artist-card:hover .artist-photo-zoom {
     transform: scale(1.65) translateY(-6%);
 }
@@ -1230,6 +1248,21 @@
           <img class="ambassador-logo" src="images/music-ambassador-logo.png" alt="Music Ambassador">
         </div>
         <div class="artist-grid artist-grid--preview">
+          <!-- ARTIST: 奥野 由紀子 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="ambassadors/yukiko-okuno/">
+              <div class="artist-photo">
+                <img class="artist-photo-focus--yukiko" src="images/Yukiko_Okuno.jpg" alt="奥野 由紀子" loading="lazy">
+                <span class="artist-photo-credit">© Junichiro Matsuo</span>
+              </div>
+              <div class="artist-body">
+                <h3>奥野 由紀子</h3>
+                <span class="artist-name-en">Yukiko Okuno</span>
+                <p class="artist-bio">第21回日本フルートコンヴェンションコンクール アルトフルート部門第1位。東京女子管弦楽団フルート奏者として、国内外の共演、ソロアルバム、地域文化活動まで幅広く活躍しています。</p>
+                <span class="artist-link-label">View Profile</span>
+              </div>
+            </a>
+          </article>
           <!-- ARTIST: くどう きよこ -->
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/kiyoko-kudo/">
@@ -1239,7 +1272,7 @@
               <div class="artist-body">
                 <h3>くどう きよこ</h3>
                 <span class="artist-name-en">Kiyoko Kudo</span>
-                <p class="artist-bio">ANTICA Music Academyの理念に共鳴し、音楽文化を通じた豊かな出会いと学びを支えるミュージック・アンバサダー。感性と表現を次世代へつなぐ活動を応援しています。</p>
+                <p class="artist-bio">文化放送スーパーオーディションでグランプリを受賞し、デュオ「アンティカ」でメジャーデビュー。音楽療法士としての知見も重ね、ボイスタッチセラピー®で感性と表現力を育みます。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1253,7 +1286,7 @@
               <div class="artist-body">
                 <h3>小宮 明日翔</h3>
                 <span class="artist-name-en">Asuka Komiya</span>
-                <p class="artist-bio">幼少期から子役としてTV・CM・映画・声優・ミュージカルで活躍。舞台芸術支援団体SASPの活動を通じ、子どもたちへ文化芸術の機会を届けています。</p>
+                <p class="artist-bio">ミュージカル「ピーターパン」「レ・ミゼラブル」などに出演。子役経験を原点に、一般社団法人SASP理事として子どもたちの舞台芸術体験を広げています。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1267,7 +1300,7 @@
               <div class="artist-body">
                 <h3>手塚 佳代子</h3>
                 <span class="artist-name-en">Kayoko Tezuka</span>
-                <p class="artist-bio">幼少期よりピアノ・バレエ・声楽を学び、舞台・ミュージカル・教育活動まで幅広く活躍。美しい日本語や表現の力を次世代へ伝えるアーティストです。</p>
+                <p class="artist-bio">劇団四季で『美女と野獣』などディズニー作品を中心に出演。国連クラシックライブ主演や全国の児童指導など、舞台表現と教育の両面で活躍しています。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1281,7 +1314,7 @@
               <div class="artist-body">
                 <h3>富永 峻</h3>
                 <span class="artist-name-en">Shun Tominaga</span>
-                <p class="artist-bio">欧州で研鑽を積んだ日本人ピアニスト。ソロ、オペラ伴奏、室内楽、舞台出演など幅広く活動し、公開レッスンや室内楽指導にも力を注いでいます。</p>
+                <p class="artist-bio">欧州で研鑽を積み、ソロ、オペラ伴奏、室内楽、舞台出演まで幅広く活動するピアニスト。聴く人の感情に寄り添う音色と誠実な音楽性で表現を届けます。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1295,7 +1328,7 @@
               <div class="artist-body">
                 <h3>増田 香穂</h3>
                 <span class="artist-name-en">Kaho Masuda</span>
-                <p class="artist-bio">桐朋学園大学大学院ピアノ専攻修了。演奏活動、音楽サロンのプロデュース、教育・起業領域を横断し、クラシック音楽の新しい届け方を模索しています。</p>
+                <p class="artist-bio">桐朋学園大学大学院ピアノ専攻修了。中学2年から本格的にピアノを始め、短期間で最難関音楽大学へ進んだ異色の経歴を持つピアニストです。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1309,7 +1342,7 @@
               <div class="artist-body">
                 <h3>水野 彰子</h3>
                 <span class="artist-name-en">Shoko Mizuno</span>
-                <p class="artist-bio">東京藝術大学大学院を首席で修了。アンサンブルピアニストとして国内外の舞台、オペラ、音楽祭、アウトリーチ活動など幅広く活躍しています。</p>
+                <p class="artist-bio">東京藝術大学大学院を首席で修了し、大学院アカンサス音楽賞を受賞。新国立劇場オペラのピアニスト、コレペティトゥアとしても活動しています。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
