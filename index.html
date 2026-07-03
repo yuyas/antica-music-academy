@@ -229,9 +229,13 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 32px;
-      align-items: stretch;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .hero-copy {
+      max-width: 780px;
     }
 
     .eyebrow {
@@ -272,13 +276,15 @@
     }
 
     .hero-panel {
+      max-width: 760px;
+      margin-top: 28px;
       border: 1px solid rgba(139, 107, 63, 0.26);
       border-radius: var(--radius);
       padding: 28px;
       background:
         linear-gradient(150deg, rgba(139, 107, 63, 0.12), rgba(139, 107, 63, 0.03)),
         var(--panel);
-      box-shadow: var(--shadow);
+      box-shadow: 0 16px 42px rgba(70, 49, 20, 0.12);
     }
 
     .hero-panel h2 {
@@ -293,7 +299,29 @@
     }
 
     .hero-panel li {
-      margin-bottom: 9px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+      align-items: start;
+    }
+
+    .hero-panel-label {
+      min-width: 4.5em;
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .hero-panel-label::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 1px;
+      margin-top: 6px;
+      background: var(--accent);
+      opacity: 0.65;
     }
 
     .cta-row {
@@ -467,6 +495,32 @@
       letter-spacing: 0.08em;
     }
 
+
+    .representative-subtitle {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: 1.08rem;
+      letter-spacing: 0.08em;
+    }
+
+    .representative-message-body {
+      margin-bottom: 32px;
+    }
+
+    .representative-signature {
+      margin-top: 24px;
+    }
+
+    .representative-signature p {
+      margin-bottom: 6px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .representative-career {
+      border-top: 1px solid var(--line);
+      padding-top: 26px;
+    }
     .representative-profile p {
       margin: 0 0 15px;
       color: var(--text-muted);
@@ -503,60 +557,7 @@
       font-size: 0.92rem;
       line-height: 1.82;
     }
-    .program-table {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .program-card {
-      border-radius: var(--radius);
-      border: 1px solid rgba(139, 107, 63, 0.24);
-      background: linear-gradient(180deg, rgba(139, 107, 63, 0.08), #fffdf9);
-      padding: 24px;
-    }
-
-    .program-card .label {
-      display: inline-block;
-      margin-bottom: 8px;
-      color: var(--accent);
-      font-size: 0.82rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      font-family: "Noto Serif JP", serif;
-      font-style: italic;
-    }
-
-    .program-card p:last-child {
-      margin-bottom: 0;
-    }
-
-
-    .flow-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .flow-item {
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: var(--panel-soft);
-      padding: 18px;
-    }
-
-    .step {
-      display: inline-block;
-      margin-bottom: 8px;
-      color: var(--accent);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      font-size: 0.78rem;
-      font-family: "Cormorant Garamond", serif;
-    }
-
-    .contact {
+.contact {
       padding-bottom: 94px;
     }
 
@@ -735,7 +736,7 @@
     .ambassador-logo-wrap {
       display: flex;
       justify-content: center;
-      margin: 30px 0 38px;
+      margin: 0 0 28px;
     }
 
     .ambassador-logo {
@@ -982,13 +983,7 @@
 
       .hero-grid,
       .grid-3,
-      .program-table,
-
       .service-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .flow-list {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -1035,8 +1030,6 @@
       .hero-grid,
       .grid-3,
       .service-grid,
-      .program-table,
-      .flow-list,
       .form-grid,
       .artist-grid,
       .instructor-grid {
@@ -1094,8 +1087,6 @@
       .hero-panel,
       .card,
       .news-card,
-      .program-card,
-      .flow-item,
       .contact-box,
       .form-box {
         width: 100%;
@@ -1140,8 +1131,6 @@
       }
 
       .service-grid,
-      .program-table,
-      .flow-list,
       .artist-grid {
         gap: 16px;
       }
@@ -1152,8 +1141,6 @@
         font-size: 0.96rem;
       }
 
-      .program-card .label,
-      .step,
       .artist-link-label {
         letter-spacing: 0.14em;
       }
@@ -1225,8 +1212,7 @@
         padding: 62px 0;
       }
 
-      .service-grid,
-      .flow-list {
+      .service-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1268,8 +1254,6 @@
       <a href="#news">News</a>
       <a href="#instructors">講師陣</a>
       <a href="#endorsing-artists">Music Ambassador</a>
-      <a href="#program">プログラム</a>
-      <a href="#flow">ご受講までの流れ</a>
       <a href="#contact">お問い合わせ</a>
       <a href="#contact-form">お問い合わせフォーム</a>
     </nav>
@@ -1277,23 +1261,23 @@
 
   <main>
     <section class="hero" id="concept">
-<div class="container hero-grid">
+      <div class="container hero-grid">
         <div class="hero-copy">
           <h1>音楽文化で、<br>社会をつなぐ。</h1>
           <p>第一線で活躍する音楽家とともに、生活者・地域・企業を音楽文化でつなぐ新しい文化事業です。</p>
           <p>コンサートや企業イベントにとどまらず、音楽を「ひとときの鑑賞体験」から「社会の日常に根づく文化」へと広げていきます。</p>
+          <aside class="hero-panel" aria-label="提供概要">
+            <h2>提供領域</h2>
+            <ul>
+              <li><span class="hero-panel-label">対象</span><span>幼児・小中高生・大人・シニアまで対応</span></li>
+              <li><span class="hero-panel-label">専門領域</span><span>ピアノ / 歌・声楽</span></li>
+              <li><span class="hero-panel-label">イベント</span><span>第一線で活躍する音楽家によるアンティカ音楽学院だけのワークショップ</span></li>
+            </ul>
+          </aside>
           <div class="cta-row">
             <a class="btn btn-primary" href="#contact">お問い合わせ</a>
           </div>
         </div>
-        <aside class="hero-panel" aria-label="提供概要">
-          <h2>提供領域</h2>
-          <ul>
-            <li>対象: 幼児・小中高生・大人・シニアまで対応</li>
-            <li>専門領域: ピアノ / 歌・声楽</li>
-            <li>イベント: 一流講師陣によるアンティカ音楽学院だけのワークショップ</li>
-          </ul>
-        </aside>
       </div>
     </section>
 
@@ -1305,28 +1289,47 @@
         </div>
         <article class="representative-profile">
           <div class="section-title">
-            <h2>代表挨拶</h2>
+            <h2>代表あいさつ</h2>
           </div>
-          <h3 class="representative-name">大西 亜里</h3>
-          <span class="representative-role">Representative / Music Producer</span>
-          <p>国立音楽大学声楽学科ソプラノ専攻卒業。桐蔭学園中学・高等学校、慶應義塾高等学校で音楽教師を務める。音大同級生kiyoと“ANTICA”を結成し、文化放送スーパーオーディションで2,000組からグランプリを受賞。テレビ朝日AXEL主題歌「返事」でメジャーデビューし、文化放送「アンティカの恋愛小説」でDJデビュー。</p>
-          <p>ソロ活動ではテレビ番組「音革命」で桑名正博のアシスタントMCを務め、KONISHIKIと花キューピットテーマソングを作曲・デュエットし全国ツアーを実施。西田ひかる、若槻千夏、IKKO、早乙女太一等へのボイストレーニングや楽曲提供も行う。2008年、avexより「誰より今」でソロデビュー。</p>
-          <p>東日本大震災を受け、昭和大学医学部で呼吸生理学を学び、医学博士と復興支援ソング「ラッタッタ呼吸体操」を共同制作。音楽で心身が健康になる音楽療法を実践している。2020年には相田翔子と共作した「星座の道標」を大西亜里公式YouTubeで配信。</p>
-          <p>2023年、Billboard Live 東京にて相田翔子、ダイアモンドユカイをゲストに迎え、復帰初の2公演を記録動員。2024年からは島谷ひとみ、秋川雅史らと共演し、築地本願寺ブディストホール舞台「おっ母ちゃん」主題歌「あなたが…」と劇伴音楽を担当、作曲家として本格活動を開始。</p>
-          <p>2025年、東京国立博物館「平和への祈り音楽祭」プロデューサーとして、次世代の若手音楽家をブッキングし好評を博す。2026年2月初演のロングラン歴史ミュージカル「小栗忠順」音楽を担当。2026年7月7日より「アンティカ音楽学院」を開校し、代表に就任。</p>
-          <div class="representative-links">
-            <a class="btn btn-secondary" href="https://www.youtube.com/channel/UCm155wwhe8EEy1PWAKxIEug" target="_blank" rel="noopener noreferrer">YouTube</a>
-            <a class="btn btn-secondary" href="https://www.instagram.com/arionishi/?igshid=1um23iik9ed8z" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a class="btn btn-secondary" href="https://www.tokyoheadline.com/700216/" target="_blank" rel="noopener noreferrer">Interview</a>
-            <a class="btn btn-secondary" href="https://tablo.jp/archives/46301" target="_blank" rel="noopener noreferrer">Article</a>
+
+          <div class="representative-message-body">
+            <h3 class="representative-subtitle">代表メッセージ</h3>
+            <p>このたび、私が長年思い描いてきた「アンティカ音楽学院」を設立いたしました。</p>
+            <p>音楽には、人と人をつなぎ、人と文化をつなぎ、そして人と社会をつなぐ力があります。</p>
+            <p>私自身、音楽家・アーティストとして活動する中で、多くの素晴らしい出会いと学びに支えられてきました。その経験を次の世代へつなぎたいという想いが、この学院設立の原点です。</p>
+            <p>第一線で活躍する音楽家との出会いや学びを通して、一人でも多くの方に音楽の素晴らしさに触れ、新たな可能性を広げていただける場を育んでまいります。</p>
+            <p>この場所から、多くの笑顔と音楽文化の輪が広がっていくことを願っています。</p>
+            <p>皆さまとお会いできる日を心より楽しみにしております。</p>
+            <div class="representative-signature">
+              <p>2026年7月7日</p>
+              <p>アンティカ音楽学院</p>
+              <p>代表　大西亜里</p>
+            </div>
           </div>
-          <div class="representative-license">
-            <h3>Licence</h3>
-            <ul>
-              <li>中学高等学校教諭第一種免許</li>
-              <li>日本メンタルヘルス協会認定心理カウンセラー</li>
-              <li>日本音楽著作権協会 JASRAC 会員</li>
-            </ul>
+
+          <div class="representative-career">
+            <h3 class="representative-subtitle">プロフィール</h3>
+            <h4 class="representative-name">大西 亜里</h4>
+            <span class="representative-role">Representative / Music Producer</span>
+            <p>国立音楽大学声楽学科ソプラノ専攻卒業。桐蔭学園中学・高等学校、慶應義塾高等学校で音楽教師を務める。音大同級生kiyoと“ANTICA”を結成し、文化放送スーパーオーディションで2,000組からグランプリを受賞。テレビ朝日AXEL主題歌「返事」でメジャーデビューし、文化放送「アンティカの恋愛小説」でDJデビュー。</p>
+            <p>ソロ活動ではテレビ番組「音革命」で桑名正博のアシスタントMCを務め、KONISHIKIと花キューピットテーマソングを作曲・デュエットし全国ツアーを実施。西田ひかる、若槻千夏、IKKO、早乙女太一等へのボイストレーニングや楽曲提供も行う。2008年、avexより「誰より今」でソロデビュー。</p>
+            <p>東日本大震災を受け、昭和大学医学部で呼吸生理学を学び、医学博士と復興支援ソング「ラッタッタ呼吸体操」を共同制作。音楽で心身が健康になる音楽療法を実践している。2020年には相田翔子と共作した「星座の道標」を大西亜里公式YouTubeで配信。</p>
+            <p>2023年、Billboard Live 東京にて相田翔子、ダイアモンドユカイをゲストに迎え、復帰初の2公演を記録動員。2024年からは島谷ひとみ、秋川雅史らと共演し、築地本願寺ブディストホール舞台「おっ母ちゃん」主題歌「あなたが…」と劇伴音楽を担当、作曲家として本格活動を開始。</p>
+            <p>2025年、東京国立博物館「平和への祈り音楽祭」プロデューサーとして、次世代の若手音楽家をブッキングし好評を博す。2026年2月初演のロングラン歴史ミュージカル「小栗忠順」音楽を担当。2026年7月7日より「アンティカ音楽学院」を開校し、代表に就任。</p>
+            <div class="representative-links">
+              <a class="btn btn-secondary" href="https://www.youtube.com/channel/UCm155wwhe8EEy1PWAKxIEug" target="_blank" rel="noopener noreferrer">YouTube</a>
+              <a class="btn btn-secondary" href="https://www.instagram.com/arionishi/?igshid=1um23iik9ed8z" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a class="btn btn-secondary" href="https://www.tokyoheadline.com/700216/" target="_blank" rel="noopener noreferrer">Interview</a>
+              <a class="btn btn-secondary" href="https://tablo.jp/archives/46301" target="_blank" rel="noopener noreferrer">Article</a>
+            </div>
+            <div class="representative-license">
+              <h3>Licence</h3>
+              <ul>
+                <li>中学高等学校教諭第一種免許</li>
+                <li>日本メンタルヘルス協会認定心理カウンセラー</li>
+                <li>日本音楽著作権協会 JASRAC 会員</li>
+              </ul>
+            </div>
           </div>
         </article>
       </div>
@@ -1372,12 +1375,12 @@
 
     <section id="endorsing-artists">
       <div class="container">
-        <div class="section-title">
-          <h2>ミュージック・アンバサダー（Music Ambassador）</h2>
-          <p>音楽の第一線で活躍するアーティストの皆さまが、アンティカ音楽学院の理念に共鳴しています。感性と表現の深みを、次世代へとつなぐ存在としてご紹介します。</p>
-        </div>
         <div class="ambassador-logo-wrap">
           <img class="ambassador-logo" src="images/music-ambassador-logo.png" alt="Music Ambassador">
+        </div>
+        <div class="section-title">
+          <h2>ミュージック・アンバサダー</h2>
+          <p>音楽の第一線で活躍するアーティストの皆さまが、アンティカ音楽学院の理念に共鳴しています。感性と表現の深みを、次世代へとつなぐ存在としてご紹介します。</p>
         </div>
         <div class="artist-grid artist-grid--preview">
           <!-- ARTIST: 奥野 由紀子 -->
@@ -1390,7 +1393,7 @@
               <div class="artist-body">
                 <h3>奥野 由紀子</h3>
                 <span class="artist-name-en">Yukiko Okuno</span>
-                <p class="artist-bio">アルトフルート・スペシャリスト。桐朋学園大学音楽学部卒業、The Flute Studio（英国）修了。主要コンクール第1位多数、国内外の楽団と共演しメディアにも出演。</p>
+                <p class="artist-bio">アルトフルート・スペシャリスト。<br>桐朋学園大学音楽学部卒業、The Flute Studio（英国）修了。主要コンクール第1位多数、国内外の楽団と共演しメディアにも出演。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1404,7 +1407,7 @@
               <div class="artist-body">
                 <h3>くどう きよこ</h3>
                 <span class="artist-name-en">Kiyoko Kudo</span>
-                <p class="artist-bio">代表・大西亜里と「アンティカ」を結成し、文化放送スーパーオーディションでグランプリを受賞。メジャーデビュー後、独自メソッド「ボイスタッチセラピー®」を始動。</p>
+                <p class="artist-bio">代表・大西亜里と「アンティカ」を結成、文化放送スーパーオーディションでグランプリ受賞。<br>メジャーデビュー後、独自メソッド「ボイスタッチセラピー®」を始動。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1418,7 +1421,7 @@
               <div class="artist-body">
                 <h3>小宮 明日翔</h3>
                 <span class="artist-name-en">Asuka Komiya</span>
-                <p class="artist-bio">幼少期からTV・CM・映画・声優で活躍。2027年度大河ドラマの主人公・小栗上野介の生涯を紡ぐミュージカルを企画・制作・主催。</p>
+                <p class="artist-bio">幼少期からTV・CM・映画・声優で活躍。<br>2027年度大河ドラマの主人公・小栗上野介の生涯を紡ぐミュージカルを企画・制作・主催。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1432,7 +1435,7 @@
               <div class="artist-body">
                 <h3>手塚 佳代子</h3>
                 <span class="artist-name-en">Kayoko Tezuka</span>
-                <p class="artist-bio">NHK番組や三越ファッションショーに子役・モデルとして出演。劇団四季では『美女と野獣』などに出演し、『赤毛のアン』大人アン役を2年連続主演。</p>
+                <p class="artist-bio">NHK番組や三越ファッションショーに子役・モデルとして出演。<br>劇団四季では『美女と野獣』などに出演し、『赤毛のアン』大人アン役を2年連続主演。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1446,7 +1449,7 @@
               <div class="artist-body">
                 <h3>富永 峻</h3>
                 <span class="artist-name-en">Shun Tominaga</span>
-                <p class="artist-bio">ポルトガル、スペイン、ドイツで育った日本人ピアニスト。マドリード王立音楽院、フライブルク音楽大学で学び、演奏と教育活動を展開。</p>
+                <p class="artist-bio">ポルトガル、スペイン、ドイツで育った日本人ピアニスト。<br>マドリード王立音楽院、フライブルク音楽大学で学び、演奏と教育活動を展開。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1460,7 +1463,7 @@
               <div class="artist-body">
                 <h3>増田 香穂</h3>
                 <span class="artist-name-en">Kaho Masuda</span>
-                <p class="artist-bio">中学2年から約4年で最難関音大へ。「クラシック音楽業界をアップデートする」を掲げ、演奏、サロン運営、MBA講師、配信でも発信。</p>
+                <p class="artist-bio">中学2年から約4年で最難関音大へ。<br>「クラシック音楽業界をアップデートする」を掲げ、演奏、サロン運営、MBA講師、配信でも発信。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1474,7 +1477,7 @@
               <div class="artist-body">
                 <h3>水野 彰子</h3>
                 <span class="artist-name-en">Shoko Mizuno</span>
-                <p class="artist-bio">東京藝術大学大学院を首席で修了し、大学院アカンサス音楽賞を受賞。Nコン2026課題曲初演、NHK Eテレ等に出演し、劇場ピアニストとしても活動。</p>
+                <p class="artist-bio">東京藝術大学大学院を首席で修了し、大学院アカンサス音楽賞を受賞。<br>Nコン2026課題曲初演、NHK Eテレ等に出演し、劇場ピアニストとしても活動。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1483,60 +1486,7 @@
       </div>
     </section>
 
-    <section id="program">
-      <div class="container">
-        <div class="section-title">
-          <h2>プログラム設計</h2>
-          <p>ライフステージと目的に応じて、教育内容と到達目標を明確に設計します。詳細な費用や期間は、体験時のヒアリング後にご提案いたします。</p>
-        </div>
-        <div class="program-table">
-          <article class="program-card">
-            <span class="label">Early Stage</span>
-            <h3>幼児・児童向け</h3>
-            <p>聴く力・リズム感・集中力を育てる導入プログラム。楽しさを起点にしながら、将来的な専門学習にもつながる基礎を丁寧に育成します。</p>
-          </article>
-          <article class="program-card">
-            <span class="label">Academic Stage</span>
-            <h3>学生向け</h3>
-            <p>中学・高校の音楽授業における中間・期末テストの成績向上を目的とした、歌唱・リコーダーなどの実技対策から、受験・コンクール・舞台経験までを見据えた実践型指導を行います。技術と表現力を同時に高めながら、自己肯定感と発信力を育てます。</p>
-          </article>
-          <article class="program-card">
-            <span class="label">Professional Life</span>
-            <h3>大人向け</h3>
-            <p>教養としての音楽、自己表現、人生後半の豊かさを追求するためのレッスン。多忙な日常に適応した、継続性の高い学びを提供します。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="flow">
-      <div class="container">
-        <div class="section-title">
-          <h2>ご受講までの流れ</h2>
-          <p>ヒアリング重視の導入プロセスで、目的と将来像に即した学習プランを設計します。</p>
-        </div>
-        <div class="flow-list">
-          <article class="flow-item">
-            <span class="step">Step 1</span>
-            <p>お問い合わせフォームへ入力</p>
-          </article>
-          <article class="flow-item">
-            <span class="step">Step 2</span>
-            <p>ご家庭・ご本人の教育方針と目標を丁寧にヒアリング</p>
-          </article>
-          <article class="flow-item">
-            <span class="step">Step 3</span>
-            <p>講師による体験レッスンと適性評価を実施</p>
-          </article>
-          <article class="flow-item">
-            <span class="step">Step 4</span>
-            <p>個別最適プログラムと年間方針をご提案</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
+<section id="contact" class="contact">
       <div class="container">
         <div class="contact-box">
           <h2>体験レッスン・個別相談のご案内</h2>
