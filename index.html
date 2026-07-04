@@ -547,10 +547,12 @@
     }
 
     .representative-career {
+      grid-column: 1 / -1;
       border-top: 1px solid var(--line);
-      padding-top: 26px;
+      padding-top: 28px;
     }
-    .representative-profile p {
+    .representative-profile p,
+    .representative-career p {
       margin: 0 0 15px;
       color: var(--text-muted);
       font-size: 0.98rem;
@@ -1348,8 +1350,7 @@
         </div>
         <div class="representative-grid">
           <article class="representative-profile">
-
-          <div class="representative-message-body">
+            <div class="representative-message-body">
             <p>このたび、私が思い描く「アンティカ音楽学院」を創立いたしました。</p>
             <p>音楽には、人と人をつなぎ、人と文化をつなぎ、そして人と社会をつなぐ力があります。</p>
             <p>私自身、アーティストとして音楽活動する中で、多くの素晴らしい出会いと学びに支えられてきました。音楽で人と人の心をつなぎたいという想いが、この学院の理念です。</p>
@@ -1362,6 +1363,13 @@
             </div>
           </div>
 
+          </article>
+          <div class="representative-photo-card">
+            <div class="representative-photo">
+              <img src="images/Ari_Onishi.jpg" alt="大西 亜里" loading="lazy">
+            </div>
+            <p class="representative-photo-name">大西亜里<span>Ari Onishi</span></p>
+          </div>
           <div class="representative-career">
             <h3 class="representative-subtitle">プロフィール</h3>
             <p>国立音楽大学声楽学科ソプラノ専攻卒業。桐蔭学園中学・高等学校、慶應義塾高等学校で音楽教師を務める。音大同級生kiyoと“ANTICA”を結成し、文化放送スーパーオーディションで2,000組からグランプリを受賞。テレビ朝日AXEL主題歌「返事」でメジャーデビューし、文化放送「アンティカの恋愛小説」でDJデビュー。</p>
@@ -1383,13 +1391,6 @@
                 <li>日本音楽著作権協会 JASRAC 会員</li>
               </ul>
             </div>
-          </div>
-          </article>
-          <div class="representative-photo-card">
-            <div class="representative-photo">
-              <img src="images/Ari_Onishi.jpg" alt="大西 亜里" loading="lazy">
-            </div>
-            <p class="representative-photo-name">大西亜里<span>Ari Onishi</span></p>
           </div>
 
         </div>
