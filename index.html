@@ -435,7 +435,6 @@
       font-size: 0.92rem;
     }
 
-
     .representative-section {
       background:
         linear-gradient(180deg, rgba(255, 253, 248, 0.72), rgba(247, 245, 242, 0.96));
@@ -470,7 +469,7 @@
     .representative-photo img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center top;
       display: block;
       background: #fff;
@@ -483,6 +482,15 @@
       font-weight: 600;
       letter-spacing: 0.08em;
       text-align: center;
+    }
+    .representative-photo-name span {
+      display: block;
+      margin-top: 5px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.98rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
     }
 
     .representative-profile {
@@ -514,7 +522,6 @@
       font-size: 1.18rem;
       letter-spacing: 0.08em;
     }
-
 
     .representative-subtitle {
       margin: 0 0 14px;
@@ -848,7 +855,7 @@
 
     .artist-photo-focus--maika {
       object-position: center top;
-      transform: scale(1.62) translateY(-11%);
+      transform: scale(1.78) translateY(-18%);
       transform-origin: center top;
     }
 
@@ -885,7 +892,7 @@
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--maika {
-    transform: scale(1.62) translateY(-11%);
+    transform: scale(1.78) translateY(-18%);
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--shoko {
@@ -1086,7 +1093,6 @@
       .instructor-grid {
         grid-template-columns: 1fr;
       }
-
 
       .representative-grid {
         grid-template-columns: 1fr;
@@ -1333,19 +1339,12 @@
       </div>
     </section>
 
-
     <section id="representative-message" class="representative-section">
       <div class="container">
         <div class="section-title representative-heading">
           <h2>代表からのご挨拶</h2>
         </div>
         <div class="representative-grid">
-          <div class="representative-photo-card">
-            <div class="representative-photo">
-              <img src="images/Ari_Onishi.jpg" alt="大西 亜里" loading="lazy">
-            </div>
-            <p class="representative-photo-name">大西亜里</p>
-          </div>
           <article class="representative-profile">
 
           <div class="representative-message-body">
@@ -1363,9 +1362,6 @@
 
           <div class="representative-career">
             <h3 class="representative-subtitle">プロフィール</h3>
-            <h4 class="representative-name">大西 亜里</h4>
-            <span class="representative-name-en">Ari Onishi</span>
-            <span class="representative-role">Representative / Music Producer</span>
             <p>国立音楽大学声楽学科ソプラノ専攻卒業。桐蔭学園中学・高等学校、慶應義塾高等学校で音楽教師を務める。音大同級生kiyoと“ANTICA”を結成し、文化放送スーパーオーディションで2,000組からグランプリを受賞。テレビ朝日AXEL主題歌「返事」でメジャーデビューし、文化放送「アンティカの恋愛小説」でDJデビュー。</p>
             <p>ソロ活動ではテレビ番組「音革命」で桑名正博のアシスタントMCを務め、KONISHIKIと花キューピットテーマソングを作曲・デュエットし全国ツアーを実施。西田ひかる、若槻千夏、IKKO、早乙女太一等へのボイストレーニングや楽曲提供も行う。2008年、avexより「誰より今」でソロデビュー。</p>
             <p>東日本大震災を受け、昭和大学医学部で呼吸生理学を学び、医学博士と復興支援ソング「ラッタッタ呼吸体操」を共同制作。音楽で心身が健康になる音楽療法を実践している。2020年には相田翔子と共作した「星座の道標」を大西亜里公式YouTubeで配信。</p>
@@ -1387,6 +1383,13 @@
             </div>
           </div>
           </article>
+          <div class="representative-photo-card">
+            <div class="representative-photo">
+              <img src="images/Ari_Onishi.jpg" alt="大西 亜里" loading="lazy">
+            </div>
+            <p class="representative-photo-name">大西亜里<span>Ari Onishi</span></p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1519,7 +1522,7 @@
               <div class="artist-body">
                 <h3>三浦 舞夏</h3>
                 <span class="artist-name-en">Maika Miura</span>
-                <p class="artist-bio">ショパン国際コンクール in ASIA高校生部門アジア大会金賞。<br>安川加寿子記念コンクール入選、ミュージック・アカデミー in みやざき優秀賞を受賞。</p>
+                <p class="artist-bio">桐朋女子高等学校音楽科（男女共学）を経て、2019年桐朋学園大学音楽学部卒業。<br>ショパン国際コンクール in ASIA高校生部門アジア大会金賞、安川加寿子記念コンクール入選。<br>ミュージック・アカデミー in みやざきで第3回・第7回・第9回優秀賞を受賞。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
