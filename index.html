@@ -458,6 +458,8 @@
     }
 
     .representative-photo {
+      width: 66.666%;
+      justify-self: center;
       overflow: hidden;
       border: 1px solid rgba(139, 107, 63, 0.24);
       border-radius: var(--radius);
@@ -809,8 +811,15 @@
       transform-origin: center top;
     }
 
+    .artist-photo-focus--asuka {
+      object-position: center top;
+      transform: scale(1.45) translateY(0);
+      transform-origin: center top;
+    }
+
     .artist-photo-focus--kayoko {
-      transform: scale(1.44) translateY(-7%);
+      object-position: center top;
+      transform: scale(1.38) translateY(0);
       transform-origin: center top;
     }
 
@@ -839,8 +848,12 @@
     transform: scale(1.18) translateY(-3%);
 }
 
+.artist-card:hover .artist-photo img.artist-photo-focus--asuka {
+    transform: scale(1.45) translateY(0);
+}
+
 .artist-card:hover .artist-photo img.artist-photo-focus--kayoko {
-    transform: scale(1.44) translateY(-7%);
+    transform: scale(1.38) translateY(0);
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--kaho {
@@ -1053,8 +1066,8 @@
       }
 
       .representative-photo {
-        max-width: 460px;
-        width: 100%;
+        max-width: 320px;
+        width: 66.666%;
         margin-inline: auto;
       }
       .hero-grid {
@@ -1303,12 +1316,11 @@
           </div>
 
           <div class="representative-message-body">
-            <p>このたび、私が長年思い描いてきた「アンティカ音楽学院」を設立いたしました。</p>
+            <p>このたび、私が思い描く「アンティカ音楽学院」を創立いたしました。</p>
             <p>音楽には、人と人をつなぎ、人と文化をつなぎ、そして人と社会をつなぐ力があります。</p>
-            <p>私自身、音楽家・アーティストとして活動する中で、多くの素晴らしい出会いと学びに支えられてきました。その経験を次の世代へつなぎたいという想いが、この学院設立の原点です。</p>
-            <p>第一線で活躍する音楽家との出会いや学びを通して、一人でも多くの方に音楽の素晴らしさに触れ、新たな可能性を広げていただける場を育んでまいります。</p>
-            <p>この場所から、多くの笑顔と音楽文化の輪が広がっていくことを願っています。</p>
-            <p>皆さまとお会いできる日を心より楽しみにしております。</p>
+            <p>私自身、アーティストとして音楽活動する中で、多くの素晴らしい出会いと学びに支えられてきました。音楽で人と人の心をつなぎたいという想いが、この学院の理念です。</p>
+            <p>これから未来はAI時代に進化する程に、音楽家の価値が大きく高まると確信してます。<br>歌うこと、奏でること、耳で聴いて心へ届けること、心へ響かせること<br>それは人として生まれたこの上ない喜びとなります。</p>
+            <p>多くの笑顔と音楽文化の輪が広がっていくことを願いながら。<br>皆さまとお会いできる日を心より楽しみにしております。</p>
             <div class="representative-signature">
               <p>2026年7月7日</p>
               <p>アンティカ音楽学院</p>
@@ -1425,7 +1437,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/asuka-komiya/">
               <div class="artist-photo">
-                <img src="images/Asuka_Komiya.jpg" alt="小宮 明日翔" loading="lazy">
+                <img class="artist-photo-focus--asuka" src="images/Asuka_Komiya.jpg" alt="小宮 明日翔" loading="lazy">
               </div>
               <div class="artist-body">
                 <h3>小宮 明日翔</h3>
