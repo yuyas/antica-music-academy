@@ -294,36 +294,26 @@
 
     .hero-panel ul {
       margin: 0;
-      padding-left: 18px;
+      padding-left: 0;
       color: var(--text-muted);
+      list-style: none;
     }
 
     .hero-panel li {
       display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 10px;
+      grid-template-columns: 5.2em minmax(0, 1fr);
+      gap: 12px;
       margin-bottom: 10px;
-      align-items: start;
+      align-items: baseline;
     }
 
     .hero-panel-label {
-      min-width: 4.5em;
       color: var(--text);
       font-weight: 600;
       letter-spacing: 0.04em;
       white-space: nowrap;
+      text-align: left;
     }
-
-    .hero-panel-label::after {
-      content: "";
-      display: block;
-      width: 22px;
-      height: 1px;
-      margin-top: 6px;
-      background: var(--accent);
-      opacity: 0.65;
-    }
-
     .cta-row {
       display: flex;
       flex-wrap: wrap;
@@ -822,13 +812,13 @@
 
     .artist-photo-focus--asuka {
       object-position: center top;
-      transform: scale(1.45) translateY(0);
+      transform: scale(1.32) translateY(0);
       transform-origin: center top;
     }
 
     .artist-photo-focus--kayoko {
       object-position: center top;
-      transform: scale(1.38) translateY(0);
+      transform: scale(1.5) translateY(0);
       transform-origin: center top;
     }
 
@@ -858,11 +848,11 @@
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--asuka {
-    transform: scale(1.45) translateY(0);
+    transform: scale(1.32) translateY(0);
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--kayoko {
-    transform: scale(1.38) translateY(0);
+    transform: scale(1.5) translateY(0);
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--kaho {
@@ -1137,11 +1127,13 @@
       }
 
       .hero-panel ul {
-        padding-left: 1.1em;
+        padding-left: 0;
       }
 
       .hero-panel li {
-        margin-bottom: 10px;
+        grid-template-columns: 5.2em minmax(0, 1fr);
+        gap: 12px;
+        margin-bottom: 12px;
         line-height: 1.78;
       }
 
