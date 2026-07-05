@@ -1568,7 +1568,11 @@
         <div class="form-box">
           <h2>お問い合わせフォーム</h2>
           <p>ご質問、法人・提携のご相談、その他のお問い合わせはこちらからお送りください。</p>
-          <form class="contact-form" action="https://formspree.io/f/xbdqbbwo" method="POST">
+          <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display:none;">
+              <label>この欄は空のままにしてください <input name="bot-field"></label>
+            </p>
             <div class="form-grid">
               <div class="form-field">
                 <label for="form-name">お名前</label>
