@@ -6,7 +6,7 @@ on:
       - feature/endorsing-artists
 
 permissions:
-  contents: read
+  contents: write
   actions: write
 
 jobs:
