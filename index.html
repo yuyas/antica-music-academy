@@ -541,13 +541,22 @@
     }
 
     .representative-signature {
-      margin-top: 24px;
+      width: fit-content;
+      margin: 28px 12% 0 auto;
+      text-align: left;
     }
 
     .representative-signature p {
       margin-bottom: 6px;
       color: var(--text);
       font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .representative-signature {
+        width: auto;
+        margin: 22px 0 0;
+      }
     }
 
     .representative-career {
@@ -1365,7 +1374,7 @@
             <div class="representative-signature">
               <p>2026年7月7日</p>
               <p>アンティカ音楽学院</p>
-              <p>代表　大西亜里</p>
+              <p>代表　大西 亜里</p>
             </div>
           </div>
 
@@ -1374,7 +1383,7 @@
             <div class="representative-photo">
               <img src="images/Ari_Onishi.jpg" alt="大西 亜里" loading="lazy">
             </div>
-            <p class="representative-photo-name">大西亜里<span>Ari Onishi</span></p>
+            <p class="representative-photo-name">大西 亜里<span>Ari Onishi</span></p>
           </div>
           <div class="representative-career">
             <h3 class="representative-subtitle">プロフィール</h3>
