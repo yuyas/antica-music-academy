@@ -878,6 +878,12 @@
       line-height: 1;
       letter-spacing: 0.04em;
     }
+    .artist-photo-focus--mio {
+      object-position: center top;
+      transform: scale(1.06) translateY(0);
+      transform-origin: center top;
+    }
+
     .artist-photo-focus--kiyoko {
       object-position: center top;
       transform: scale(1.18) translateY(-3%);
@@ -923,6 +929,10 @@
     .artist-card:hover .artist-photo img {
     transform: none;
 }
+.artist-card:hover .artist-photo img.artist-photo-focus--mio {
+    transform: scale(1.06) translateY(0);
+}
+
 .artist-card:hover .artist-photo img.artist-photo-focus--kiyoko {
     transform: scale(1.18) translateY(-3%);
 }
@@ -1478,6 +1488,20 @@
           <p>音楽の第一線で活躍するアーティストの皆さまが、アンティカ音楽学院の理念に共鳴しています。<br>感性と表現の深みを、次世代へとつなぐ存在としてご紹介します。</p>
         </div>
         <div class="artist-grid artist-grid--preview">
+          <!-- ARTIST: 安藤 未緒 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="ambassadors/mio-ando/">
+              <div class="artist-photo">
+                <img class="artist-photo-focus--mio" src="images/Mio_Ando.jpeg" alt="安藤 未緒" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>安藤 未緒</h3>
+                <span class="artist-name-en">Mio Ando</span>
+                <p class="artist-bio">1991年に渡米、バークリー音楽院に入学。<br>ヴォーカリストとしてボディ・エクササイズや発声法を学び、独自のヴォイストレーニング法を確立。Perfect Voiceを開校し、アーティストから企業向け講習まで幅広く指導。</p>
+                <span class="artist-link-label">View Profile</span>
+              </div>
+            </a>
+          </article>
           <!-- ARTIST: 奥野 由紀子 -->
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/yukiko-okuno/">
