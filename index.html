@@ -466,7 +466,7 @@
     .representative-photo-card {
       justify-self: end;
       width: 100%;
-      max-width: 300px;
+      max-width: 360px;
     }
 
     .representative-photo {
@@ -486,7 +486,8 @@
       object-fit: cover;
       object-position: center top;
       display: block;
-      transform: none;
+      transform: scale(1.16) translateY(-2%);
+      transform-origin: center top;
       background: #fff;
     }
 
@@ -879,9 +880,9 @@
       letter-spacing: 0.04em;
     }
     .artist-photo-focus--mio {
-      object-fit: contain;
+      object-fit: cover;
       object-position: center top;
-      transform: scale(0.78);
+      transform: scale(1.04);
       transform-origin: center top;
       background: #fff;
     }
@@ -932,7 +933,7 @@
     transform: none;
 }
 .artist-card:hover .artist-photo img.artist-photo-focus--mio {
-    transform: scale(0.78);
+    transform: scale(1.04);
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--kiyoko {
@@ -1160,7 +1161,7 @@
       }
 
       .representative-photo-card {
-        max-width: 300px;
+        max-width: 360px;
         width: 100%;
         margin-inline: auto;
       }
