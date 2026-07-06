@@ -879,9 +879,11 @@
       letter-spacing: 0.04em;
     }
     .artist-photo-focus--mio {
+      object-fit: contain;
       object-position: center top;
-      transform: scale(1.06) translateY(0);
+      transform: none;
       transform-origin: center top;
+      background: #fff;
     }
 
     .artist-photo-focus--kiyoko {
@@ -930,7 +932,7 @@
     transform: none;
 }
 .artist-card:hover .artist-photo img.artist-photo-focus--mio {
-    transform: scale(1.06) translateY(0);
+    transform: none;
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--kiyoko {
