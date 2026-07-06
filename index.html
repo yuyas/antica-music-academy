@@ -466,7 +466,7 @@
     .representative-photo-card {
       justify-self: end;
       width: 100%;
-      max-width: 360px;
+      max-width: 240px;
     }
 
     .representative-photo {
@@ -474,19 +474,19 @@
       width: 100%;
       overflow: hidden;
       border: 1px solid rgba(139, 107, 63, 0.24);
-      border-radius: var(--radius);
+      border-radius: 50% / 44%;
       background: var(--panel-soft);
       box-shadow: var(--shadow);
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 3 / 4;
     }
 
     .representative-photo img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center top;
       display: block;
-      transform: scale(1.08) translateY(0);
+      transform: none;
       transform-origin: center top;
       background: #fff;
     }
@@ -1161,7 +1161,7 @@
       }
 
       .representative-photo-card {
-        max-width: 360px;
+        max-width: 240px;
         width: 100%;
         margin-inline: auto;
       }
