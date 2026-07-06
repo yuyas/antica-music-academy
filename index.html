@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
@@ -572,6 +572,38 @@
       font-size: 1.02rem;
       font-weight: 500;
       letter-spacing: 0.06em;
+    }
+
+    .representative-profile-toggle {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 12px;
+      padding: 7px 15px;
+      border: 1px solid rgba(139, 107, 63, 0.34);
+      border-radius: 999px;
+      background: rgba(255, 253, 248, 0.86);
+      color: var(--accent);
+      font: inherit;
+      font-size: 0.88rem;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .representative-profile-toggle:hover {
+      border-color: rgba(139, 107, 63, 0.64);
+      background: rgba(139, 107, 63, 0.08);
+      color: var(--accent-deep);
+    }
+
+    .representative-profile-more {
+      margin-top: 18px;
+    }
+
+    .representative-profile-more[hidden] {
+      display: none;
     }
 
     .representative-message-body {
@@ -1452,24 +1484,26 @@
           <div class="representative-career">
             <h3 class="representative-subtitle">プロフィール</h3>
             <p class="representative-career-name">大西 亜里<span>Ari Onishi</span></p>
-            <p>国立音楽大学声楽学科ソプラノ専攻卒業。桐蔭学園中学・高等学校、慶應義塾高等学校で音楽教師を務める。音大同級生kiyoと“ANTICA”を結成し、文化放送スーパーオーディションで2,000組からグランプリを受賞。テレビ朝日AXEL主題歌「返事」でメジャーデビューし、文化放送「アンティカの恋愛小説」でDJデビュー。</p>
-            <p>ソロ活動ではテレビ番組「音革命」で桑名正博のアシスタントMCを務め、KONISHIKIと花キューピットテーマソングを作曲・デュエットし全国ツアーを実施。西田ひかる、若槻千夏、IKKO、早乙女太一等へのボイストレーニングや楽曲提供も行う。2008年、avexより「誰より今」でソロデビュー。</p>
-            <p>東日本大震災を受け、昭和大学医学部で呼吸生理学を学び、医学博士と復興支援ソング「ラッタッタ呼吸体操」を共同制作。音楽で心身が健康になる音楽療法を実践している。2020年には相田翔子と共作した「星座の道標」を大西亜里公式YouTubeで配信。</p>
-            <p>2023年、Billboard Live 東京にて相田翔子、ダイアモンドユカイをゲストに迎え、復帰初の2公演を記録動員。2024年からは島谷ひとみ、秋川雅史らと共演し、築地本願寺ブディストホール舞台「おっ母ちゃん」主題歌「あなたが…」と劇伴音楽を担当、作曲家として本格活動を開始。</p>
-            <p>2025年、東京国立博物館「平和への祈り音楽祭」プロデューサーとして、次世代の若手音楽家をブッキングし好評を博す。2026年2月初演のロングラン歴史ミュージカル「小栗忠順」音楽を担当。2026年7月7日より「アンティカ音楽学院」を開校し、代表に就任。</p>
-            <div class="representative-links">
-              <a class="btn btn-secondary" href="https://www.youtube.com/channel/UCm155wwhe8EEy1PWAKxIEug" target="_blank" rel="noopener noreferrer">YouTube</a>
-              <a class="btn btn-secondary" href="https://www.instagram.com/arionishi/?igshid=1um23iik9ed8z" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a class="btn btn-secondary" href="https://www.tokyoheadline.com/700216/" target="_blank" rel="noopener noreferrer">Interview</a>
-              <a class="btn btn-secondary" href="https://tablo.jp/archives/46301" target="_blank" rel="noopener noreferrer">Article</a>
-            </div>
-            <div class="representative-license">
-              <h3>Licence</h3>
-              <ul>
-                <li>中学高等学校教諭第一種免許</li>
-                <li>日本メンタルヘルス協会認定心理カウンセラー</li>
-                <li>日本音楽著作権協会 JASRAC 会員</li>
-              </ul>
+            <p>国立音楽大学声楽学科ソプラノ専攻卒業。桐蔭学園中学・高等学校、慶應義塾高等学校で音楽教師を務める。音大同級生kiyoと“ANTICA”を結成し、文化放送スーパーオーディションで2,000組からグランプリを受賞。テレビ朝日AXEL主題歌「返事」でメジャーデビューし、文化放送「アンティカの恋愛小説」でDJデビュー。<button class="representative-profile-toggle" type="button" aria-expanded="false" aria-controls="ari-profile-more" onclick="const more=document.getElementById('ari-profile-more'); more.hidden=!more.hidden; this.setAttribute('aria-expanded', String(!more.hidden));">プロフィールを見る↗</button></p>
+            <div id="ari-profile-more" class="representative-profile-more" hidden>
+              <p>ソロ活動ではテレビ番組「音革命」で桑名正博のアシスタントMCを務め、KONISHIKIと花キューピットテーマソングを作曲・デュエットし全国ツアーを実施。西田ひかる、若槻千夏、IKKO、早乙女太一等へのボイストレーニングや楽曲提供も行う。2008年、avexより「誰より今」でソロデビュー。</p>
+              <p>東日本大震災を受け、昭和大学医学部で呼吸生理学を学び、医学博士と復興支援ソング「ラッタッタ呼吸体操」を共同制作。音楽で心身が健康になる音楽療法を実践している。2020年には相田翔子と共作した「星座の道標」を大西亜里公式YouTubeで配信。</p>
+              <p>2023年、Billboard Live 東京にて相田翔子、ダイアモンドユカイをゲストに迎え、復帰初の2公演を記録動員。2024年からは島谷ひとみ、秋川雅史らと共演し、築地本願寺ブディストホール舞台「おっ母ちゃん」主題歌「あなたが…」と劇伴音楽を担当、作曲家として本格活動を開始。</p>
+              <p>2025年、東京国立博物館「平和への祈り音楽祭」プロデューサーとして、次世代の若手音楽家をブッキングし好評を博す。2026年2月初演のロングラン歴史ミュージカル「小栗忠順」音楽を担当。2026年7月7日より「アンティカ音楽学院」を開校し、代表に就任。</p>
+              <div class="representative-links">
+                <a class="btn btn-secondary" href="https://www.youtube.com/channel/UCm155wwhe8EEy1PWAKxIEug" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a class="btn btn-secondary" href="https://www.instagram.com/arionishi/?igshid=1um23iik9ed8z" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a class="btn btn-secondary" href="https://www.tokyoheadline.com/700216/" target="_blank" rel="noopener noreferrer">Interview</a>
+                <a class="btn btn-secondary" href="https://tablo.jp/archives/46301" target="_blank" rel="noopener noreferrer">Article</a>
+              </div>
+              <div class="representative-license">
+                <h3>Licence</h3>
+                <ul>
+                  <li>中学高等学校教諭第一種免許</li>
+                  <li>日本メンタルヘルス協会認定心理カウンセラー</li>
+                  <li>日本音楽著作権協会 JASRAC 会員</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -1485,19 +1519,10 @@
           <span class="news-date">2026.07.07</span>
           <h3><a href="flyer_AnticaMusicAcademy_20260707.pdf" target="_blank" rel="noopener noreferrer">アンティカ音楽学院 ローンチ・イベント</a></h3>
         </article>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-title">
-          <h2>対応分野</h2>
-          <p>ピアノと歌・声楽に特化し、感性と表現力を丁寧に育む音楽文化をご提供しています。</p>
-        </div>
-        <div class="service-grid">
-          <div class="service-item">ピアノ</div>
-          <div class="service-item">歌・声楽</div>
-        </div>
+        <article class="news-card">
+          <span class="news-date">2026.08.25</span>
+          <h3><a href="tominaga_flyer_20260825_v11.pdf" target="_blank" rel="noopener noreferrer">アンティカ音楽学院プレゼンツ富永 峻 ピアノ独奏会＆アフターレセプション</a></h3>
+        </article>
       </div>
     </section>
 
