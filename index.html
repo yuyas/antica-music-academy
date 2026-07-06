@@ -466,7 +466,7 @@
     .representative-photo-card {
       justify-self: end;
       width: 100%;
-      max-width: 300px;
+      max-width: 336px;
     }
 
     .representative-photo {
@@ -475,7 +475,7 @@
       overflow: hidden;
       border: 1px solid rgba(139, 107, 63, 0.24);
       border-radius: 50% / 45%;
-      background: var(--panel-soft);
+      background: #fff;
       box-shadow: var(--shadow);
       aspect-ratio: 2 / 3;
     }
@@ -484,17 +484,22 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 8%;
+      object-position: center top;
       display: block;
-      transform: none;
+      transform: scale(1.05) translateY(3.8%);
       transform-origin: center top;
       background: #fff;
     }
 
-    .representative-photo .representative-photo-credit {
-      right: 34px;
-      bottom: 28px;
-      z-index: 2;
+    .representative-photo-credit {
+      display: block;
+      margin: 8px 0 0;
+      color: var(--text-muted);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      text-align: center;
     }
 
     .representative-photo-name {
@@ -872,7 +877,6 @@
       transition: transform 0.45s ease;
     }
 
-    .representative-photo-credit,
     .artist-photo-credit {
       position: absolute;
       right: 10px;
@@ -924,12 +928,12 @@
 
     .artist-photo-focus--maika {
       object-position: center top;
-      transform: scale(1.30) translateY(-7%);
+      transform: scale(1.78) translateY(-20%);
       transform-origin: center top;
     }
 
     .artist-photo-focus--shoko {
-      transform: scale(1.30) translateY(-6%);
+      transform: scale(1.78) translateY(-18%);
       transform-origin: center top;
     }
 
@@ -969,11 +973,11 @@
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--maika {
-    transform: scale(1.30) translateY(-7%);
+    transform: scale(1.78) translateY(-20%);
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--shoko {
-    transform: scale(1.30) translateY(-6%);
+    transform: scale(1.78) translateY(-18%);
 }
 
     .artist-card:hover .artist-photo img.artist-photo-focus--yukiko {
@@ -1177,7 +1181,7 @@
       }
 
       .representative-photo-card {
-        max-width: 300px;
+        max-width: 336px;
         width: 100%;
         margin-inline: auto;
       }
@@ -1441,8 +1445,8 @@
           <div class="representative-photo-card">
             <div class="representative-photo">
               <img src="images/Ari_Onishi.jpg" alt="大西 亜里" loading="lazy">
-              <span class="artist-photo-credit representative-photo-credit">© Shin Yamagishi</span>
             </div>
+            <span class="representative-photo-credit">© Shin Yamagishi</span>
             <p class="representative-photo-name">大西 亜里</p>
           </div>
           <div class="representative-career">
@@ -1531,7 +1535,7 @@
               <div class="artist-body">
                 <h3>奥野 由紀子</h3>
                 <span class="artist-name-en">Yukiko Okuno</span>
-                <p class="artist-bio">桐朋学園大学音楽学部卒業、The Flute Studio（英国）修了。<br>アルトフルート・スペシャリスト。主要コンクール第1位多数、国内外の楽団と共演しメディアにも出演。</p>
+                <p class="artist-bio">桐朋学園大学音楽学部器楽科専攻卒業、The Flute Studio（英国）修了。<br>アルトフルート・スペシャリスト。主要コンクール第1位多数、国内外の楽団と共演しメディアにも出演。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
