@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>増田 香穂 | Music Ambassador | Antica Music Academy</title>
-  <meta name="description" content="増田 香穂（Kaho Masuda）のプロフィール。ANTICA Music Academy ミュージック・アンバサダー。">
+  <title>坪倉 唯子 | Music Ambassador | Antica Music Academy</title>
+  <meta name="description" content="坪倉 唯子（Yuiko Tsubokura）のプロフィール。ANTICA Music Academy ミュージック・アンバサダー。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,6 @@
       --text-muted: #5e503e;
       --line: #ddcfba;
       --accent: #8b6b3f;
-      --accent-deep: #6f5532;
       --max-width: 1120px;
       --radius: 16px;
       --shadow: 0 16px 38px rgba(70, 49, 20, 0.12);
@@ -63,7 +62,13 @@
       box-shadow: var(--shadow);
       aspect-ratio: 4 / 5;
     }
-    .profile-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
     .profile-copy { padding-top: 10px; }
     .eyebrow {
       display: inline-block;
@@ -77,7 +82,6 @@
     }
     h1 { margin: 0 0 6px; font-size: clamp(2.1rem, 4vw, 3.6rem); font-weight: 500; line-height: 1.35; letter-spacing: 0.06em; }
     .name-en { display: block; margin-bottom: 22px; color: var(--accent); font-family: "Cormorant Garamond", serif; font-size: clamp(1.35rem, 2.8vw, 2rem); }
-    .official-link { display: inline-flex; margin-bottom: 24px; padding: 11px 20px; border-radius: 999px; color: #fff; background: linear-gradient(120deg, #9a7751, #7c6039); font-weight: 700; }
     .tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 28px; padding: 0; list-style: none; }
     .tags li { border: 1px solid rgba(139, 107, 63, 0.34); border-radius: 999px; padding: 7px 13px; color: var(--accent); background: rgba(255, 253, 248, 0.82); font-size: 0.86rem; }
     .profile-body { border-top: 1px solid var(--line); padding-top: 28px; }
@@ -86,7 +90,7 @@
     @media (max-width: 860px) {
       main { padding-top: 46px; }
       .profile-hero { grid-template-columns: 1fr; gap: 28px; }
-      .profile-photo { max-width: 520px; width: 100%; margin-inline: auto; }
+      .profile-photo-wrap { max-width: 520px; width: 100%; margin-inline: auto; }
     }
     @media (max-width: 640px) {
       .header-inner { min-height: 66px; }
@@ -106,19 +110,25 @@
 
   <main>
     <div class="container profile-hero">
-      <div class="profile-photo">
-        <img src="../../images/Kaho_Masuda.jpeg" alt="増田 香穂">
+      <div class="profile-photo-wrap">
+        <div class="profile-photo">
+          <img src="../../images/Yuiko_Tsubokura.jpg" alt="坪倉 唯子">
+        </div>
       </div>
       <article class="profile-copy">
         <span class="eyebrow">Music Ambassador</span>
-        <h1>増田 香穂</h1>
-        <span class="name-en">Kaho Masuda</span>
-          <a class="official-link" href="https://lit.link/kahomasuda" target="_blank" rel="noopener noreferrer">公式サイトを見る ↗</a>
-        <ul class="tags"><li>Piano</li><li>Produce</li><li>Entrepreneurship</li></ul>
+        <h1>坪倉 唯子</h1>
+        <span class="name-en">Yuiko Tsubokura</span>
+        <ul class="tags"><li>Vocal</li><li>B.B. Queens</li><li>Chorus</li><li>Studio Musician</li></ul>
         <div class="profile-body">
-          <p>桐朋学園大学大学院ピアノ専攻修了。</p>
-          <p>在学中より国内外で研鑽を積み、演奏家として活動する一方、音楽サロンのプロデュースや早稲田大学MBAでの講義など、教育・企画分野にも活動の幅を広げている。</p>
-          <p>クラシック音楽の本質的な魅力を大切にしながら、多様な人々へ音楽を届ける新たな場づくりにも取り組み、演奏・教育・企画の三つの視点から音楽文化の発展に貢献している。</p>
+          <p>大阪府枚方市出身。高校卒業後に上京し、コーラス、仮歌、CM、ツアーサポート、スタジオミュージシャンとして活動を始める。</p>
+          <p>1985年「Cry For The Moon」でデビュー。1986年にアルバム『Always in love』、シングル「熱帯夜」をリリース。1988年にビーイング（現:B ZONE）へ移籍し、1989年には「渚のオールスターズ」に参加。1990年にアルバム『Loving you』をリリースする。</p>
+          <p>1990年、B.B.クィーンズのvocalとしてアニメ「ちびまる子ちゃん」の初代エンディング曲「おどるポンポコリン」でデビュー。同年レコード大賞を受賞し、紅白歌合戦にも出場。1991年には「はじめてのおつかい」主題歌「ドレミファだいじょうぶ」を発表する。</p>
+          <p>1993年には坪倉唯子ソロとして、ドラマ「ジェラシー」の主題歌「ジュテーム」とアルバム『ジュテーム』をリリース。1994年にアルバム『Devious』をリリースし、1995年に渡米。1998年にはミュージカル日本版「Rent」にジョアンヌ役で参加する。</p>
+          <p>2006年、本田美奈子の追悼シングルとして発売された「wish」に、福山雅治らとともにINOUEAKIRA & M.I.H.BANDのボーカルとして参加。同年「吉田拓郎&かぐや姫Concert in つま恋2006」にバックコーラスとして参加する。</p>
+          <p>2011年、洗足学園音楽大学ロック&ポップスコース非常勤講師に就任。同年、活動休止していたB.B.クィーンズを再始動し、近藤房之助と二人で現在も活動を続けている。2021年には『B'z presents LIVE FRIENDS』に参加。</p>
+          <p>主なツアー参加アーティストは、吉田拓郎、中島みゆき、福山雅治、工藤静香、桑名正博、アン・ルイス、中原めいこ、野猿（とんねるず）、ハウンドドッグ、子供ばんど、44マグナム、T-BOLANなど。80年代より長年歌唱しているCMロゴに「高須クリニック」がある。</p>
+          <p>現在は「T-BOLAN LAST LIVE TOUR 2025-2026 終章 SING THE BEST HIT JOURNEY 47」にコーラス参加している。</p>
         </div>
         <a class="back-link" href="../../index.html#endorsing-artists">トップページへ戻る</a>
       </article>

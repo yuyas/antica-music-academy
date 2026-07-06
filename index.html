@@ -474,19 +474,19 @@
       width: 100%;
       overflow: hidden;
       border: 1px solid rgba(139, 107, 63, 0.24);
-      border-radius: 50%;
+      border-radius: 50% / 44%;
       background: var(--panel-soft);
       box-shadow: var(--shadow);
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 3 / 4;
     }
 
     .representative-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 28%;
+      object-position: center top;
       display: block;
-      transform: scale(1);
+      transform: none;
       transform-origin: center top;
       background: #fff;
     }
@@ -899,6 +899,12 @@
       transform-origin: center top;
     }
 
+    .artist-photo-focus--yuiko {
+      object-position: center center;
+      transform: scale(1.36);
+      transform-origin: center center;
+    }
+
     .artist-photo-focus--kayoko {
       object-position: center top;
       transform: scale(1.23) translateY(0);
@@ -942,6 +948,10 @@
 
 .artist-card:hover .artist-photo img.artist-photo-focus--asuka {
     transform: scale(1.16) translateY(0);
+}
+
+.artist-card:hover .artist-photo img.artist-photo-focus--yuiko {
+    transform: scale(1.36);
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--kayoko {
@@ -1391,7 +1401,7 @@
             <h2>提供領域</h2>
             <ul>
               <li><span class="hero-panel-label">対象</span><span>幼児・小中高生・大人・シニアまで対応</span></li>
-              <li><span class="hero-panel-label">専門領域</span><span>ピアノ / 歌・声楽</span></li>
+              <li><span class="hero-panel-label">専門領域</span><span>ピアノ / 歌・声楽 / ヴァイオリン / フルート　各楽器、対応可能</span></li>
               <li><span class="hero-panel-label">イベント</span><span>第一線で活躍する音楽家によるアンティカ音楽学院だけのワークショップ</span></li>
             </ul>
           </aside>
@@ -1548,6 +1558,20 @@
               </div>
             </a>
           </article>
+          <!-- ARTIST: 坪倉 唯子 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="ambassadors/yuiko-tsubokura/">
+              <div class="artist-photo">
+                <img class="artist-photo-focus--yuiko" src="images/Yuiko_Tsubokura.jpg" alt="坪倉 唯子" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>坪倉 唯子</h3>
+                <span class="artist-name-en">Yuiko Tsubokura</span>
+                <p class="artist-bio">1985年「Cry For The Moon」でデビュー。<br>B.B.クィーンズのvocalとして「おどるポンポコリン」でレコード大賞を受賞し、紅白歌合戦にも出場。<br>洗足学園音楽大学ロック&ポップスコース非常勤講師。</p>
+                <span class="artist-link-label">View Profile</span>
+              </div>
+            </a>
+          </article>
           <!-- ARTIST: 手塚 佳代子 -->
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/kayoko-tezuka/">
@@ -1557,7 +1581,7 @@
               <div class="artist-body">
                 <h3>手塚 佳代子</h3>
                 <span class="artist-name-en">Kayoko Tezuka</span>
-                <p class="artist-bio">幼少期よりピアノ・バレエ・声楽を学び、舞台・ミュージカル・教育活動まで幅広く活躍。美しい日本語や表現の力を次世代へ伝えるアーティストです。</p>
+                <p class="artist-bio">武蔵野音楽大学音楽学科声楽学部を経て、劇団四季研究所卒業。海外音楽大学短期助成派遣、ウィーン国立音楽大学マスタークラス・ディプロマ取得及び、選抜終了コンサートにて歌唱。<br>幼少期より、ピアノ、声楽、バレエなどを学び、美しい日本語や表現の力を次世代へ伝えるアーティスト。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1578,14 +1602,7 @@
           </article>
           <!-- ARTIST: 増田 香穂 -->
           <article class="artist-card">
-            <a class="artist-card-link" href="ambassadors/kaho-masuda/">
-              <div class="artist-photo">
-                <img class="artist-photo-focus--kaho" src="images/Kaho_Masuda.jpeg" alt="増田 香穂" loading="lazy">
-              </div>
-              <div class="artist-body">
-                <h3>増田 香穂</h3>
-                <span class="artist-name-en">Kaho Masuda</span>
-                <p class="artist-bio">桐朋学園大学大学院ピアノ専攻修了。<br>「クラシック音楽業界をアップデートする」を掲げ、演奏活動を軸に、音楽サロンのプロデュースや早稲田大学MBAでの講師を務めるなど、表現者・教育者・起業家の三つの顔を併せ持つ。</p>
+                            <p class="artist-bio">桐朋学園大学大学院ピアノ専攻修了。<br>演奏活動をはじめ、音楽サロンのプロデュースや早稲田大学MBAでの講義など、演奏・教育・企画を横断しながら、音楽の新たな価値創造に取り組んでいる。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
