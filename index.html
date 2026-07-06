@@ -474,21 +474,27 @@
       width: 100%;
       overflow: hidden;
       border: 1px solid rgba(139, 107, 63, 0.24);
-      border-radius: 50% / 44%;
+      border-radius: 50% / 45%;
       background: var(--panel-soft);
       box-shadow: var(--shadow);
-      aspect-ratio: 3 / 4;
+      aspect-ratio: 2 / 3;
     }
 
     .representative-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 8%;
       display: block;
       transform: none;
       transform-origin: center top;
       background: #fff;
+    }
+
+    .representative-photo .representative-photo-credit {
+      right: 34px;
+      bottom: 28px;
+      z-index: 2;
     }
 
     .representative-photo-name {
@@ -918,12 +924,12 @@
 
     .artist-photo-focus--maika {
       object-position: center top;
-      transform: scale(1.78) translateY(-20%);
+      transform: scale(1.30) translateY(-7%);
       transform-origin: center top;
     }
 
     .artist-photo-focus--shoko {
-      transform: scale(1.78) translateY(-18%);
+      transform: scale(1.30) translateY(-6%);
       transform-origin: center top;
     }
 
@@ -963,11 +969,11 @@
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--maika {
-    transform: scale(1.78) translateY(-20%);
+    transform: scale(1.30) translateY(-7%);
 }
 
 .artist-card:hover .artist-photo img.artist-photo-focus--shoko {
-    transform: scale(1.78) translateY(-18%);
+    transform: scale(1.30) translateY(-6%);
 }
 
     .artist-card:hover .artist-photo img.artist-photo-focus--yukiko {
@@ -1602,7 +1608,14 @@
           </article>
           <!-- ARTIST: 増田 香穂 -->
           <article class="artist-card">
-                            <p class="artist-bio">桐朋学園大学大学院ピアノ専攻修了。<br>演奏活動をはじめ、音楽サロンのプロデュースや早稲田大学MBAでの講義など、演奏・教育・企画を横断しながら、音楽の新たな価値創造に取り組んでいる。</p>
+            <a class="artist-card-link" href="ambassadors/kaho-masuda/">
+              <div class="artist-photo">
+                <img class="artist-photo-focus--kaho" src="images/Kaho_Masuda.jpeg" alt="増田 香穂" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>増田 香穂</h3>
+                <span class="artist-name-en">Kaho Masuda</span>
+                <p class="artist-bio">桐朋学園大学大学院ピアノ専攻修了。<br>演奏活動をはじめ、音楽サロンのプロデュースや早稲田大学MBAでの講義など、演奏・教育・企画を横断しながら、音楽の新たな価値創造に取り組んでいる。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
