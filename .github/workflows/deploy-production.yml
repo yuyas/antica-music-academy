@@ -30,6 +30,7 @@ jobs:
           mkdir -p _site
           cp index.html CNAME _site/
           cp *.svg _site/
+          find . -maxdepth 1 -type f -iname '*.pdf' -exec cp {} _site/ \;
           if [ -d images ]; then cp -r images _site/; fi
 
       - name: Configure Pages
