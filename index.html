@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
@@ -91,6 +91,40 @@
 
     .nav {
       display: none;
+    }
+
+    .header-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-left: auto;
+    }
+
+    .header-social-links {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      color: var(--accent);
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .header-social-link:hover {
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .header-social-link svg {
+      width: 20px;
+      height: 20px;
+      display: block;
     }
 
     .menu-toggle {
@@ -1178,7 +1212,29 @@
       }
 
       .brand-wordmark {
-        width: clamp(178px, 54vw, 238px);
+        width: clamp(154px, 44vw, 218px);
+      }
+
+      .header-inner {
+        gap: 12px;
+      }
+
+      .header-actions {
+        gap: 11px;
+      }
+
+      .header-social-links {
+        gap: 8px;
+      }
+
+      .header-social-link {
+        width: 24px;
+        height: 24px;
+      }
+
+      .header-social-link svg {
+        width: 18px;
+        height: 18px;
       }
 
       .menu-drawer {
@@ -1414,13 +1470,29 @@
         <img class="brand-icon" src="LOGO.svg" alt="" aria-hidden="true">
         <img class="brand-wordmark" src="アンティカ音楽学院.svg" alt="アンティカ音楽学院">
       </a>
-      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="menu-drawer">
-        <span class="hamburger" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </button>
+      <div class="header-actions">
+        <nav class="header-social-links" aria-label="SNSリンク">
+          <a class="header-social-link" href="https://www.instagram.com/anticamusicacademy?igsh=MTJuY3Vqa2J3dnR4bQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect>
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle>
+              <circle cx="17.5" cy="6.5" r="1.35" fill="currentColor"></circle>
+            </svg>
+          </a>
+          <a class="header-social-link" href="https://www.facebook.com/share/1LCu9EqJZo/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M14.2 8.1h2.45V4.35c-.42-.06-1.88-.18-3.55-.18-3.52 0-5.9 2.12-5.9 6.02v3.38H3.55v4.18H7.2V24h4.48v-6.25h3.7l.58-4.18h-4.28v-2.96c0-1.22.34-2.51 2.52-2.51Z" fill="currentColor"></path>
+            </svg>
+          </a>
+        </nav>
+        <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="menu-drawer">
+          <span class="hamburger" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
     </div>
   </header>
 
