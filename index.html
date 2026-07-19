@@ -959,6 +959,12 @@
       line-height: 1;
       letter-spacing: 0.04em;
     }
+    .artist-photo-focus--fuga {
+      object-position: center top;
+      transform: scale(1.03);
+      transform-origin: center top;
+    }
+
     .artist-photo-focus--mio {
       object-fit: cover;
       object-position: center top;
@@ -1018,6 +1024,10 @@
     .artist-card:hover .artist-photo img {
     transform: none;
 }
+.artist-card:hover .artist-photo img.artist-photo-focus--fuga {
+    transform: scale(1.03);
+}
+
 .artist-card:hover .artist-photo img.artist-photo-focus--mio {
     transform: scale(1.04);
 }
@@ -1618,6 +1628,20 @@
           <p>音楽の第一線で活躍するアーティストの皆さまが、アンティカ音楽学院の理念に共鳴しています。<br>感性と表現の深みを、次世代へとつなぐ存在としてご紹介します。</p>
         </div>
         <div class="artist-grid artist-grid--preview">
+          <!-- ARTIST: 秋川 風雅 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="ambassadors/fuga-akikawa/">
+              <div class="artist-photo">
+                <img class="artist-photo-focus--fuga" src="images/Fuga_Akikawa.jpg" alt="秋川 風雅" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>秋川 風雅</h3>
+                <span class="artist-name-en">Fuga Akikawa</span>
+                <p class="artist-bio">2004年東京都生まれ。<br>6歳で日本フィル、12歳で東京交響楽団と共演し、同演奏会でベートーヴェン「交響曲第7番」を指揮。<br>国際コンクール「チャンピオンズ・キーボード」ベートーヴェン部門第1位、ホロヴィッツ・コンクール最高位賞受賞。</p>
+                <span class="artist-link-label">View Profile</span>
+              </div>
+            </a>
+          </article>
           <!-- ARTIST: 安藤 未緒 -->
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/mio-ando/">
