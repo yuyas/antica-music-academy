@@ -489,12 +489,6 @@
       transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
     }
 
-    .venue-card:hover {
-      border-color: rgba(139, 107, 63, 0.42);
-      box-shadow: 0 24px 54px rgba(76, 59, 39, 0.13);
-      transform: translateY(-2px);
-    }
-
     .venue-label {
       color: var(--accent);
       font-family: "Cormorant Garamond", serif;
@@ -517,13 +511,28 @@
       line-height: 1.8;
     }
 
-    .venue-link-label {
-      align-self: end;
-      color: var(--accent);
-      font-size: 0.86rem;
+    .venue-banner-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      margin-top: 6px;
+      border: 1px solid rgba(139, 107, 63, 0.36);
+      border-radius: 999px;
+      background: linear-gradient(120deg, rgba(139, 107, 63, 0.96), rgba(111, 82, 45, 0.96));
+      color: #fff;
+      font-size: 0.9rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-align: center;
+      box-shadow: 0 14px 28px rgba(76, 59, 39, 0.16);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .venue-banner-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 36px rgba(76, 59, 39, 0.22);
+      background: linear-gradient(120deg, rgba(154, 119, 81, 0.98), rgba(124, 96, 57, 0.98));
     }
 
     .service-grid {
@@ -1729,18 +1738,18 @@
           <p>アンティカ音楽学院では、上質な音楽体験を支える会場と連携しています。</p>
         </div>
         <div class="venue-grid">
-          <a class="venue-card" href="https://www.soundzone.jp/ebisuta/" target="_blank" rel="noopener noreferrer">
+          <article class="venue-card">
             <span class="venue-label">Partner Venue</span>
             <h3>恵比寿EBISUTA | エビスタ</h3>
             <address>〒150-0013<br>東京都渋谷区恵比寿3丁目28-12<br>ATYビル 1F</address>
-            <span class="venue-link-label">公式サイトを見る ↗</span>
-          </a>
-          <a class="venue-card" href="https://mirethos.net/" target="_blank" rel="noopener noreferrer">
+            <a class="venue-banner-link" href="https://www.soundzone.jp/ebisuta/" target="_blank" rel="noopener noreferrer">公式サイトを見る ↗</a>
+          </article>
+          <article class="venue-card">
             <span class="venue-label">Partner Venue</span>
             <h3>Mirethos（ミレートス）</h3>
             <address>〒150-0012<br>東京都渋谷区広尾5-8-12<br>飯田ビル B1</address>
-            <span class="venue-link-label">公式サイトを見る ↗</span>
-          </a>
+            <a class="venue-banner-link" href="https://mirethos.net/" target="_blank" rel="noopener noreferrer">公式サイトを見る ↗</a>
+          </article>
         </div>
       </div>
     </section>
