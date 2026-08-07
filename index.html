@@ -489,6 +489,25 @@
       transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
     }
 
+    .venue-logo-link {
+      display: grid;
+      gap: 8px;
+      padding: 22px 24px;
+      border: 1px solid rgba(139, 107, 63, 0.3);
+      border-radius: 8px;
+      background: rgba(255, 252, 246, 0.72);
+      color: var(--text);
+      text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .venue-logo-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(139, 107, 63, 0.52);
+      background: rgba(255, 250, 240, 0.96);
+      box-shadow: 0 16px 34px rgba(76, 59, 39, 0.13);
+    }
+
     .venue-label {
       color: var(--accent);
       font-family: "Cormorant Garamond", serif;
@@ -511,28 +530,12 @@
       line-height: 1.8;
     }
 
-    .venue-banner-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 54px;
-      margin-top: 6px;
-      border: 1px solid rgba(139, 107, 63, 0.36);
-      border-radius: 999px;
-      background: linear-gradient(120deg, rgba(139, 107, 63, 0.96), rgba(111, 82, 45, 0.96));
-      color: #fff;
-      font-size: 0.9rem;
+    .venue-visit {
+      color: var(--accent);
+      font-size: 0.82rem;
       font-weight: 700;
-      letter-spacing: 0.14em;
-      text-align: center;
-      box-shadow: 0 14px 28px rgba(76, 59, 39, 0.16);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    }
-
-    .venue-banner-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 36px rgba(76, 59, 39, 0.22);
-      background: linear-gradient(120deg, rgba(154, 119, 81, 0.98), rgba(124, 96, 57, 0.98));
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
     .service-grid {
@@ -1739,16 +1742,20 @@
         </div>
         <div class="venue-grid">
           <article class="venue-card">
-            <span class="venue-label">Partner Venue</span>
-            <h3>恵比寿EBISUTA | エビスタ</h3>
+            <a class="venue-logo-link" href="https://www.soundzone.jp/ebisuta/" target="_blank" rel="noopener noreferrer" aria-label="恵比寿EBISUTA | エビスタ 公式サイトを見る">
+              <span class="venue-label">Partner Venue</span>
+              <h3>恵比寿EBISUTA | エビスタ</h3>
+              <span class="venue-visit">Official Site ↗</span>
+            </a>
             <address>〒150-0013<br>東京都渋谷区恵比寿3丁目28-12<br>ATYビル 1F</address>
-            <a class="venue-banner-link" href="https://www.soundzone.jp/ebisuta/" target="_blank" rel="noopener noreferrer">公式サイトを見る ↗</a>
           </article>
           <article class="venue-card">
-            <span class="venue-label">Partner Venue</span>
-            <h3>Mirethos（ミレートス）</h3>
+            <a class="venue-logo-link" href="https://mirethos.net/" target="_blank" rel="noopener noreferrer" aria-label="Mirethos（ミレートス）公式サイトを見る">
+              <span class="venue-label">Partner Venue</span>
+              <h3>Mirethos（ミレートス）</h3>
+              <span class="venue-visit">Official Site ↗</span>
+            </a>
             <address>〒150-0012<br>東京都渋谷区広尾5-8-12<br>飯田ビル B1</address>
-            <a class="venue-banner-link" href="https://mirethos.net/" target="_blank" rel="noopener noreferrer">公式サイトを見る ↗</a>
           </article>
         </div>
       </div>
