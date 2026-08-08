@@ -468,6 +468,76 @@
     .news-card h3 a:hover {
       color: var(--accent);
     }
+
+    .venue-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .venue-card {
+      display: grid;
+      gap: 14px;
+      min-height: 100%;
+      border: 1px solid rgba(139, 107, 63, 0.26);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(145deg, rgba(139, 107, 63, 0.09), rgba(139, 107, 63, 0.025)),
+        var(--panel-soft);
+      box-shadow: 0 18px 42px rgba(76, 59, 39, 0.08);
+      padding: 28px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .venue-logo-link {
+      display: grid;
+      gap: 8px;
+      padding: 22px 24px;
+      border: 1px solid rgba(139, 107, 63, 0.3);
+      border-radius: 8px;
+      background: rgba(255, 252, 246, 0.72);
+      color: var(--text);
+      text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .venue-logo-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(139, 107, 63, 0.52);
+      background: rgba(255, 250, 240, 0.96);
+      box-shadow: 0 16px 34px rgba(76, 59, 39, 0.13);
+    }
+
+    .venue-label {
+      color: var(--accent);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.88rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .venue-card h3 {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(1.28rem, 2vw, 1.72rem);
+      line-height: 1.45;
+    }
+
+    .venue-card address {
+      margin: 0;
+      color: var(--text-muted);
+      font-style: normal;
+      line-height: 1.8;
+    }
+
+    .venue-visit {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
     .service-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -991,6 +1061,12 @@
       transform-origin: center center;
     }
 
+    .artist-photo-focus--soma {
+      object-position: center top;
+      transform: scale(1.08) translateY(-2%);
+      transform-origin: center top;
+    }
+
     .artist-photo-focus--kayoko {
       object-position: center top;
       transform: scale(1.23) translateY(0);
@@ -1015,6 +1091,12 @@
 
     .artist-photo-focus--yukiko {
       transform: scale(1.28) translateY(-6%);
+      transform-origin: center top;
+    }
+
+    .artist-photo-focus--ono {
+      object-position: center top;
+      transform: scale(1.18) translateY(-4%);
       transform-origin: center top;
     }
     .artist-photo-zoom {
@@ -1044,6 +1126,10 @@
     transform: scale(1.36);
 }
 
+.artist-card:hover .artist-photo img.artist-photo-focus--soma {
+    transform: scale(1.08) translateY(-2%);
+}
+
 .artist-card:hover .artist-photo img.artist-photo-focus--kayoko {
     transform: scale(1.23) translateY(0);
 }
@@ -1062,6 +1148,11 @@
 
     .artist-card:hover .artist-photo img.artist-photo-focus--yukiko {
       transform: scale(1.28) translateY(-6%);
+    }
+
+
+    .artist-card:hover .artist-photo img.artist-photo-focus--ono {
+      transform: scale(1.18) translateY(-4%);
     }
 .artist-card:hover .artist-photo-zoom {
     transform: scale(1.65) translateY(-6%);
@@ -1142,6 +1233,19 @@
     .page-hero .section-title {
       margin-bottom: 0;
       max-width: 68ch;
+    }
+
+    @media (max-width: 1024px) {
+      .news-card h3 {
+        font-size: clamp(1rem, 2.7vw, 1.35rem);
+        line-height: 1.6;
+      }
+
+      .news-card h3 a {
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: normal;
+      }
     }
 
     @media (max-width: 980px) {
@@ -1273,8 +1377,18 @@
       .service-grid,
       .form-grid,
       .artist-grid,
+      .venue-grid,
       .instructor-grid {
         grid-template-columns: 1fr;
+      }
+
+      .artist-grid {
+        justify-items: center;
+      }
+
+      .artist-card {
+        width: 80%;
+        max-width: 360px;
       }
 
       .representative-grid {
@@ -1327,6 +1441,7 @@
       .hero-panel,
       .card,
       .news-card,
+      .venue-card,
       .contact-box,
       .form-box {
         width: 100%;
@@ -1518,6 +1633,7 @@
     <nav class="menu-drawer-nav" aria-label="メインナビゲーション">
       <a href="#concept">コンセプト</a>
       <a href="#news">News</a>
+      <a href="#venues">提携会場</a>
       <a href="#endorsing-artists">Music Ambassador</a>
       <a href="#contact">お問い合わせ</a>
       <a href="#contact-form">お問い合わせフォーム</a>
@@ -1618,6 +1734,33 @@
       </div>
     </section>
 
+    <section id="venues" class="partner-venues">
+      <div class="container">
+        <div class="section-title">
+          <h2>提携会場</h2>
+          <p>アンティカ音楽学院では、上質な音楽体験を支える会場と連携しています。</p>
+        </div>
+        <div class="venue-grid">
+          <article class="venue-card">
+            <a class="venue-logo-link" href="https://www.soundzone.jp/ebisuta/" target="_blank" rel="noopener noreferrer" aria-label="恵比寿EBISUTA | エビスタ 公式サイトを見る">
+              <span class="venue-label">Partner Venue</span>
+              <h3>恵比寿EBISUTA | エビスタ</h3>
+              <span class="venue-visit">Official Site ↗</span>
+            </a>
+            <address>〒150-0013<br>東京都渋谷区恵比寿3丁目28-12<br>ATYビル 1F</address>
+          </article>
+          <article class="venue-card">
+            <a class="venue-logo-link" href="https://mirethos.net/" target="_blank" rel="noopener noreferrer" aria-label="Mirethos（ミレートス）公式サイトを見る">
+              <span class="venue-label">Partner Venue</span>
+              <h3>Mirethos（ミレートス）</h3>
+              <span class="venue-visit">Official Site ↗</span>
+            </a>
+            <address>〒150-0012<br>東京都渋谷区広尾5-8-12<br>飯田ビル B1</address>
+          </article>
+        </div>
+      </div>
+    </section>
+
 <section id="endorsing-artists">
       <div class="container">
         <div class="ambassador-logo-wrap">
@@ -1637,7 +1780,7 @@
               <div class="artist-body">
                 <h3>秋川 風雅</h3>
                 <span class="artist-name-en">Fuga Akikawa</span>
-                <p class="artist-bio">2004年東京都生まれ。<br>6歳で日本フィル、12歳で東京交響楽団と共演し、同演奏会でベートーヴェン「交響曲第7番」を指揮。<br>国際コンクール「チャンピオンズ・キーボード」ベートーヴェン部門第1位、ホロヴィッツ・コンクール最高位賞受賞。</p>
+                <p class="artist-bio">国際コンクール「チャンピオンズ・キーボード」（イタリア）ベートヴェン部門第1位。<br>ホロヴィッツ・コンクール（ハンガリー）フェリックス・ブルーメンフェルト記念賞（大会最高位賞）。<br>父はオペラ歌手の秋川雅史氏。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
@@ -1671,6 +1814,20 @@
               </div>
             </a>
           </article>
+          <!-- ARTIST: 小野 友葵子 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="ambassadors/yukiko-ono/">
+              <div class="artist-photo">
+                <img class="artist-photo-focus--ono" src="images/Yukiko_Ono.jpg" alt="小野 友葵子" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>小野 友葵子</h3>
+                <span class="artist-name-en">Yukiko Ono</span>
+                <p class="artist-bio">昭和音楽大学声楽科、同大学研究科を卒業。<br>大阪国際音楽コンクール第3位、日本クラシック声楽コンコルソ第2位など受賞。<br>2024年キングレコードよりメジャーデビュー。ソプラノ歌手・錦戸部屋女将として活動。</p>
+                <span class="artist-link-label">View Profile</span>
+              </div>
+            </a>
+          </article>
           <!-- ARTIST: くどう きよこ -->
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/kiyoko-kudo/">
@@ -1695,6 +1852,20 @@
                 <h3>小宮 明日翔</h3>
                 <span class="artist-name-en">Asuka Komiya</span>
                 <p class="artist-bio">洗足学園音楽大学 ミュージカルコース卒業。<br>幼少期からTV・CM・映画・声優で活躍。<br>2027年度大河ドラマの主人公・小栗上野介の生涯を紡ぐミュージカルを企画・制作・主催。</p>
+                <span class="artist-link-label">View Profile</span>
+              </div>
+            </a>
+          </article>
+          <!-- ARTIST: 田川 颯眞 -->
+          <article class="artist-card">
+            <a class="artist-card-link" href="ambassadors/soma-tagawa/">
+              <div class="artist-photo">
+                <img class="artist-photo-focus--soma" src="images/Soma_Tagawa.jpg" alt="田川 颯眞" loading="lazy">
+              </div>
+              <div class="artist-body">
+                <h3>田川 颯眞</h3>
+                <span class="artist-name-en">Soma Tagawa</span>
+                <p class="artist-bio">青山学院大学国際政治経済学部卒業。東宝ミュージカルアカデミー11期修了、BPAP 0期生。<br>日本とフランスで育まれた感性を武器に、舞台から映像まで幅広く活躍する俳優。<br>ミュージカルを軸に、イマーシブシアター、映像、声優などジャンルを横断して活動。</p>
                 <span class="artist-link-label">View Profile</span>
               </div>
             </a>
