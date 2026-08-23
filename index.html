@@ -442,6 +442,10 @@
       padding: 28px;
     }
 
+    .news-card + .news-card {
+      margin-top: 18px;
+    }
+
     .news-date {
       display: inline-block;
       margin-bottom: 8px;
@@ -449,6 +453,52 @@
       font-family: "Cormorant Garamond", serif;
       font-size: 1.05rem;
       letter-spacing: 0.1em;
+    }
+
+    .news-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .news-card-meta .news-date {
+      margin-bottom: 0;
+    }
+
+    .news-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 46px;
+      padding: 3px 10px;
+      border: 1px solid rgba(139, 107, 63, 0.32);
+      border-radius: 999px;
+      color: #fff;
+      background: var(--accent);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      animation: newsBadgePulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes newsBadgePulse {
+      0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 rgba(139, 107, 63, 0);
+      }
+      50% {
+        opacity: 0.42;
+        box-shadow: 0 0 14px rgba(139, 107, 63, 0.26);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .news-badge {
+        animation: none;
+      }
     }
 
     .news-card h3 {
@@ -1742,6 +1792,13 @@
         <article class="news-card">
           <span class="news-date">2026.08.25</span>
           <h3><a href="20260825_ShunTominaga.pdf" target="_blank" rel="noopener noreferrer">富永峻ピアノコンサート＆ドイツ歌曲・イタリアオペラ＆出演者を囲むアフターレセプション（満員御礼）</a></h3>
+        </article>
+        <article class="news-card">
+          <div class="news-card-meta">
+            <span class="news-date">2026.09.28</span>
+            <span class="news-badge">NEW</span>
+          </div>
+          <h3><a href="news/peter-kater-the-gift/">アンティカ音楽学院presents ‘’2度のグラミー賞受賞アーティスト‘’Peter Kater The Gift 〜ピアノの贈り物〜 アルバム発売記念 LIVE</a></h3>
         </article>
       </div>
     </section>

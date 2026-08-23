@@ -35,6 +35,7 @@ jobs:
           find . -maxdepth 1 -type f -iname '*.pdf' -exec cp {} _site/ \;
           if [ -d images ]; then cp -r images _site/; fi
           if [ -d ambassadors ]; then cp -r ambassadors _site/; fi
+          if [ -d news ]; then cp -r news _site/; fi
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
