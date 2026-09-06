@@ -171,11 +171,90 @@
       padding: clamp(24px, 5vw, 44px);
     }
 
+    .event-card + .event-card {
+      margin-top: 24px;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.45rem, 2.7vw, 2rem);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    h3 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 10px;
+      margin: 28px 0 8px;
+      color: var(--accent-deep);
+      font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    h3:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 span {
+      color: var(--accent);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.92em;
+      font-style: italic;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
     .event-title {
       margin: 0;
       font-size: clamp(1.2rem, 2.4vw, 1.6rem);
       line-height: 1.8;
       font-weight: 600;
+    }
+
+    .event-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .event-list li {
+      display: grid;
+      grid-template-columns: 9.5em minmax(0, 1fr);
+      gap: 18px;
+      border-bottom: 1px solid rgba(139, 107, 63, 0.16);
+      padding-bottom: 10px;
+    }
+
+    .event-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .event-list strong {
+      color: var(--accent-deep);
+      font-weight: 700;
+    }
+
+    .academy-text p,
+    .reservation-text p {
+      margin: 0 0 14px;
+    }
+
+    .reservation-items {
+      margin: 16px 0 0;
+      padding-left: 1.2em;
+    }
+
+    .text-link {
+      color: var(--accent-deep);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
     }
 
     .button-row {
@@ -205,6 +284,10 @@
       .brand-wordmark { width: clamp(180px, 58vw, 250px); }
       .event-visuals { grid-template-columns: 1fr; }
       .event-card { padding: 24px 20px; }
+      .event-list li {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
       .button-row { display: grid; }
     }
   </style>
@@ -239,9 +322,75 @@
 
       <section class="event-card">
         <p class="event-title">アンティカ音楽学院presents<br>美しすぎる音楽家たちの饗宴</p>
+      </section>
+
+      <section class="event-card">
+        <h2>出演</h2>
+        <ul class="event-list">
+          <li><strong>Opening Act / Piano</strong><span>秋川 風雅</span></li>
+          <li><strong>Piano</strong><span>増田 香穂</span></li>
+          <li><strong>Piano</strong><span>三浦 舞夏</span></li>
+          <li><strong>Violin</strong><span>末延 麻裕子</span></li>
+          <li><strong>Flute</strong><span>奥野 由紀子</span></li>
+          <li><strong>Soprano</strong><span>小野 友葵子</span></li>
+          <li><strong>Navigator</strong><span>大西 亜里</span></li>
+        </ul>
+      </section>
+
+      <section class="event-card academy-text">
+        <h2>公演紹介</h2>
+        <p>気品と情熱を纏う音楽家たちが集い、麗しき調べを紡ぐひととき。</p>
+        <p>ピアノ、ヴァイオリン、フルート、ソプラノ、それぞれの第一線で活躍する音楽家たちによる饗宴をお届けします。</p>
+      </section>
+
+      <section class="event-card">
+        <h2>開催概要</h2>
+        <ul class="event-list">
+          <li><strong>日程</strong><span>2026年10月6日（火）</span></li>
+          <li><strong>時間</strong><span>15:45開場 / 16:00開演 / 18:00終了</span></li>
+          <li><strong>会場</strong><span>赤坂ストラドホール</span></li>
+          <li><strong>料金</strong><span>6,000円</span></li>
+          <li><strong>ご予約</strong><span>公式InstagramまたはホームページのDMまで</span></li>
+        </ul>
+      </section>
+
+      <section class="event-card reservation-text">
+        <h2>ご予約・お問い合わせ</h2>
+        <p>公式InstagramまたはホームページのDMよりお問い合わせください。</p>
         <div class="button-row">
+          <a class="button" href="https://www.instagram.com/anticamusicacademy?igsi=MTJuY3Vqa2J3dnR4bQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
+          <a class="button" href="https://anticamusicacademy.com/">公式ホームページ</a>
           <a class="button" href="../../20261006_beautiful_musicians_flyer.pdf" target="_blank" rel="noopener noreferrer">PDFを開く</a>
         </div>
+      </section>
+
+      <section class="event-card academy-text">
+        <h2>アンティカ音楽学院</h2>
+        <p>音楽文化で、社会をつなぐ。第一線で活躍する音楽家とともに、人・地域・企業を音楽文化でつなぐ新しい文化事業。</p>
+      </section>
+
+      <section class="event-card academy-text">
+        <h2>出演者プロフィール</h2>
+        <h3>秋川 風雅 <span>piano</span></h3>
+        <p>2004年東京都生まれ。父はオペラ歌手・秋川雅史氏。3歳よりHakuju Hallでソロリサイタルを開催し、6歳で日本フィルハーモニー管弦楽団と共演。12歳で東京交響楽団とショパンを演奏し、以降ニッポンシンフォニーとラフマニノフ、チャイコフスキー等の協奏曲を演奏。国際コンクール「チャンピオンズ・キーボード」（イタリア）ベートーヴェン部門第1位、ホロヴィッツ・コンクール（ハンガリー）フェリックス・ブルーメンフェルト記念賞を受賞。</p>
+
+        <h3>増田 香穂 <span>piano</span></h3>
+        <p>桐朋学園大学音楽学部ピアノ専攻を経て、同大学院音楽研究科修士課程修了。音の夢ピアノコンクール全国大会最高位、イタリアコンコルソ MusicArte Premio d'Oro（金賞）受賞。コロンナ宮殿やテアトロオリンピコ等、世界遺産・国際芸術祭にも出演。早稲田大学MBAでの講義や自ら主宰する音楽サロンなど、演奏・教育・企画を横断しながら、音楽と社会の新たな接点を創出している。</p>
+
+        <h3>三浦 舞夏 <span>piano</span></h3>
+        <p>桐朋女子高等学校音楽科を経て、2019年桐朋学園大学音楽学部卒業。第15回ショパン国際コンクール in ASIA高校生部門アジア大会金賞、安川加寿子記念コンクール入選。宮崎国際音楽祭、サントリーホール ARKクラシックス等、多数のソロリサイタル・室内楽コンサートに出演。ピアノソロと並行し、室内楽・アンサンブルピアニストとしても幅広く活動している。</p>
+
+        <h3>末延 麻裕子 <span>violin</span></h3>
+        <p>桐朋学園高校、桐朋学園大学研究科卒業。若い音楽家のためのチャイコフスキー国際コンクール・ディプロマ賞、第13回日本モーツァルトコンクール第2位。大阪フィル・東京フィルとの共演をはじめ、YOSHIKI、矢沢永吉ら多彩なアーティストとも共演。クラシックを軸に、ジャンルを超えた表現で多くの聴衆を魅了している。</p>
+
+        <h3>奥野 由紀子 <span>flute</span></h3>
+        <p>アルトフルート・スペシャリスト、東京女子管弦楽団フルート奏者。桐朋学園大学音楽学部卒業、同大学研究科、The Flute Studio（英国）修了。日本フルートコンヴェンションコンクール アルトフルート部門第1位など受賞歴多数。ブルガリア国立ソフィア管弦楽団等とも共演し、2024年に2ndソロアルバム『Grace』をメジャーリリース。</p>
+
+        <h3>小野 友葵子 <span>soprano</span></h3>
+        <p>ソプラノ歌手・錦戸部屋女将。昭和音楽大学声楽科、同大学研究科を卒業。第21回大阪国際音楽コンクール第3位、日本クラシック声楽コンコルソ第2位など受賞。企画立案からキャスティング、演出、広報までを自ら手掛けるコンサートプロデュースでも注目され、2024年キングレコードよりメジャーデビュー。</p>
+
+        <h3>大西 亜里 <span>navigator</span></h3>
+        <p>国立音楽大学声楽学科卒業。音楽教師を経てANTICAでメジャーデビューし、文化放送DJやテレビMCとして活動。avexからソロデビュー後、歌手・タレントへのボイストレーニング、楽曲提供、舞台音楽制作を手掛ける。医学知識を生かした音楽療法や復興支援にも取り組み、2025年「平和への祈り音楽祭」をプロデュース。2026年、アンティカ音楽学院を開校し代表に就任。</p>
       </section>
     </div>
   </main>
