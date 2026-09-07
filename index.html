@@ -521,6 +521,23 @@
       color: var(--accent);
     }
 
+    .news-card-visual {
+      display: block;
+      width: min(100%, 520px);
+      margin-top: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(139, 107, 63, 0.22);
+      border-radius: 8px;
+      background: var(--panel-soft);
+      box-shadow: 0 14px 30px rgba(70, 49, 20, 0.1);
+    }
+
+    .news-card-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     .venue-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1894,7 +1911,10 @@
         </article>
         <article class="news-card">
           <span class="news-date">2026.09.28</span>
-          <h3><a href="news/peter-kater-the-gift/">アンティカ音楽学院presents<br>『超！音楽家の響宴』ジャンルを超えた一流アーティストたちが集い、音楽の新たな扉を開くと特別なひととき</a></h3>
+          <h3><a href="news/super-musicians-feast/">アンティカ音楽学院presents<br>『超！音楽家の響宴』ジャンルを超えた一流アーティストたちが集い、音楽の新たな扉を開くと特別なひととき</a></h3>
+          <a class="news-card-visual" href="news/super-musicians-feast/" aria-label="2026年9月28日 超！音楽家の響宴の詳細を見る">
+            <img src="images/Super_Musicians_Feast_flyer_front.jpg" alt="アンティカ音楽学院presents 超！音楽家の響宴 フライヤー" loading="lazy">
+          </a>
         </article>
         <article class="news-card">
           <div class="news-card-meta">
