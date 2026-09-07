@@ -680,6 +680,74 @@
       color: var(--text-muted);
     }
 
+    .officer-section {
+      padding-top: 0;
+      background: linear-gradient(180deg, rgba(247, 245, 242, 0.96), rgba(255, 253, 248, 0.72));
+    }
+
+    .officer-card {
+      display: grid;
+      grid-template-columns: minmax(220px, 302px) minmax(0, 1fr);
+      gap: clamp(24px, 4vw, 40px);
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(145deg, rgba(139, 107, 63, 0.08), rgba(139, 107, 63, 0.02)),
+        var(--panel-soft);
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 4vw, 36px);
+    }
+
+    .officer-photo {
+      width: 100%;
+      max-width: 302px;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(139, 107, 63, 0.22);
+      border-radius: 8px;
+      background: #fff;
+      aspect-ratio: 4 / 5;
+    }
+
+    .officer-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .officer-profile {
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+    }
+
+    .officer-role {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.02rem;
+      font-style: italic;
+      letter-spacing: 0.08em;
+    }
+
+    .officer-profile h3 {
+      margin: 0 0 18px;
+      color: var(--text);
+      font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+
+    .officer-profile p {
+      margin: 0 0 15px;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.86;
+    }
+
     .representative-profile {
       border-top: 1px solid var(--line);
       padding-top: 24px;
@@ -1463,6 +1531,15 @@
         width: 100%;
         margin-inline: auto;
       }
+
+      .officer-card {
+        grid-template-columns: 1fr;
+      }
+
+      .officer-photo {
+        max-width: 212px;
+        margin: 0 auto;
+      }
       .hero-grid {
         gap: 26px;
       }
@@ -1780,6 +1857,28 @@
         </div>
       </div>
     </section>
+
+    <section id="officers" class="officer-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>役員</h2>
+        </div>
+        <article class="officer-card">
+          <figure class="officer-photo">
+            <img src="images/Kanako_Abe.jpg" alt="阿部かな子" loading="lazy">
+          </figure>
+          <div class="officer-profile">
+            <span class="officer-role">Officer</span>
+            <h3>阿部かな子</h3>
+            <p>元宝塚歌劇団娘役スター。退団後、女優として活動し、恩返しのために映像制作会社 株式会社トップチャンネルを起業。</p>
+            <p>経営者団体 パッションリーダーズ副理事として、経営者同士の交流や学びの場づくりに力を注ぐ。</p>
+            <p>また、ライオンズクラブ国際協会330-A地区の地区ガバナーを務め、「愛・絆・情熱」を胸に、子どもたちへの支援をはじめとする社会貢献活動を積極的に推進。</p>
+            <p>さらに、白鵬会副会長としての活動にも尽力し、これまで培ってきた経験と人とのご縁を生かしながら、経営、文化、社会貢献、そして人と人との絆を大切に、現在も各分野で精力的に活動している。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="news">
       <div class="container">
         <div class="section-title">
