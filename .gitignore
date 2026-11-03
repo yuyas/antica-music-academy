@@ -1,0 +1,6 @@
+# Keep local and internal documents out of the public website repository.
+_site*/
+*.docx
+CLAUDE.md
+業務委託契約書_参考資料.pdf
+音楽系フリーランスのための契約ガイドブック(文化庁).pdf

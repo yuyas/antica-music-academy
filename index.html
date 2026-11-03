@@ -985,6 +985,14 @@
       grid-column: 1 / -1;
     }
 
+    .form-honeypot {
+      position: absolute;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
     .form-field label {
       font-size: 0.86rem;
       letter-spacing: 0.03em;
@@ -2213,31 +2221,35 @@
         <div class="form-box">
           <h2>お問い合わせフォーム</h2>
           <p>ご質問、法人・提携のご相談、その他のお問い合わせはこちらからお送りください。</p>
-          <form class="contact-form" action="https://formspree.io/f/xpqgbzvb" method="POST">
+          <form class="contact-form" action="https://formspree.io/f/xpqgbzvb" method="POST" accept-charset="UTF-8">
+            <div class="form-honeypot" aria-hidden="true">
+              <label for="form-website">ウェブサイト</label>
+              <input id="form-website" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            </div>
             <div class="form-grid">
               <div class="form-field">
                 <label for="form-name">お名前</label>
-                <input id="form-name" name="name" type="text" required>
+                <input id="form-name" name="name" type="text" maxlength="100" autocomplete="name" required>
               </div>
               <div class="form-field">
                 <label for="form-occupation">ご職業</label>
-                <input id="form-occupation" name="occupation" type="text">
+                <input id="form-occupation" name="occupation" type="text" maxlength="100" autocomplete="organization-title">
               </div>
               <div class="form-field">
                 <label for="form-affiliation">所属団体・お役職</label>
-                <input id="form-affiliation" name="affiliation_title" type="text">
+                <input id="form-affiliation" name="affiliation_title" type="text" maxlength="150" autocomplete="organization">
               </div>
               <div class="form-field">
                 <label for="form-email">メールアドレス</label>
-                <input id="form-email" name="email" type="email" required>
+                <input id="form-email" name="email" type="email" maxlength="254" autocomplete="email" required>
               </div>
               <div class="form-field">
                 <label for="form-tel">電話番号</label>
-                <input id="form-tel" name="phone" type="tel">
+                <input id="form-tel" name="phone" type="tel" maxlength="30" inputmode="tel" autocomplete="tel">
               </div>
               <div class="form-field">
                 <label for="form-type">希望内容</label>
-                <select id="form-type" name="request_type">
+                <select id="form-type" name="request_type" required>
                   <option value="お問い合わせ">お問い合わせ</option>
                   <option value="法人・提携相談">法人・提携相談</option>
                   <option value="その他">その他</option>
@@ -2245,7 +2257,7 @@
               </div>
               <div class="form-field full">
                 <label for="form-message">ご相談内容</label>
-                <textarea id="form-message" name="message"></textarea>
+                <textarea id="form-message" name="message" minlength="10" maxlength="3000" required></textarea>
               </div>
             </div>
             <button class="btn btn-primary form-submit" type="submit">送信する</button>
@@ -2319,6 +2331,22 @@
         });
         if (img.complete && img.naturalWidth === 0) {
           img.dispatchEvent(new Event("error"));
+        }
+      });
+    })();
+
+    (function () {
+      var form = document.querySelector(".contact-form");
+      if (!form) {
+        return;
+      }
+
+      form.addEventListener("submit", function () {
+        var submit = form.querySelector(".form-submit");
+        if (submit) {
+          submit.disabled = true;
+          submit.setAttribute("aria-disabled", "true");
+          submit.textContent = "送信中...";
         }
       });
     })();
