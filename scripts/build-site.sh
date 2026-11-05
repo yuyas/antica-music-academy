@@ -10,8 +10,9 @@ fi
 
 mkdir -p "$output_dir"
 
-cp index.html CNAME "$output_dir/"
+cp index.html CNAME robots.txt sitemap.xml "$output_dir/"
 cp LOGO.svg アンティカ音楽学院.svg "$output_dir/"
+cp -r assets "$output_dir/"
 cp flyer_AnticaMusicAcademy_20260707.pdf "$output_dir/"
 cp 20260825_ShunTominaga.pdf "$output_dir/"
 cp 20261006_beautiful_musicians_flyer.pdf "$output_dir/"

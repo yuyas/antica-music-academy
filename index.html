@@ -3,1777 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>アンティカ音楽学院 | 音楽文化で、社会をつなぐ。</title>
-  <meta name="description" content="アンティカ音楽学院は、第一線で活躍する音楽家とともに、生活者・地域・企業を音楽文化でつなぐ新しい文化事業です。">
+  <title>アンティカ音楽学院 | 東京の音楽イベント・音楽文化事業</title>
+  <meta name="description" content="アンティカ音楽学院は、東京を中心に第一線で活躍する音楽家によるコンサート、企業・地域向け音楽イベント、ワークショップを企画・開催する音楽文化事業です。">
+  <link rel="icon" href="LOGO.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://anticamusicacademy.com/">
+  <meta name="theme-color" content="#8b6b3f">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="アンティカ音楽学院">
+  <meta property="og:title" content="アンティカ音楽学院 | 東京の音楽イベント・音楽文化事業">
+  <meta property="og:description" content="アンティカ音楽学院は、東京を中心に第一線で活躍する音楽家によるコンサート、企業・地域向け音楽イベント、ワークショップを企画・開催する音楽文化事業です。">
+  <meta property="og:url" content="https://anticamusicacademy.com/">
+  <meta property="og:image" content="https://anticamusicacademy.com/images/music-ambassador-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "アンティカ音楽学院",
+      "alternateName": "Antica Music Academy",
+      "url": "https://anticamusicacademy.com/",
+      "logo": "https://anticamusicacademy.com/LOGO.svg",
+      "email": "anticamusicacademy@gmail.com",
+      "sameAs": [
+        "https://www.instagram.com/anticamusicacademy/",
+        "https://www.facebook.com/share/1LCu9EqJZo/"
+      ]
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f7f5f2;
-      --bg-soft: #faf7f2;
-      --panel: #ffffff;
-      --panel-soft: #fffdf8;
-      --text: #2f2618;
-      --text-muted: #5e503e;
-      --line: #ddcfba;
-      --accent: #8b6b3f;
-      --accent-deep: #6f5532;
-      --max-width: 1120px;
-      --radius: 16px;
-      --shadow: 0 16px 38px rgba(70, 49, 20, 0.12);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background:
-        radial-gradient(circle at 85% 0%, rgba(139, 107, 63, 0.1) 0%, rgba(139, 107, 63, 0) 42%),
-        linear-gradient(180deg, #ffffff 0%, #fbf8f3 100%);
-      color: var(--text);
-      font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
-      line-height: 1.75;
-      letter-spacing: 0.01em;
-    }
-    .en {
-      font-family: "Cormorant Garamond", serif;
-    }
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(100% - 40px, var(--max-width));
-      margin-inline: auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      border-bottom: 1px solid rgba(139, 107, 63, 0.22);
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(10px);
-    }
-
-    .header-inner {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      white-space: nowrap;
-    }
-
-    .brand-icon {
-      width: 28px;
-      height: auto;
-      display: block;
-    }
-
-    .brand-wordmark {
-      width: clamp(calc(140px + 12pt), calc(24vw + 12pt), calc(250px + 12pt));
-      height: auto;
-      display: block;
-    }
-
-    .nav {
-      display: none;
-    }
-
-    .header-actions {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      margin-left: auto;
-    }
-
-    .header-social-links {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .header-social-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 30px;
-      height: 30px;
-      color: var(--accent);
-      transition: color 0.2s ease, transform 0.2s ease;
-    }
-
-    .header-social-link:hover {
-      color: var(--text);
-      transform: translateY(-1px);
-    }
-
-    .header-social-link svg {
-      width: 26px;
-      height: 26px;
-      display: block;
-    }
-
-    .header-social-link--facebook svg {
-      transform: translateY(-2px);
-    }
-
-    .menu-toggle {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 8px 2px;
-      border: 0;
-      background: transparent;
-      cursor: pointer;
-      color: var(--accent);
-    }
-
-    .menu-toggle:hover .hamburger span {
-      background: var(--text);
-    }
-
-    .hamburger {
-      position: relative;
-      display: block;
-      width: 26px;
-      height: 18px;
-    }
-
-    .hamburger span {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--accent);
-      border-radius: 999px;
-    }
-
-    .hamburger span:nth-child(1) {
-      top: 0;
-    }
-
-    .hamburger span:nth-child(2) {
-      top: 8px;
-    }
-
-    .hamburger span:nth-child(3) {
-      bottom: 0;
-    }
-
-    .menu-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 30;
-      background: rgba(47, 38, 24, 0.42);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
-    .menu-overlay.is-open {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .menu-drawer {
-      position: fixed;
-      top: 0;
-      right: 0;
-      z-index: 40;
-      width: 60%;
-      height: 100%;
-      padding: 28px 32px 40px;
-      border-left: 1px solid rgba(139, 107, 63, 0.28);
-      background:
-        linear-gradient(165deg, rgba(139, 107, 63, 0.08), rgba(139, 107, 63, 0.02)),
-        #ffffff;
-      box-shadow: -12px 0 40px rgba(70, 49, 20, 0.14);
-      transform: translateX(100%);
-      transition: transform 0.35s ease;
-      overflow-y: auto;
-    }
-
-    .menu-drawer.is-open {
-      transform: translateX(0);
-    }
-
-    .menu-drawer-header {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 36px;
-    }
-
-    .menu-close {
-      border: 1px solid rgba(139, 107, 63, 0.35);
-      border-radius: 999px;
-      padding: 8px 18px;
-      background: transparent;
-      color: var(--accent);
-      font-family: "Noto Serif JP", serif;
-      font-size: 0.88rem;
-      letter-spacing: 0.08em;
-      cursor: pointer;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .menu-close:hover {
-      background: rgba(139, 107, 63, 0.1);
-      color: var(--accent-deep);
-    }
-
-    .menu-drawer-nav {
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-    }
-
-    .menu-drawer-nav a {
-      color: var(--text);
-      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
-      letter-spacing: 0.06em;
-      border-bottom: 1px solid transparent;
-      padding-bottom: 4px;
-      transition: color 0.2s ease, border-color 0.2s ease;
-    }
-
-    .menu-drawer-nav a:hover {
-      color: var(--accent);
-      border-bottom-color: rgba(139, 107, 63, 0.4);
-    }
-
-    body.menu-open {
-      overflow: hidden;
-    }
-
-    .hero {
-      padding: 110px 0 82px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 28px;
-      align-items: start;
-    }
-
-    .hero-copy {
-      max-width: 100%;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 16px;
-      font-family: "Noto Serif JP", serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-style: italic;
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0 0 16px;
-      line-height: 1.35;
-      font-weight: 600;
-      font-family: "Noto Serif JP", serif;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-      letter-spacing: 0.06em;
-      margin-bottom: 20px;
-      font-weight: 400;
-      line-height: 1.5;
-    }
-
-    p {
-      margin: 0 0 14px;
-      color: var(--text-muted);
-    }
-
-    .hero-copy p {
-      max-width: 65ch;
-    }
-
-    @media (min-width: 981px) {
-      .hero-copy > p {
-        max-width: none;
-        white-space: nowrap;
-      }
-    }
-
-    .hero-panel {
-      max-width: none;
-      width: 100%;
-      margin-top: 30px;
-      border-top: 1px solid rgba(139, 107, 63, 0.28);
-      border-bottom: 1px solid rgba(139, 107, 63, 0.2);
-      padding: 24px 0 22px;
-      background: linear-gradient(90deg, rgba(139, 107, 63, 0.055), rgba(255, 253, 248, 0));
-    }
-
-    .hero-panel h2 {
-      padding-left: 28px;
-      font-size: 1.08rem;
-      margin-bottom: 14px;
-      color: var(--text);
-      letter-spacing: 0.08em;
-    }
-
-    .hero-panel ul {
-      margin: 0;
-      padding-left: 0;
-      color: var(--text-muted);
-      list-style: none;
-    }
-
-    .hero-panel li {
-      display: grid;
-      grid-template-columns: 6.2em minmax(0, 1fr);
-      gap: 18px;
-      padding: 11px 0;
-      align-items: baseline;
-      border-top: 1px solid rgba(139, 107, 63, 0.12);
-    }
-
-    .hero-panel li:first-child {
-      border-top: 0;
-    }
-
-    .hero-panel-label {
-      color: var(--accent);
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      white-space: nowrap;
-      text-align: center;
-    }
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 999px;
-      font-size: 0.92rem;
-      letter-spacing: 0.04em;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      opacity: 0.94;
-    }
-
-    .btn-primary {
-      color: #ffffff;
-      font-weight: 700;
-      background: linear-gradient(120deg, #9a7751, #7c6039);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(139, 107, 63, 0.42);
-      color: var(--accent);
-      background: transparent;
-    }
-
-    section {
-      padding: 78px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-title {
-      margin-bottom: 30px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(1.5rem, 3vw, 2.35rem);
-      margin-bottom: 10px;
-      letter-spacing: 0.03em;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--panel-soft);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 24px;
-    }
-
-    .card h3 {
-      color: var(--accent);
-      font-size: 1.05rem;
-      margin-bottom: 8px;
-    }
-
-    .news-card {
-      display: grid;
-      align-items: center;
-      border: 1px solid rgba(139, 107, 63, 0.26);
-      border-radius: var(--radius);
-      background:
-        linear-gradient(145deg, rgba(139, 107, 63, 0.1), rgba(139, 107, 63, 0.03)),
-        var(--panel-soft);
-      box-shadow: var(--shadow);
-      padding: 28px;
-    }
-
-    .news-card + .news-card {
-      margin-top: 18px;
-    }
-
-    .news-date {
-      display: inline-block;
-      margin-bottom: 8px;
-      color: var(--accent);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.05rem;
-      letter-spacing: 0.1em;
-    }
-
-    .news-card-meta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 8px;
-    }
-
-    .news-card-meta .news-date {
-      margin-bottom: 0;
-    }
-
-    .news-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 46px;
-      padding: 3px 10px;
-      border: 1px solid rgba(139, 107, 63, 0.32);
-      border-radius: 999px;
-      color: #fff;
-      background: var(--accent);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.16em;
-      line-height: 1.2;
-      text-transform: uppercase;
-      animation: newsBadgePulse 1.8s ease-in-out infinite;
-    }
-
-    @keyframes newsBadgePulse {
-      0%, 100% {
-        opacity: 1;
-        box-shadow: 0 0 0 rgba(139, 107, 63, 0);
-      }
-      50% {
-        opacity: 0.42;
-        box-shadow: 0 0 14px rgba(139, 107, 63, 0.26);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .news-badge {
-        animation: none;
-      }
-    }
-
-    .news-card h3 {
-      margin-bottom: 0;
-      color: var(--text);
-      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-    }
-
-    .news-status {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--accent);
-      font-size: 0.72em;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-    }
-
-    .news-card h3 a {
-      white-space: normal;
-      overflow-wrap: anywhere;
-      word-break: normal;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 5px;
-      transition: color 0.2s ease;
-    }
-
-    .news-card h3 a:hover {
-      color: var(--accent);
-    }
-
-    .news-card-visual {
-      display: block;
-      width: min(100%, 520px);
-      margin-top: 22px;
-      overflow: hidden;
-      border: 1px solid rgba(139, 107, 63, 0.22);
-      border-radius: 8px;
-      background: var(--panel-soft);
-      box-shadow: 0 14px 30px rgba(70, 49, 20, 0.1);
-    }
-
-    .news-card-visual img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .venue-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .venue-card {
-      display: grid;
-      gap: 14px;
-      min-height: 100%;
-      border: 1px solid rgba(139, 107, 63, 0.26);
-      border-radius: var(--radius);
-      background:
-        linear-gradient(145deg, rgba(139, 107, 63, 0.09), rgba(139, 107, 63, 0.025)),
-        var(--panel-soft);
-      box-shadow: 0 18px 42px rgba(76, 59, 39, 0.08);
-      padding: 28px;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-    }
-
-    .venue-logo-link {
-      display: grid;
-      gap: 8px;
-      padding: 22px 24px;
-      border: 1px solid rgba(139, 107, 63, 0.3);
-      border-radius: 8px;
-      background: rgba(255, 252, 246, 0.72);
-      color: var(--text);
-      text-decoration: none;
-      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    }
-
-    .venue-logo-link:hover {
-      transform: translateY(-2px);
-      border-color: rgba(139, 107, 63, 0.52);
-      background: rgba(255, 250, 240, 0.96);
-      box-shadow: 0 16px 34px rgba(76, 59, 39, 0.13);
-    }
-
-    .venue-label {
-      color: var(--accent);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 0.88rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .venue-card h3 {
-      margin: 0;
-      color: var(--text);
-      font-size: clamp(1.28rem, 2vw, 1.72rem);
-      line-height: 1.45;
-    }
-
-    .venue-card address {
-      margin: 0;
-      color: var(--text-muted);
-      font-style: normal;
-      line-height: 1.8;
-    }
-
-    .venue-visit {
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .service-item {
-      text-align: center;
-      background: var(--panel-soft);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 16px 12px;
-      color: var(--text);
-      font-size: 0.92rem;
-    }
-
-    .representative-section {
-      background:
-        linear-gradient(180deg, rgba(255, 253, 248, 0.72), rgba(247, 245, 242, 0.96));
-    }
-
-    .representative-heading {
-      margin-bottom: 24px;
-      text-align: left;
-    }
-
-    .representative-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
-      gap: 38px;
-      align-items: start;
-    }
-
-    .representative-photo-card {
-      justify-self: end;
-      width: 100%;
-      max-width: 336px;
-    }
-
-    .representative-photo {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      border: 1px solid rgba(139, 107, 63, 0.24);
-      border-radius: 50% / 45%;
-      background: #fff;
-      box-shadow: var(--shadow);
-      aspect-ratio: 2 / 3;
-    }
-
-    .representative-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      transform: scale(1.05) translateY(3.8%);
-      transform-origin: center top;
-      background: #fff;
-    }
-
-    .representative-photo-credit {
-      display: block;
-      margin: 8px 0 0;
-      color: var(--text-muted);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.04em;
-      line-height: 1;
-      text-align: center;
-    }
-
-    .representative-photo-name {
-      margin: 14px 0 0;
-      color: var(--text);
-      font-size: 1.08rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-align: center;
-    }
-    .representative-photo-name span {
-      display: block;
-      margin-top: 5px;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 0.98rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      color: var(--text-muted);
-    }
-
-    .officer-section {
-      padding-top: 0;
-      background: linear-gradient(180deg, rgba(247, 245, 242, 0.96), rgba(255, 253, 248, 0.72));
-    }
-
-    .officer-card {
-      display: grid;
-      grid-template-columns: minmax(220px, 302px) minmax(0, 1fr);
-      gap: clamp(24px, 4vw, 40px);
-      align-items: start;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background:
-        linear-gradient(145deg, rgba(139, 107, 63, 0.08), rgba(139, 107, 63, 0.02)),
-        var(--panel-soft);
-      box-shadow: var(--shadow);
-      padding: clamp(24px, 4vw, 36px);
-    }
-
-    .officer-photo {
-      width: 100%;
-      max-width: 302px;
-      margin: 0;
-      overflow: hidden;
-      border: 1px solid rgba(139, 107, 63, 0.22);
-      border-radius: 8px;
-      background: #fff;
-      aspect-ratio: 4 / 5;
-    }
-
-    .officer-photo img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-    }
-
-    .officer-profile {
-      border-top: 1px solid var(--line);
-      padding-top: 22px;
-    }
-
-    .officer-role {
-      display: block;
-      margin-bottom: 10px;
-      color: var(--accent);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.02rem;
-      font-style: italic;
-      letter-spacing: 0.08em;
-    }
-
-    .officer-profile h3 {
-      margin: 0 0 18px;
-      color: var(--text);
-      font-size: clamp(1.5rem, 2.8vw, 2.1rem);
-      font-weight: 500;
-      letter-spacing: 0.08em;
-    }
-
-    .officer-profile p {
-      margin: 0 0 15px;
-      color: var(--text-muted);
-      font-size: 0.98rem;
-      line-height: 1.86;
-    }
-
-    .representative-profile {
-      border-top: 1px solid var(--line);
-      padding-top: 24px;
-    }
-
-    .representative-name {
-      margin: 0 0 4px;
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      font-weight: 500;
-      letter-spacing: 0.08em;
-    }
-
-    .representative-name-en {
-      display: block;
-      margin: -2px 0 8px;
-      color: var(--accent);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.12rem;
-      letter-spacing: 0.04em;
-    }
-
-    .representative-role {
-      display: block;
-      margin-bottom: 22px;
-      color: var(--accent);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.18rem;
-      letter-spacing: 0.08em;
-    }
-
-    .representative-subtitle {
-      margin: 0 0 14px;
-      color: var(--accent);
-      font-size: 1.08rem;
-      letter-spacing: 0.08em;
-    }
-
-    .representative-career-name {
-      margin: 0 0 16px;
-      color: var(--text);
-      font-size: 1.08rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-    }
-
-    .representative-career-name span {
-      margin-left: 0.9em;
-      color: var(--accent);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.02rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-    }
-
-    .representative-profile-toggle {
-      display: inline-flex;
-      align-items: center;
-      margin-left: 12px;
-      padding: 7px 15px;
-      border: 1px solid rgba(139, 107, 63, 0.34);
-      border-radius: 999px;
-      background: rgba(255, 253, 248, 0.86);
-      color: var(--accent);
-      font: inherit;
-      font-size: 0.88rem;
-      line-height: 1.4;
-      letter-spacing: 0.04em;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-    }
-
-    .representative-profile-toggle:hover {
-      border-color: rgba(139, 107, 63, 0.64);
-      background: rgba(139, 107, 63, 0.08);
-      color: var(--accent-deep);
-    }
-
-    .representative-profile-more {
-      margin-top: 18px;
-    }
-
-    .representative-profile-more[hidden] {
-      display: none;
-    }
-
-    .representative-message-body {
-      margin-bottom: 32px;
-    }
-
-    .representative-signature {
-      width: fit-content;
-      margin: 28px 7% 0 auto;
-      text-align: left;
-    }
-
-    .representative-signature p {
-      margin-bottom: 6px;
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .representative-signature-line {
-      white-space: nowrap;
-    }
-
-    @media (max-width: 768px) {
-      .representative-signature {
-        width: auto;
-        margin: 22px 0 0;
-      }
-    }
-
-    .representative-career {
-      grid-column: 1 / -1;
-      border-top: 1px solid var(--line);
-      padding-top: 28px;
-    }
-    .representative-profile p,
-    .representative-career p {
-      margin: 0 0 15px;
-      color: var(--text-muted);
-      font-size: 0.98rem;
-      line-height: 1.86;
-    }
-
-    .representative-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 24px 0 20px;
-    }
-
-    .representative-license {
-      margin-top: 20px;
-      padding: 18px 20px;
-      border: 1px solid rgba(139, 107, 63, 0.24);
-      border-radius: var(--radius);
-      background: rgba(255, 253, 248, 0.72);
-    }
-
-    .representative-license h3 {
-      margin: 0 0 10px;
-      color: var(--accent);
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-    }
-
-    .representative-license ul {
-      margin: 0;
-      padding-left: 1.1em;
-      color: var(--text-muted);
-      font-size: 0.92rem;
-      line-height: 1.82;
-    }
-.contact {
-      padding-bottom: 94px;
-    }
-
-    .contact-box {
-      border-radius: var(--radius);
-      border: 1px solid rgba(139, 107, 63, 0.3);
-      background:
-        linear-gradient(140deg, rgba(139, 107, 63, 0.12), rgba(139, 107, 63, 0.03)),
-        #fffdf9;
-      box-shadow: var(--shadow);
-      padding: 34px;
-      text-align: center;
-    }
-
-    .contact-box p {
-      max-width: 72ch;
-      margin-inline: auto;
-    }
-
-    .contact-form-section {
-      padding-top: 0;
-      padding-bottom: 94px;
-    }
-
-    .form-box {
-      border-radius: var(--radius);
-      border: 1px solid rgba(139, 107, 63, 0.28);
-      background:
-        linear-gradient(145deg, rgba(139, 107, 63, 0.1), rgba(139, 107, 63, 0.03)),
-        #ffffff;
-      box-shadow: var(--shadow);
-      padding: 34px;
-    }
-
-    .form-box h2 {
-      font-size: clamp(1.4rem, 2.8vw, 2rem);
-      margin-bottom: 8px;
-    }
-
-    .form-box p {
-      color: var(--text-muted);
-      margin-bottom: 22px;
-    }
-
-    .contact-form {
-      display: grid;
-      gap: 16px;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .form-field {
-      display: grid;
-      gap: 7px;
-    }
-
-    .form-field.full {
-      grid-column: 1 / -1;
-    }
-
-    .form-honeypot {
-      position: absolute;
-      left: -10000px;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-
-    .form-field label {
-      font-size: 0.86rem;
-      letter-spacing: 0.03em;
-      color: var(--text);
-    }
-
-    .form-field input,
-    .form-field select,
-    .form-field textarea {
-      width: 100%;
-      border-radius: 10px;
-      border: 1px solid rgba(139, 107, 63, 0.28);
-      background: #ffffff;
-      color: var(--text);
-      padding: 12px 14px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      line-height: 1.45;
-    }
-
-    .form-field textarea {
-      resize: vertical;
-      min-height: 140px;
-    }
-
-    .form-field input:focus,
-    .form-field select:focus,
-    .form-field textarea:focus {
-      outline: none;
-      border-color: rgba(139, 107, 63, 0.7);
-      box-shadow: 0 0 0 2px rgba(139, 107, 63, 0.15);
-    }
-
-    .form-submit {
-      margin-top: 4px;
-    }
-
-    .instructor-grid {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .instructor-card {
-      text-align: center;
-    }
-
-    .instructor-photo-link {
-      display: block;
-    }
-
-    .instructor-photo {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      overflow: hidden;
-      border-radius: 12px;
-      border: 1px solid rgba(139, 107, 63, 0.2);
-      background: var(--panel-soft);
-      margin-bottom: 14px;
-      position: relative;
-    }
-
-    .instructor-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      transition: transform 0.4s ease;
-      display: block;
-    }
-
-    .instructor-photo-link:hover .instructor-photo img {
-      transform: scale(1.04);
-    }
-
-    .instructor-photo-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: "Noto Serif JP", serif;
-      font-size: 2.4rem;
-      color: var(--accent);
-      opacity: 0.5;
-    }
-
-    .instructor-dept {
-      display: block;
-      font-family: "Noto Serif JP", serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 5px;
-      font-style: italic;
-    }
-
-    .instructor-card h3 {
-      font-size: 0.96rem;
-      color: var(--text);
-      margin-bottom: 0;
-      letter-spacing: 0.08em;
-    }
-
-    .artist-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 28px;
-    }
-
-    .ambassador-logo-wrap {
-      display: flex;
-      justify-content: center;
-      margin: 0 0 28px;
-    }
-
-    .ambassador-logo {
-      display: block;
-      width: min(100%, 560px);
-      max-width: 560px;
-      height: auto;
-    }
-
-    .artist-card {
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: var(--panel-soft);
-      overflow: hidden;
-      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-    }
-
-    .artist-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(139, 107, 63, 0.38);
-      box-shadow: 0 22px 48px rgba(70, 49, 20, 0.14);
-    }
-
-    .artist-card-link {
-      display: block;
-      height: 100%;
-      color: inherit;
-    }
-
-    .artist-card-link:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 4px;
-    }
-
-    .artist-photo {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      overflow: hidden;
-      background:
-        linear-gradient(145deg, rgba(139, 107, 63, 0.08), rgba(139, 107, 63, 0.02)),
-        var(--panel);
-      border-bottom: 1px solid rgba(139, 107, 63, 0.16);
-      position: relative;
-    }
-
-    .artist-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      transition: transform 0.45s ease;
-    }
-
-    .artist-photo-credit {
-      position: absolute;
-      right: 10px;
-      bottom: 8px;
-      padding: 2px 7px;
-      background: rgba(255, 255, 255, 0.78);
-      color: var(--text-muted);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 0.72rem;
-      line-height: 1;
-      letter-spacing: 0.04em;
-    }
-    .artist-photo-focus--fuga {
-      object-position: center top;
-      transform: scale(1.03);
-      transform-origin: center top;
-    }
-
-    .artist-photo-focus--mio {
-      object-fit: cover;
-      object-position: center top;
-      transform: none;
-      transform-origin: center top;
-      background: #fff;
-    }
-
-    .artist-photo-focus--kiyoko {
-      object-position: center top;
-      transform: scale(1.18) translateY(-3%);
-      transform-origin: center top;
-    }
-
-    .artist-photo-focus--asuka {
-      object-position: center top;
-      transform: scale(1.16) translateY(0);
-      transform-origin: center top;
-    }
-
-    .artist-photo-focus--yuiko {
-      object-position: center center;
-      transform: scale(1.36);
-      transform-origin: center center;
-    }
-
-    .artist-photo-focus--soma {
-      object-position: center top;
-      transform: scale(1.08) translateY(-2%);
-      transform-origin: center top;
-    }
-
-    .artist-photo-focus--mayuko {
-      object-position: center center;
-      transform: scale(1.45) translateY(2%);
-      transform-origin: center center;
-    }
-
-    .artist-photo-focus--kayoko {
-      object-position: center top;
-      transform: scale(1.23) translateY(0);
-      transform-origin: center top;
-    }
-
-    .artist-photo-focus--kaho {
-      transform: scale(1.48) translateY(-12%);
-      transform-origin: center top;
-    }
-
-    .artist-photo-focus--maika {
-      object-position: center top;
-      transform: scale(1.78) translateY(-20%);
-      transform-origin: center top;
-    }
-
-    .artist-photo-focus--shoko {
-      transform: scale(1.78) translateY(-18%);
-      transform-origin: center top;
-    }
-
-    .artist-photo-focus--yukiko {
-      transform: scale(1.28) translateY(-6%);
-      transform-origin: center top;
-    }
-
-    .artist-photo-focus--ono {
-      object-position: center top;
-      transform: scale(1.18) translateY(-4%);
-      transform-origin: center top;
-    }
-
-    .artist-photo-focus--shimo {
-      object-position: 10% center;
-      transform: scale(1.22);
-      transform-origin: 10% center;
-    }
-    .artist-photo-zoom {
-    transform: scale(1.6) translateY(-8%);
-    transform-origin: center top;
-}
-    .artist-card:hover .artist-photo img {
-    transform: none;
-}
-.artist-card:hover .artist-photo img.artist-photo-focus--fuga {
-    transform: scale(1.03);
-}
-
-.artist-card:hover .artist-photo img.artist-photo-focus--mio {
-    transform: none;
-}
-
-.artist-card:hover .artist-photo img.artist-photo-focus--kiyoko {
-    transform: scale(1.18) translateY(-3%);
-}
-
-.artist-card:hover .artist-photo img.artist-photo-focus--asuka {
-    transform: scale(1.16) translateY(0);
-}
-
-.artist-card:hover .artist-photo img.artist-photo-focus--yuiko {
-    transform: scale(1.36);
-}
-
-.artist-card:hover .artist-photo img.artist-photo-focus--soma {
-    transform: scale(1.08) translateY(-2%);
-}
-
-.artist-card:hover .artist-photo img.artist-photo-focus--mayuko {
-    transform: scale(1.45) translateY(2%);
-}
-
-.artist-card:hover .artist-photo img.artist-photo-focus--kayoko {
-    transform: scale(1.23) translateY(0);
-}
-
-.artist-card:hover .artist-photo img.artist-photo-focus--kaho {
-    transform: scale(1.48) translateY(-12%);
-}
-
-.artist-card:hover .artist-photo img.artist-photo-focus--maika {
-    transform: scale(1.78) translateY(-20%);
-}
-
-.artist-card:hover .artist-photo img.artist-photo-focus--shoko {
-    transform: scale(1.78) translateY(-18%);
-}
-
-    .artist-card:hover .artist-photo img.artist-photo-focus--yukiko {
-      transform: scale(1.28) translateY(-6%);
-    }
-
-
-    .artist-card:hover .artist-photo img.artist-photo-focus--ono {
-      transform: scale(1.18) translateY(-4%);
-    }
-
-    .artist-card:hover .artist-photo img.artist-photo-focus--shimo {
-      transform: scale(1.22);
-    }
-.artist-card:hover .artist-photo-zoom {
-    transform: scale(1.65) translateY(-6%);
-}
-    .artist-photo.is-missing::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(145deg, rgba(139, 107, 63, 0.1), rgba(139, 107, 63, 0.03)),
-        var(--panel-soft);
-    }
-
-    .artist-photo.is-missing::after {
-      content: "Photo";
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.4rem;
-      letter-spacing: 0.2em;
-      color: var(--accent);
-      opacity: 0.45;
-    }
-
-    .artist-body {
-      padding: 22px 22px 24px;
-    }
-
-    .artist-body h3 {
-      font-size: 1.05rem;
-      color: var(--text);
-      margin-bottom: 10px;
-      letter-spacing: 0.1em;
-    }
-
-    .artist-name-en {
-      display: block;
-      margin: -4px 0 12px;
-      color: var(--accent);
-      font-family: "Cormorant Garamond", serif;
-      font-size: 1.05rem;
-      letter-spacing: 0.04em;
-    }
-    .artist-bio {
-      font-size: 0.9rem;
-      line-height: 1.8;
-      margin-bottom: 14px;
-      display: -webkit-box;
-      -webkit-line-clamp: 6;
-      line-clamp: 6;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .artist-link-label {
-      display: inline-block;
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-family: "Cormorant Garamond", serif;
-      font-style: italic;
-    }
-
-    .artist-teaser-actions {
-      margin-top: 28px;
-      text-align: center;
-    }
-
-    .page-hero {
-      padding: 88px 0 48px;
-      border-top: none;
-    }
-
-    .page-hero .section-title {
-      margin-bottom: 0;
-      max-width: 68ch;
-    }
-
-    @media (max-width: 1024px) {
-      .news-card h3 {
-        font-size: clamp(1rem, 2.7vw, 1.35rem);
-        line-height: 1.6;
-      }
-
-      .news-card h3 a {
-        white-space: normal;
-        overflow-wrap: anywhere;
-        word-break: normal;
-      }
-    }
-
-    @media (max-width: 980px) {
-      .artist-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .instructor-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .artist-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .ambassador-logo-wrap {
-        margin: 22px 0 30px;
-      }
-
-      .ambassador-logo {
-        width: min(100%, 92vw);
-      }
-
-      .instructor-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    .site-footer {
-      border-top: 1px solid var(--line);
-      padding: 26px 0 36px;
-      text-align: center;
-      font-size: 0.84rem;
-      color: #9ea2ad;
-    }
-
-    .footer-brand {
-      font-size: calc(0.84rem + 4pt);
-      line-height: 1.35;
-    }
-
-    .footer-owner-role {
-      font-size: calc(0.84rem + 4pt);
-      line-height: 1.35;
-    }
-
-    .footer-owner-name {
-      font-size: calc(0.84rem + 6pt);
-      line-height: 1.35;
-    }
-
-    @media (max-width: 980px) {
-      .artist-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .hero-grid,
-      .grid-3,
-      .service-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      body {
-        line-height: 1.86;
-        letter-spacing: 0;
-      }
-
-      .container {
-        width: min(100% - 44px, var(--max-width));
-      }
-
-      .site-header {
-        background: rgba(255, 255, 255, 0.96);
-      }
-
-      .header-inner {
-        min-height: 68px;
-      }
-
-      .brand-wordmark {
-        width: clamp(154px, 44vw, 218px);
-      }
-
-      .header-inner {
-        gap: 12px;
-      }
-
-      .header-actions {
-        gap: 11px;
-      }
-
-      .header-social-links {
-        gap: 8px;
-      }
-
-      .header-social-link {
-        width: 28px;
-        height: 28px;
-      }
-
-      .header-social-link svg {
-        width: 26px;
-        height: 26px;
-      }
-
-      .menu-drawer {
-        width: min(86vw, 360px);
-        padding: 24px 24px 36px;
-      }
-
-      .menu-drawer-nav {
-        gap: 18px;
-      }
-
-      .menu-drawer-nav a {
-        font-size: 1.08rem;
-      }
-
-      .hero {
-        padding: 74px 0 58px;
-      }
-
-      .hero-grid,
-      .grid-3,
-      .service-grid,
-      .form-grid,
-      .artist-grid,
-      .venue-grid,
-      .instructor-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .artist-grid {
-        justify-items: center;
-      }
-
-      .artist-card {
-        width: 80%;
-        max-width: 360px;
-      }
-
-      .representative-grid {
-        grid-template-columns: 1fr;
-        gap: 26px;
-      }
-
-      .representative-photo-card {
-        max-width: 235px;
-        width: 100%;
-        margin-inline: auto;
-      }
-
-      .officer-card {
-        grid-template-columns: 1fr;
-      }
-
-      .officer-photo {
-        max-width: 212px;
-        margin: 0 auto;
-      }
-      .hero-grid {
-        gap: 26px;
-      }
-
-      h1 {
-        font-size: clamp(1.78rem, 8vw, 2.38rem);
-        line-height: 1.48;
-        letter-spacing: 0.035em;
-        margin-bottom: 18px;
-      }
-
-      .hero-copy p,
-      .section-title p,
-      .contact-box p,
-      .form-box p {
-        max-width: 34em;
-      }
-
-      p {
-        font-size: 0.96rem;
-        line-height: 1.92;
-      }
-
-      section {
-        padding: 64px 0;
-      }
-
-      .section-title {
-        margin-bottom: 24px;
-      }
-
-      .section-title h2 {
-        font-size: clamp(1.36rem, 6vw, 1.86rem);
-        line-height: 1.45;
-        letter-spacing: 0.02em;
-      }
-
-      .hero-panel,
-      .card,
-      .news-card,
-      .venue-card,
-      .contact-box,
-      .form-box {
-        width: 100%;
-        padding: 24px 22px;
-      }
-
-      .hero-panel {
-        padding: 22px 0 20px;
-        box-shadow: none;
-      }
-
-      .hero-panel h2,
-      .contact-box h2,
-      .form-box h2 {
-        font-size: 1.24rem;
-        line-height: 1.45;
-      }
-
-      .hero-panel ul {
-        padding-left: 0;
-      }
-
-      .hero-panel li {
-        grid-template-columns: 5.6em minmax(0, 1fr);
-        gap: 12px;
-        padding: 10px 0;
-        margin-bottom: 0;
-        line-height: 1.78;
-      }
-
-      .cta-row {
-        justify-content: center;
-        margin-top: 28px;
-      }
-
-      .btn {
-        width: auto;
-        max-width: 100%;
-        padding: 12px 20px;
-        text-align: center;
-      }
-
-      .news-card h3 {
-        font-size: clamp(0.86rem, 3.45vw, 1.1rem);
-        line-height: 1.55;
-      }
-
-      .news-card h3 a {
-        white-space: normal;
-        overflow-wrap: anywhere;
-        word-break: normal;
-      }
-
-      .service-grid,
-      .artist-grid {
-        gap: 16px;
-      }
-
-      .service-item {
-        width: 100%;
-        padding: 15px 16px;
-        font-size: 0.96rem;
-      }
-
-      .artist-link-label {
-        letter-spacing: 0.14em;
-      }
-
-      .ambassador-logo-wrap {
-        margin: 22px 0 30px;
-      }
-
-      .ambassador-logo {
-        width: min(100%, 92vw);
-      }
-
-      .artist-body {
-        padding: 22px 20px 24px;
-      }
-
-      .artist-body h3 {
-        font-size: 1.12rem;
-        line-height: 1.45;
-      }
-
-      .artist-name-en {
-        font-size: 1.08rem;
-      }
-
-      .artist-bio {
-        font-size: 0.94rem;
-        line-height: 1.92;
-      }
-
-      .contact {
-        padding-bottom: 72px;
-      }
-
-      .contact-form-section {
-        padding-bottom: 76px;
-      }
-
-      .form-field input,
-      .form-field select,
-      .form-field textarea {
-        font-size: 1rem;
-        padding: 13px 14px;
-      }
-
-      .form-submit {
-        justify-self: center;
-      }
-
-      .site-footer {
-        padding: 24px 0 32px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .artist-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .header-inner {
-        min-height: 66px;
-      }
-
-      .hero {
-        padding-top: 80px;
-      }
-
-      section {
-        padding: 62px 0;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-box {
-        padding: 24px;
-      }
-
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
   <header class="site-header">
@@ -1867,7 +128,7 @@
           </article>
           <div class="representative-photo-card">
             <div class="representative-photo">
-              <img src="images/Ari_Onishi.jpg" alt="大西 亜里" loading="lazy">
+              <img src="images/Ari_Onishi.jpg" alt="大西 亜里" loading="lazy" width="577" height="1280" srcset="images/responsive/Ari_Onishi-480.webp 480w, images/responsive/Ari_Onishi-577.webp 577w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
             </div>
             <span class="representative-photo-credit">© Shin Yamagishi</span>
             <p class="representative-photo-name">大西 亜里</p>
@@ -1909,7 +170,7 @@
         </div>
         <article class="officer-card">
           <figure class="officer-photo">
-            <img src="images/Kanako_Abe.jpg" alt="阿部かな子" loading="lazy">
+            <img src="images/Kanako_Abe.jpg" alt="阿部かな子" loading="lazy" width="1040" height="1165" srcset="images/responsive/Kanako_Abe-480.webp 480w, images/responsive/Kanako_Abe-960.webp 960w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
           </figure>
           <div class="officer-profile">
             <span class="officer-role">アンティカ音楽学院　理事</span>
@@ -1951,7 +212,7 @@
           </div>
           <h3><a href="news/opera-vs-musical/">アンティカ音楽学院presents<br>オペラVSミュージカル 徹底比較！</a></h3>
           <a class="news-card-visual" href="news/opera-vs-musical/" aria-label="2026年11月9日 オペラVSミュージカル 徹底比較！の詳細を見る">
-            <img src="images/november-2026/opera-vs-musical-front.png" alt="アンティカ音楽学院presents オペラVSミュージカル 徹底比較！ フライヤー" loading="lazy">
+            <img src="images/november-2026/opera-vs-musical-front.png" alt="アンティカ音楽学院presents オペラVSミュージカル 徹底比較！ フライヤー" loading="lazy" width="1024" height="1536" srcset="images/responsive/opera-vs-musical-front-640.webp 640w, images/responsive/opera-vs-musical-front-1024.webp 1024w" sizes="(max-width: 760px) calc(100vw - 48px), 560px" decoding="async">
           </a>
         </article>
       </div>
@@ -1987,7 +248,7 @@
 <section id="endorsing-artists">
       <div class="container">
         <div class="ambassador-logo-wrap">
-          <img class="ambassador-logo" src="images/music-ambassador-logo.png" alt="Music Ambassador">
+          <img class="ambassador-logo" src="images/music-ambassador-logo.png" alt="Music Ambassador" width="1774" height="887" srcset="images/responsive/music-ambassador-logo-480.webp 480w, images/responsive/music-ambassador-logo-960.webp 960w" sizes="(max-width: 760px) 82vw, 480px" loading="lazy" decoding="async">
         </div>
         <div class="section-title">
           <h2>ミュージック・アンバサダー</h2>
@@ -1998,7 +259,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/fuga-akikawa/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--fuga" src="images/Fuga_Akikawa.jpg" alt="秋川 風雅" loading="lazy">
+                <img class="artist-photo-focus--fuga" src="images/Fuga_Akikawa.jpg" alt="秋川 風雅" loading="lazy" width="853" height="1280" srcset="images/responsive/Fuga_Akikawa-480.webp 480w, images/responsive/Fuga_Akikawa-853.webp 853w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>秋川 風雅</h3>
@@ -2012,7 +273,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/mio-ando/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--mio" src="images/Mio_Ando_20260818.png" alt="安藤 未緒" loading="lazy">
+                <img class="artist-photo-focus--mio" src="images/Mio_Ando_20260818.png" alt="安藤 未緒" loading="lazy" width="1847" height="2271" srcset="images/responsive/Mio_Ando_20260818-480.webp 480w, images/responsive/Mio_Ando_20260818-960.webp 960w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>安藤 未緒</h3>
@@ -2026,7 +287,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/yukiko-okuno/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--yukiko" src="images/Yukiko_Okuno.jpg" alt="奥野 由紀子" loading="lazy">
+                <img class="artist-photo-focus--yukiko" src="images/Yukiko_Okuno.jpg" alt="奥野 由紀子" loading="lazy" width="853" height="1280" srcset="images/responsive/Yukiko_Okuno-480.webp 480w, images/responsive/Yukiko_Okuno-853.webp 853w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
                 <span class="artist-photo-credit">© Junichiro Matsuo</span>
               </div>
               <div class="artist-body">
@@ -2041,7 +302,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/yukiko-ono/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--ono" src="images/Yukiko_Ono.jpg" alt="小野 友葵子" loading="lazy">
+                <img class="artist-photo-focus--ono" src="images/Yukiko_Ono.jpg" alt="小野 友葵子" loading="lazy" width="853" height="1280" srcset="images/responsive/Yukiko_Ono-480.webp 480w, images/responsive/Yukiko_Ono-853.webp 853w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>小野 友葵子</h3>
@@ -2055,7 +316,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/kiyoko-kudo/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--kiyoko" src="images/Kiyoko_Kudo.jpg" alt="くどう きよこ" loading="lazy">
+                <img class="artist-photo-focus--kiyoko" src="images/Kiyoko_Kudo.jpg" alt="くどう きよこ" loading="lazy" width="7008" height="4672" srcset="images/responsive/Kiyoko_Kudo-480.webp 480w, images/responsive/Kiyoko_Kudo-960.webp 960w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>くどう きよこ</h3>
@@ -2069,7 +330,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/asuka-komiya/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--asuka" src="images/Asuka_Komiya.jpg" alt="小宮 明日翔" loading="lazy">
+                <img class="artist-photo-focus--asuka" src="images/Asuka_Komiya.jpg" alt="小宮 明日翔" loading="lazy" width="1778" height="1800" srcset="images/responsive/Asuka_Komiya-480.webp 480w, images/responsive/Asuka_Komiya-960.webp 960w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>小宮 明日翔</h3>
@@ -2083,7 +344,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/mayuko-suenobu/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--mayuko" src="images/Mayuko_Suenobu.jpg" alt="末延 麻裕子" loading="lazy">
+                <img class="artist-photo-focus--mayuko" src="images/Mayuko_Suenobu.jpg" alt="末延 麻裕子" loading="lazy" width="1567" height="1045" srcset="images/responsive/Mayuko_Suenobu-480.webp 480w, images/responsive/Mayuko_Suenobu-960.webp 960w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>末延 麻裕子</h3>
@@ -2097,7 +358,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/soma-tagawa/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--soma" src="images/Soma_Tagawa.jpg" alt="田川 颯眞" loading="lazy">
+                <img class="artist-photo-focus--soma" src="images/Soma_Tagawa.jpg" alt="田川 颯眞" loading="lazy" width="2560" height="3840" srcset="images/responsive/Soma_Tagawa-480.webp 480w, images/responsive/Soma_Tagawa-960.webp 960w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>田川 颯眞</h3>
@@ -2111,7 +372,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/shimo-shimomura/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--shimo" src="images/Shimo_Shimomura.jpg" alt="Shimo / 下村 裕" loading="lazy">
+                <img class="artist-photo-focus--shimo" src="images/Shimo_Shimomura.jpg" alt="Shimo / 下村 裕" loading="lazy" width="1280" height="853" srcset="images/responsive/Shimo_Shimomura-480.webp 480w, images/responsive/Shimo_Shimomura-960.webp 960w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>Shimo / 下村 裕</h3>
@@ -2125,7 +386,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/yuiko-tsubokura/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--yuiko" src="images/Yuiko_Tsubokura.jpg" alt="坪倉 唯子" loading="lazy">
+                <img class="artist-photo-focus--yuiko" src="images/Yuiko_Tsubokura.jpg" alt="坪倉 唯子" loading="lazy" width="1280" height="720" srcset="images/responsive/Yuiko_Tsubokura-480.webp 480w, images/responsive/Yuiko_Tsubokura-960.webp 960w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>坪倉 唯子</h3>
@@ -2139,7 +400,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/kayoko-tezuka/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--kayoko" src="images/Kayoko_Tezuka.jpg" alt="手塚 佳代子" loading="lazy">
+                <img class="artist-photo-focus--kayoko" src="images/Kayoko_Tezuka.jpg" alt="手塚 佳代子" loading="lazy" width="960" height="1280" srcset="images/responsive/Kayoko_Tezuka-480.webp 480w, images/responsive/Kayoko_Tezuka-960.webp 960w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>手塚 佳代子</h3>
@@ -2153,7 +414,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/shun-tominaga/">
               <div class="artist-photo">
-                <img src="images/Shun_Tominaga.JPG" alt="富永 峻" loading="lazy">
+                <img src="images/Shun_Tominaga.JPG" alt="富永 峻" loading="lazy" width="4672" height="7008" srcset="images/responsive/Shun_Tominaga-480.webp 480w, images/responsive/Shun_Tominaga-960.webp 960w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>富永 峻</h3>
@@ -2167,7 +428,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/kaho-masuda/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--kaho" src="images/Kaho_Masuda.jpeg" alt="増田 香穂" loading="lazy">
+                <img class="artist-photo-focus--kaho" src="images/Kaho_Masuda.jpeg" alt="増田 香穂" loading="lazy" width="1201" height="1800" srcset="images/responsive/Kaho_Masuda-480.webp 480w, images/responsive/Kaho_Masuda-960.webp 960w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>増田 香穂</h3>
@@ -2181,7 +442,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/maika-miura/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--maika" src="images/Maika_Miura.jpg" alt="三浦 舞夏" loading="lazy">
+                <img class="artist-photo-focus--maika" src="images/Maika_Miura.jpg" alt="三浦 舞夏" loading="lazy" width="853" height="1280" srcset="images/responsive/Maika_Miura-480.webp 480w, images/responsive/Maika_Miura-853.webp 853w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>三浦 舞夏</h3>
@@ -2195,7 +456,7 @@
           <article class="artist-card">
             <a class="artist-card-link" href="ambassadors/shoko-mizuno/">
               <div class="artist-photo">
-                <img class="artist-photo-focus--shoko" src="images/Shoko_Mizuno.jpg" alt="水野 彰子" loading="lazy">
+                <img class="artist-photo-focus--shoko" src="images/Shoko_Mizuno.jpg" alt="水野 彰子" loading="lazy" width="898" height="1280" srcset="images/responsive/Shoko_Mizuno-480.webp 480w, images/responsive/Shoko_Mizuno-898.webp 898w" sizes="(max-width: 760px) 80vw, (max-width: 1100px) 45vw, 340px" decoding="async">
               </div>
               <div class="artist-body">
                 <h3>水野 彰子</h3>
@@ -2214,8 +475,8 @@
         <div class="contact-box">
           <h2>個別相談のご案内</h2>
           <p>感性教育を重視するご家庭、教養と品格を磨きたい大人の皆さまへ。<br>アンティカ音楽学院は、音楽を通じた長期的な成長と社会的価値の創出を支援します。</p>
-          <p>メールでのお問い合わせ: <a href="mailto:anticamusicacademy@gmail.com" style="color:var(--accent); text-decoration:underline; text-underline-offset:3px;">anticamusicacademy@gmail.com</a></p>
-          <div class="cta-row" style="justify-content:center;">
+          <p>メールでのお問い合わせ: <a class="contact-email-link" href="mailto:anticamusicacademy@gmail.com">anticamusicacademy@gmail.com</a></p>
+          <div class="cta-row cta-row--center">
             <a class="btn btn-primary" href="#contact-form">お問い合わせ</a>
           </div>
         </div>
@@ -2279,7 +540,7 @@
       <p>Copyright 2026 Antica Music Academy.</p>
       <p>All rights reserved.</p>
       <p class="footer-owner-role">代表 | 音楽プロデューサー</p>
-      <p class="footer-owner-name"><a href="https://www.tunecore.co.jp/artists/ARI_OHNISHI" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline; text-underline-offset:3px;">大西 亜里</a></p>
+      <p class="footer-owner-name"><a class="footer-owner-link" href="https://www.tunecore.co.jp/artists/ARI_OHNISHI" target="_blank" rel="noopener noreferrer">大西 亜里</a></p>
     </div>
   </footer>
 
