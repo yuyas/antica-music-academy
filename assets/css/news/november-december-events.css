@@ -1,0 +1,36 @@
+:root { --bg:#f7f5f2; --panel:#fffdf8; --text:#2f2618; --muted:#5e503e; --line:#ddcfba; --accent:#8b6b3f; --deep:#6f5532; --max:980px; --radius:16px; --shadow:0 16px 38px rgba(70,49,20,.12); }
+    * { box-sizing:border-box; }
+    html,body { margin:0; padding:0; background:radial-gradient(circle at 85% 0%,rgba(139,107,63,.1),transparent 42%),linear-gradient(180deg,#fff 0%,#fbf8f3 100%); color:var(--text); font-family:"Noto Serif JP","Yu Mincho",serif; line-height:1.9; letter-spacing:.01em; }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(100% - 40px,var(--max)); margin-inline:auto; }
+    .site-header { position:sticky; top:0; z-index:20; border-bottom:1px solid rgba(139,107,63,.22); background:rgba(255,255,255,.92); backdrop-filter:blur(10px); }
+    .header-inner { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:inline-flex; align-items:center; gap:12px; white-space:nowrap; }
+    .brand-icon { width:28px; height:auto; display:block; }
+    .brand-wordmark { width:clamp(170px,26vw,262px); height:auto; display:block; }
+    .back-link { color:var(--accent); font-size:.95rem; letter-spacing:.08em; }
+    main { padding:72px 0 96px; }
+    .news-hero { border-bottom:1px solid var(--line); padding-bottom:28px; margin-bottom:34px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:12px; margin-bottom:18px; color:var(--accent); font-family:"Cormorant Garamond",serif; font-size:1rem; letter-spacing:.18em; text-transform:uppercase; font-style:italic; }
+    .new-badge { padding:3px 11px; border-radius:999px; color:#fff; background:var(--accent); font-size:.78rem; letter-spacing:.16em; line-height:1.2; font-style:normal; }
+    h1 { margin:0; font-size:clamp(2rem,4vw,3.35rem); font-weight:500; line-height:1.42; letter-spacing:.04em; }
+    .lead { margin:22px 0 0; color:var(--muted); font-size:1.05rem; }
+    .event-visuals { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; align-items:start; margin:0 0 28px; }
+    .event-visual { margin:0; overflow:hidden; border:1px solid rgba(139,107,63,.24); border-radius:var(--radius); background:var(--panel); box-shadow:var(--shadow); }
+    .event-visual img { display:block; width:100%; height:auto; }
+    .event-card { border:1px solid rgba(139,107,63,.24); border-radius:var(--radius); background:linear-gradient(145deg,rgba(139,107,63,.08),rgba(139,107,63,.02)),var(--panel); box-shadow:var(--shadow); padding:clamp(24px,5vw,44px); }
+    .event-card + .event-card { margin-top:24px; }
+    h2 { margin:0 0 18px; font-size:clamp(1.45rem,2.7vw,2rem); font-weight:600; letter-spacing:.06em; }
+    h3 { display:flex; flex-wrap:wrap; align-items:baseline; gap:10px; margin:28px 0 8px; color:var(--deep); font-size:clamp(1.15rem,2.2vw,1.45rem); line-height:1.5; }
+    h3:first-of-type { margin-top:0; }
+    h3 span { color:var(--accent); font-family:"Cormorant Garamond",serif; font-size:.92em; font-style:italic; }
+    .event-title { margin:0; font-size:clamp(1.2rem,2.4vw,1.6rem); line-height:1.8; font-weight:600; }
+    .event-list { display:grid; gap:10px; margin:0; padding:0; list-style:none; }
+    .event-list li { display:grid; grid-template-columns:9.5em minmax(0,1fr); gap:18px; border-bottom:1px solid rgba(139,107,63,.16); padding-bottom:10px; }
+    .event-list li:last-child { border-bottom:0; padding-bottom:0; }
+    .event-list strong { color:var(--deep); }
+    .event-card p { margin:0 0 14px; color:var(--muted); }
+    .reservation-items { margin:16px 0 0; padding-left:1.2em; }
+    .button-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:24px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 20px; border-radius:999px; color:#fff; background:linear-gradient(120deg,#9a7751,#7c6039); font-weight:700; }
+    @media (max-width:768px) { main{padding:48px 0 72px}.header-inner{min-height:68px}.brand-wordmark{width:clamp(180px,58vw,250px)}h1{font-size:1.6rem;letter-spacing:.02em}.event-visuals{grid-template-columns:1fr}.event-card{padding:24px 20px}.event-list li{grid-template-columns:1fr;gap:2px}.button-row{display:grid} }
