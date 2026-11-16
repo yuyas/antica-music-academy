@@ -308,49 +308,51 @@
     }
 
     .hero-panel {
-      max-width: none;
+      max-width: 920px;
       width: 100%;
-      margin-top: 30px;
+      margin: 30px auto 0;
       border-top: 1px solid rgba(139, 107, 63, 0.28);
       border-bottom: 1px solid rgba(139, 107, 63, 0.2);
-      padding: 24px 0 22px;
+      padding: 28px 34px 24px;
       background: linear-gradient(90deg, rgba(139, 107, 63, 0.055), rgba(255, 253, 248, 0));
     }
 
     .hero-panel h2 {
-      padding-left: 28px;
       font-size: 1.08rem;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       color: var(--text);
       letter-spacing: 0.08em;
     }
 
-    .hero-panel ul {
+    .hero-panel-list {
       margin: 0;
-      padding-left: 0;
       color: var(--text-muted);
-      list-style: none;
     }
 
-    .hero-panel li {
+    .hero-panel-item {
       display: grid;
-      grid-template-columns: 6.2em minmax(0, 1fr);
-      gap: 18px;
-      padding: 11px 0;
-      align-items: baseline;
+      grid-template-columns: 5.2em minmax(0, 1fr);
+      column-gap: 24px;
+      padding: 14px 0;
+      align-items: start;
       border-top: 1px solid rgba(139, 107, 63, 0.12);
     }
 
-    .hero-panel li:first-child {
+    .hero-panel-item:first-child {
       border-top: 0;
     }
 
-    .hero-panel-label {
+    .hero-panel-item dt {
       color: var(--accent);
       font-weight: 600;
       letter-spacing: 0.08em;
       white-space: nowrap;
       text-align: center;
+    }
+
+    .hero-panel-item dd {
+      margin: 0;
+      line-height: 1.78;
     }
     .cta-row {
       display: flex;
@@ -1636,7 +1638,7 @@
       }
 
       .hero-panel {
-        padding: 22px 0 20px;
+        padding: 24px 24px 20px;
         box-shadow: none;
       }
 
@@ -1647,14 +1649,10 @@
         line-height: 1.45;
       }
 
-      .hero-panel ul {
-        padding-left: 0;
-      }
-
-      .hero-panel li {
-        grid-template-columns: 5.6em minmax(0, 1fr);
-        gap: 12px;
-        padding: 10px 0;
+      .hero-panel-item {
+        grid-template-columns: 5.2em minmax(0, 1fr);
+        column-gap: 20px;
+        padding: 12px 0;
         margin-bottom: 0;
         line-height: 1.78;
       }
@@ -1758,6 +1756,20 @@
 
       .hero {
         padding-top: 28px;
+      }
+
+      .hero-panel {
+        padding: 22px 20px 18px;
+      }
+
+      .hero-panel-item {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 4px;
+        padding: 14px 0;
+      }
+
+      .hero-panel-item dt {
+        text-align: left;
       }
 
       section {
